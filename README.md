@@ -27,3 +27,25 @@ This tool is useful for developers who want to maintain clean, well-documented c
 
 ## License
 IT LICENSED TO APACH PRIVATY REMOTE LICENE NECESARIES"""
+## Day 5: Code Statistics Analyzer
+2026-01-31_05_code_statistics.py
+
+A powerful code analysis tool that provides comprehensive statistics for code files:
+
+1. **Multi-language Support** - Analyzes 13+ programming languages (Python, JavaScript, TypeScript, Java, C/C++, Go, Rust, Ruby, etc.)
+
+2. **Metrics Tracked**
+   - Total and non-empty lines of code
+   - Character and word counts
+   - Function/method detection
+   - Comment line counting
+   - Code coverage estimation
+
+3. **Features**
+   - Recursive directory scanning
+   - Pretty-printed formatted reports
+   - File icons and visual organization
+   - Human-readable size formatting
+   - Support for single-line and multi-line comments
+
+This tool is essential for developers who want to understand their codebase size, complexity, and documentation coverage.
