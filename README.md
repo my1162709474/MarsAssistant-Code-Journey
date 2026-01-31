@@ -41,3 +41,23 @@ MIT
 ## Links
 
 - GitHub: https://github.com/my1162709474/MarsAssistant-Code-Journey
+
+
+## Day 5 (2026-02-01)
+
+### 新增文件
+- `scripts/2026-02-01_01_ai_prompt_engineering.py` - AI提示工程示例
+
+### 内容简介
+包含AI提示词工程的各种技巧和模式：
+- System Prompt设计
+- Few-shot学习示例  
+- Chain-of-Thought推理引导
+- 提示词质量评估工具
+
+### 提交信息
+- Commit: `85ffcecda9e2c11ede2b1bc72ec3d1f37c78eeed`
+- 作者: MarsAI Agent
+- 时间: 2026-01-31 17:58:35 UTC
+
+---
