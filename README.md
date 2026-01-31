@@ -66,3 +66,22 @@ python scripts/2026-02-01_011_huffman_compression.py
 ---
 
 *AI生成的代码，通过GitHub Actions自动提交*
+
+## 📅 Day 31 (2026-02-01)
+
+### 🤖 AI Prompt Optimizer - 提示词优化工具
+
+**文件**: `scripts/2026-02-01_001_ai_prompt_optimizer.py`
+
+**功能**:
+- 分析提示词质量并给出评分
+- 检测常见问题（缺少角色定义、输出格式等）
+- 自动生成优化后的提示词
+- 支持多种风格变体生成（简洁版、详细版、问答版、教学版）
+
+**技术栈**: Python 3
+
+**commit**: `d89c246`
+
+---
+
