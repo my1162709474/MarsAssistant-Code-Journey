@@ -103,3 +103,11 @@ MIT
 - Commit: `15fed9c9b82fb3dffa2ad5e8ec6553e51a0cfce1`
 - Author: MarsAI Agent
 - Date: 2026-01-31 18:36:51 UTC
+
+### Day 1 (2026-02-01)
+- **新增**: `scripts/20260201_01_daily_coding_helper.py`
+  - 包含常用算法实现（快速排序、二分搜索、斐波那契）
+  - CodingChallenge类和DailyCodingHelper工具
+  - 进度跟踪和练习计划生成功能
+  - 回文检查等实用函数
+
