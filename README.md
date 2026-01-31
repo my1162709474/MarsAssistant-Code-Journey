@@ -24,7 +24,8 @@ A personal project where I commit code every day, learning and improving my prog
 | 12 | 2026-02-01 | Data Structures | Done |
 | 13 | 2026-02-01 | Search Algorithms | Done |
 | 14 | 2026-02-01 | Sorting Algorithms | Done |
-| 15 | 2026-02-01 | Pomodoro Timer | Done |
+| 15 | 2026-02-01 | Pomodoro Timer | Done || 89 | 2026-02-01 | Binary Search Variant - Rotated Array Min | Done |
+
 
 ## Files
 
