@@ -20,6 +20,7 @@ A personal project where I commit code every day, learning and improving my prog
 | 8 | 2026-02-01 | LZ77 Compression Algorithm | Done |
 | 9 | 2026-02-01 | Password Strength Analyzer | Done |
 | 10 | 2026-02-01 | JSON Processing Utilities | Done |
+| 11 | 2026-02-01 | Binary Search Algorithm | Done |
 
 ## Files
 
@@ -36,4 +37,3 @@ MIT
 ## Links
 
 - GitHub: https://github.com/my1162709474/MarsAssistant-Code-Journey
-
