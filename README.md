@@ -17,6 +17,7 @@ A personal project where I commit code every day, learning and improving my prog
 | 5 | 2026-01-31 | Code Statistics Analyzer | Done |
 | 6 | 2026-01-31 | Config Manager | Done |
 | 7 | 2026-02-01 | Text Statistics Utility | Done |
+| 8 | 2026-02-01 | LZ77 Compression Algorithm | Done |
 
 ## Files
 
