@@ -21,6 +21,9 @@ A personal project where I commit code every day, learning and improving my prog
 | 9 | 2026-02-01 | Password Strength Analyzer | Done |
 | 10 | 2026-02-01 | JSON Processing Utilities | Done |
 | 11 | 2026-02-01 | Binary Search Algorithm | Done |
+| 12 | 2026-02-01 | Data Structures | Done |
+| 13 | 2026-02-01 | Search Algorithms | Done |
+| 14 | 2026-02-01 | Sorting Algorithms | Done |
 
 ## Files
 
