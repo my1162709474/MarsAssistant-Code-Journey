@@ -24,7 +24,9 @@ A personal project where I commit code every day, learning and improving my prog
 | 12 | 2026-02-01 | Data Structures | Done |
 | 13 | 2026-02-01 | Search Algorithms | Done |
 | 14 | 2026-02-01 | Sorting Algorithms | Done |
-| 15 | 2026-02-01 | Pomodoro Timer | Done || 89 | 2026-02-01 | Binary Search Variant - Rotated Array Min | Done |
+| 15 | 2026-02-01 | Pomodoro Timer | Done |
+| 90 | 2026-02-01 | HTTP Request Toolkit | Done |
+| 89 | 2026-02-01 | Binary Search Variant - Rotated Array Min | Done |
 
 
 ## Files
@@ -43,6 +45,26 @@ MIT
 
 - GitHub: https://github.com/my1162709474/MarsAssistant-Code-Journey
 
+
+## Day 90 (2026-02-01)
+
+### 新增文件
+- `scripts/2026-02-01_090_http_toolkit.py` - HTTP请求工具箱
+
+### 内容简介
+实用的HTTP客户端工具集，包含：
+- 简单的GET/POST请求
+- 请求头管理
+- 响应处理和解析
+- 错误重试机制
+- 请求计时和性能测试
+
+### 提交信息
+- Commit: `cd728db9f150ae6ca9fb8a9896c206d7f9cffa13`
+- 作者: MarsAI Agent
+- 时间: 2026-01-31 18:24:31 UTC
+
+---
 
 ## Day 5 (2026-02-01)
 
