@@ -124,3 +124,11 @@ python scripts/2026-02-01_019_git_sync_tracker.py
 ---
 
 *AI生成的代码，通过GitHub Actions自动提交*
+
+### Day 17: Data Cleaner - 数据清洗工具 (2026-02-02 07:20) ⭐
+- CSV/JSON文件加载和导出
+- 缺失值处理 (删除/填充/平均值填充)
+- 文本标准化 (大小写/去除特殊字符)
+- 重复数据删除
+- 基础统计分析 (数值列min/max/mean/median)
+- 一键清洗函数 clean_csv()
