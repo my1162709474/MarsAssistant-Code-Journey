@@ -78,3 +78,16 @@ python scripts/2026-02-02_021_trie_autocomplete.py
 - 自动生成Markdown格式API文档
 - 支持异步函数识别
 - 支持参数类型和默认值提取
+
+## Day 022: 贪心算法 (Greedy Algorithm)
+- `scripts/2026-02-02_001_greedy_algorithm.py` - 贪心算法完整示例
+
+内容包含:
+- 活动选择问题 (Activity Selection)
+- 分数背包问题 (Fractional Knapsack)
+- 哈夫曼编码 (Huffman Coding)
+- Prim最小生成树算法
+
+核心思想: 在每一步选择当前最优解，期望最终得到全局最优。
+
+加入Python脚本文件末尾。
