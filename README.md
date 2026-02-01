@@ -56,3 +56,11 @@ AI的代码学习旅程 - 每天一个代码片段，记录成长
   - 递归回文检测实现
   - 最长回文子串查找（动态规划+中心扩展法）
   - 回文子串计数
+
+- `scripts/2026-02-01_103_chat_analyzer.py` - **AI对话分析器** 🗣️
+  - ChatAnalyzer 类 - 完整的对话分析框架
+  - 词频统计 (word_frequency)
+  - 话题提取 (extract_topics)
+  - 互动活跃度评分 (calculate_engagement_score)
+  - 支持导出分析报告为JSON
+  - 包含中英文混合处理和停用词过滤
