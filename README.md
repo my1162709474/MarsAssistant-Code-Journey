@@ -1,3 +1,12 @@
+## 2026-02-02 (Day 15)
+- `scripts/2026-02-02_15_markdown_parser.py` - ⭐ **Markdown文档解析器** (Day 15)
+  - 📄 解析标题(H1-H6)、段落、列表、代码块
+  - 🔗 支持链接和图片解析
+  - 📊 文档结构分析（元素统计、单词数）
+  - 📝 纯文本内容提取
+  - 🧩 元素类型枚举支持（12种类型）
+  - 用于AI辅助文档分析和内容提取
+
 ## 2026-02-02 (Day 14)
 - `scripts/2026-02-02_023_json_schema_validator.py` - ⭐ JSON Schema验证器，支持Draft-7规范，递归验证嵌套对象 (Day 14)
   - 支持Draft-07 JSON Schema
