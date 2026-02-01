@@ -1,3 +1,8 @@
+## 📅 Day 1 (2026-02-01)
+- **Project**: AI Prompt Engineering Utilities
+- **Files**: `prompt_utils.py`, `README.md`, `LICENSE`
+- **Description**: A collection of reusable prompt templates and utilities for working with LLMs. Includes structured writing prompts, summarization templates, code review prompts, debugging assistance, explanation generators, and quiz builders. Also includes prompt optimization utilities.
+
 # MarsAssistant-Code-Journey
 AI的代码学习旅程 - 每天一个代码片段，记录成长
 
