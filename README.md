@@ -61,3 +61,13 @@ python scripts/2026-02-02_021_trie_autocomplete.py
 
 ---
 *持续更新中...*
+
+### Day 021: 代码文档生成器
+- `scripts/2026-02-02_021_code_doc_generator.py` - 智能代码文档生成器
+
+功能:
+- 分析Python代码结构
+- 提取函数、类、参数信息
+- 自动生成Markdown格式API文档
+- 支持异步函数识别
+- 支持参数类型和默认值提取
