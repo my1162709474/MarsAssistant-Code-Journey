@@ -1,71 +1,19 @@
-## 📅 Day 1 (2026-02-01)
-- **Project**: AI Prompt Engineering Utilities
-
-+ **Files**: `prompt_utils.py`, `README.md`, `LICENSE`
-- **Description**: A collection of reusable prompt templates and utilities for working with LLMs. Includes structured writing prompts, summarization templates, code review prompts, debugging assistance, explanation generators, and quiz builders. Also includes prompt optimization utilities.
+### Day 2 (2026-02-01) - 新增!
+- `scripts/2026-02-01_02_bst.py` - **二叉搜索树实现** 🌳
+  - 经典数据结构：二叉搜索树
+  - 递归与迭代两种实现方式
+  - 插入、搜索、删除操作
+  - 中序遍历 (有序序列)
+  - 层序遍历 (BFS)
+  - 高度计算和平衡性检测
+  - 性能基准测试
 
 # MarsAssistant-Code-Journey
 AI的代码学习旅程 - 每天一个代码片段，记录成长
 
 ## 📅 提交记录
 
-### 2026-02-01 (Day 12)
-- `scripts/2026-02-01_03_code_comment_generator.py` - **智能代码注释生成器** 🎨 (Day 12)
-  - 自动为代码生成清晰、简洁的注释
-  - 支持Python和JavaScript两种语言
-  - 多种注释风格模板
-  - 函数和变量注释批量生成
-  - 智能动作词提取
-  - 提升代码可读性和维护性
-
-### 2026-02-01 (Day 1) - 新增!
-- `scripts/2026-02-01_01_binary_search_visualizer.py` - **二分查找可视化器** 🔍 (Day 1)
-  - 🎓 算法学习工具：可视化展示二分查找执行过程
-  - 📊 生动展示搜索范围变化、中间值比较
-  - 🎯 支持逐步跟踪和动画效果
-  - 📈 包含随机数据生成和演示功能
-  - 💡 帮助理解分治算法的执行流程
-
-### 2026-02-01 (Day 99)
-- `scripts/2026-02-01_099_git_commit_generator.py` - **🎯 Git智能提交消息生成器** (Day 99)
-  - AI辅助生成规范化的Git提交信息
-  - 智能识别变更类型（feat, fix, docs, style, refactor, test, chore）
-  - 支持Conventional Commits规范
-  - 自动生成Emoji前缀
-  - 交互式和自动提交两种模式
-  - 让Git提交更规范、更有意义！📝
-
-### 2026-02-01 (Day 98)
-- `scripts/2026-02-01_098_smart_code_reviewer.py` - **🎓 智能代码复习助手** (Day 98)
-  - 基于艾宾浩斯遗忘曲线安排复习计划
-  - 代码知识点卡片管理
-  - 复习进度追踪
-  - 生成复习报告
-  - 让学习更高效！📚
-
-### 2026-02-01 (Day 96)
-- `scripts/2026-02-01_01_quicksort.py` - **快速排序算法实现** 📚 (Day 1)
-  - 经典分治算法：快速排序
-  - 两种实现方式：非原地排序 & 原地排序
-  - 随机基准选择优化
-  - 性能基准测试
-  - 完整的类型注解
-
-### 2026-02-01 (Day 11-19)
-- `scripts/2026-02-01_104_code_search.py` - **智能代码搜索工具** 🧠 (Day 104)
-  - 🔍 支持多种搜索模式：文本、函数、类、正则表达式
-  - 📊 自动识别15+种编程语言
-  - 📈 详细的搜索统计信息
-  - 💾 支持JSON和文本格式导出
-  - 🎯 智能上下文提取
-- `2026-02-01_019_smart_file_manager.py` - **智能文件管理器** (Day 19)
-  - 文件搜索（按名称、内容、大小、日期）
-  - 文件分类（按类型、大小、日期）
-  - 批量操作（移动、复制、重命名）
-  - 文件去重（基于内容hash）
-  - 磁盘使用分析
-  - 生成分析报告并导出
-
+### 2026-02-01 (Day 11-18)
 - `2026-02-01_018_markdown_parser.py` - **智能Markdown解析器** (Day 18)
   - 标题解析（1-6级）
   - 链接和图片提取
@@ -76,6 +24,7 @@ AI的代码学习旅程 - 每天一个代码片段，记录成长
   - 生成目录（TOC）
   - 转换为JSON/HTML格式
 
+- `2026-02-01_017_code_statistics.py` - **代码统计器** (Day 17)
 - `2026-02-01_017_code_statistics.py` - **代码统计器** (Day 17)
   - 统计代码行数（总行数、代码行、注释行、空行）
   - 统计字符数和字节数
@@ -110,17 +59,57 @@ AI的代码学习旅程 - 每天一个代码片段，记录成长
   - 最长回文子串查找（动态规划+中心扩展法）
   - 回文子串计数
 
-- `scripts/2026-02-01_103_chat_analyzer.py` - **AI对话分析器** 🗣️
-  - ChatAnalyzer 类 - 完整的对话分析框架
-  - 词频统计 (word_frequency)
-  - 话题提取 (extract_topics)
-  - 互动活跃度评分 (calculate_engagement_score)
-  - 支持导出分析报告为JSON
-  - 包含中英文混合处理和停用词过滤
-- `scripts/2026-02-01_010_code_diff_analyzer.py` - **代码差异分析器** (Day 31)
-  - 🔍 比较两个代码文件或文本的差异
-  - 📊 高亮显示添加、删除和修改的行
-  - 📈 计算相似度百分比
-  - 📝 生成格式化的差异报告
-  - 🔧 支持统一格式差异输出（类似 git diff）
-  - 💡 包含使用示例和详细文档
+- `2026-02-01_012_smart_task_manager.py` - **智能待办事项管理器** (Day 12)
+- `2026-02-01_012_smart_task_manager.py` - **智能待办事项管理器** (Day 12)
+  - 创建、列出、完成、删除待办事项
+  - 优先级设置（高/中/低）
+  - 截止日期提醒与分类标签
+  - 数据持久化存储（JSON）
+  - 包含演示示例
+
+- `2026-02-01_011_huffman_compression.py` - **Huffman压缩工具** (Day 11)
+  - 基于Huffman算法的文件压缩/解压缩
+  - 频率统计与字符编码
+  - 压缩比率计算
+  - 包含完整的演示示例
+
+- `2026-02-01_006_lcs_algorithm.py` - **最长公共子序列(LCS)算法** (Day 10)
+  - 传统动态规划解法
+  - 空间优化版本（只用两行）
+  - 只返回长度的最优版本
+  - 包含中英文测试用例
+- `2026-02-01_005_file_finder.py` - 智能文件搜索器
+- `2026-02-01_004_password_generator.py` - **智能密码生成器** (Day 9)
+  - 随机密码生成（支持自定义字符集）
+  - 易记语音密码（如 KAXI-MEPO-BUNO）
+  - 密码强度检测与分析
+- `2026-02-01_003_text_similarity.py` - **文本相似度计算器** (Day 8)
+  - 余弦相似度、Jaccard相似度
+  - Levenshtein编辑距离
+  - SimHash算法用于去重
+- `2026-02-01_090_http_toolkit.py` - HTTP工具包
+- `2026-02-01_002_sorting_algorithms.py` - 排序算法合集
+- `2026-02-01_001_quicksort.py` - 快速排序实现
+
+### 2026-01-31 (Day 1-6)
+- AI提示工程工具
+- 算法工具包
+- 配置管理器
+- 更多实用工具
+
+## 🚀 开始
+```bash
+python scripts/2026-02-01_018_markdown_parser.py
+```
+
+## 📈 统计
+- 总提交: 18+
+- 代码文件: 18+
+- 算法涵盖: 排序、搜索、动态规划、字符串处理、压缩算法、回文检测、文本摘要、缓存管理、数据验证、代码分析
+
+## 🎯 目标
+创建一个持续增长的代码旅程，展示AI的编码能力和学习过程。
+
+---
+
+*AI生成的代码，通过GitHub Actions自动提交*
