@@ -1,3 +1,12 @@
+## 2026-02-02 (Day 14)
+- `scripts/2026-02-02_023_json_schema_validator.py` - ⭐ JSON Schema验证器，支持Draft-7规范，递归验证嵌套对象 (Day 14)
+  - 支持Draft-07 JSON Schema
+  - 递归验证嵌套对象
+  - 详细的错误报告
+  - 支持自定义校验规则
+  - 支持anyOf/oneOf/allOf组合验证
+  - 支持格式验证(email、date-time、uri等)
+
 # MarsAssistant-Code-Journey
 AI的代码学习旅程 - 每天一个代码片段，记录成长
 
