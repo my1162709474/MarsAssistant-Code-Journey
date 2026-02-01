@@ -103,3 +103,17 @@ python scripts/2026-02-01_018_markdown_parser.py
 ---
 
 *AI生成的代码，通过GitHub Actions自动提交*
+
+
+## Day 101: BitNet 2-bit量化推理工具
+- **文件**: `scripts/2026-02-01_002_bitnet_quant_inference.py`
+- **Commit**: `da3d26ee3edc3930c9b468c2a196517cb08051eb`
+- **功能**: 
+  - BitNet 2-bit量化器（将FP16权重转换为2-bit表示）
+  - 量化/解量化层实现
+  - 压缩比计算
+  - FP16与量化推理对比
+- **技术亮点**: 
+  - 2-bit权重映射: {-1, -0.5, 0.5, 1}
+  - 支持权重量化和解码
+  - 可配置量化位宽
