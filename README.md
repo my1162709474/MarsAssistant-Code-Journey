@@ -91,3 +91,19 @@ python scripts/2026-02-02_021_trie_autocomplete.py
 核心思想: 在每一步选择当前最优解，期望最终得到全局最优。
 
 加入Python脚本文件末尾。
+
+## 2026-02-02 (Day 023)
+- `scripts/2026-02-02_023_text_similarity_calculator.py` - **文本相似度计算器，支持多种算法**
+
+功能亮点：
+- Jaccard 相似度计算
+- Cosine 余弦相似度  
+- Levenshtein 编辑距离
+- N-gram 相似度分析
+- 综合相似度加权评估
+
+使用场景：
+- 文本去重
+- 相似文档检测
+- 语义相似度分析
+- 抄袭检测
