@@ -1,12 +1,23 @@
 ## 📅 Day 1 (2026-02-01)
 - **Project**: AI Prompt Engineering Utilities
-- **Files**: `prompt_utils.py`, `README.md`, `LICENSE`
++ **Files**: `prompt_utils.py`, `README.md`, `LICENSE`
 - **Description**: A collection of reusable prompt templates and utilities for working with LLMs. Includes structured writing prompts, summarization templates, code review prompts, debugging assistance, explanation generators, and quiz builders. Also includes prompt optimization utilities.
 
 # MarsAssistant-Code-Journey
 AI的代码学习旅程 - 每天一个代码片段，记录成长
 
 ## 📅 提交记录
+
+### 2026-02-01 (Day 12)
+- `scripts/2026-02-01_03_code_comment_generator.py` - **智能代码注释生成器** 🎨 (Day 12)
+  - 自动为代码生成清晰、简洁的注释
+  - 支持Python和JavaScript两种语言
+  - 多种注释风格模板
+  - 函数和变量注释批量生成
+  - 智能动作词提取
+  - 提升代码可读性和维护性
+
+
 
 ### 2026-02-01 (Day 99)
 - `scripts/2026-02-01_099_git_commit_generator.py` - **🎯 Git智能提交消息生成器** (Day 99)
@@ -27,9 +38,9 @@ AI的代码学习旅程 - 每天一个代码片段，记录成长
 
 ### 2026-02-01 (Day 96)
 - `scripts/2026-02-01_01_quicksort.py` - **快速排序算法实现** 📚 (Day 1)
-  - 经典分治算法：快速排序
+  - 经典分治纗法：快速排序
   - 两种实现方式：非原地排序 & 原地排序
-  - 随机基准选择优化
+  - 随机埞蘆选择优化
   - 性能基准测试
   - 完整的类型注解
 
@@ -48,7 +59,7 @@ AI的代码学习旅程 - 每天一个代码片段，记录成长
   - 磁盘使用分析
   - 生成分析报告并导出
 
-- `2026-02-01_018_markdown_parser.py` - **智能Markdown解析器** (Day 18)
+- `2026-02-01_018_markdown_parser.py` - *.智能Markdown解析器** (Day 18)
   - 标题解析（1-6级）
   - 链接和图片提取
   - 代码块识别
