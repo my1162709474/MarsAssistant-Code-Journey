@@ -1,3 +1,13 @@
+### 2026-02-02 (Day 27)
+- `scripts/2026-02-02_27_ascii_art_generator.py` - **🎨 ASCII艺术生成器** (Day 27)
+  - 🖼️ 图片转ASCII艺术（支持调整宽度和字符集）
+  - 📝 文本转ASCII标题（大字体/小字体）
+  - 🎯 7种字符集可选（simple, detailed, blocks, binary, minimal, rainbow）
+  - 🎨 保持宽高比的图片缩放
+  - 💾 支持保存到文件
+  - 🎮 命令行界面支持
+  - 让文字和图片都变成有趣的ASCII艺术！
+
 # Day 26: 进度条生成器 - Progress Bar Generator 📊
 
 📁 **文件**: `scripts/2026-02-02_26_progress_bar.py`
