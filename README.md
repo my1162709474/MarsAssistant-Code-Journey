@@ -1,5 +1,21 @@
+### Day 44: 命令行参数解析器 (17:02) ⭐ **最新**
+- 📁 文件: `scripts/2026-02-02_44_argparse_demo.py`
+- 📊 大小: 25.8 KB
+- 💡 **命令行参数解析器** - 功能强大的CLI参数处理工具，支持多种参数风格和验证
+- 💡 **核心功能**:
+  - 🎯 **多种参数风格**: UNIX (-o, --option)、DOS (/option)、GNU (--long)、SHORT (-)
+  - 🔒 **参数验证**: 内置邮箱、URL、路径、整数、浮点数验证器
+  - 📊 **类型转换**: 自动字符串、整数、浮点数、布尔值转换
+  - 🔧 **参数约束**: 必需参数、默认值、选择列表、范围限制
+  - 🛠️ **子命令支持**: 支持嵌套子命令（类似git命令）
+  - 📖 **智能帮助**: 自动生成格式化的帮助信息
+- 💡 **使用方式**: 
+  - 创建解析器: `parser = ArgumentParser(prog="myapp", description="我的应用")`
+  - 添加参数: `parser.add_argument("-n", "--name", required=True, help="姓名")`
+  - 解析参数: `args = parser.parse_args()`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_44_argparse_demo.py
+- ✅ README.md已更新
 
-### Day 43: 智能文件管理器 (16:51) ⭐ **最新**
 - 📁 文件: `scripts/2026-02-02_43_smart_file_manager.py`
 - 📊 大小: 24.3 KB
 - 💡 **智能文件管理器** - 功能强大的命令行文件管理工具
@@ -524,3 +540,4 @@ lIIK4pSU4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSYCmBgYAo=
+
