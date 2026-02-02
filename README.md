@@ -1,4 +1,4 @@
-这是一个实用的密码强度检测工具
+# 实用密码检测工具
 
 # 密码强度检测器 (Day 17)
 
@@ -26,31 +26,6 @@ python password_strength.py
 
 
 ---
-
-## Day 20: 文件压缩解压工具
-
-📁 **文件**: `scripts/2026-02-02_020_file_compressor.py`  
-📝 **功能**: 支持ZIP/TAR.GZ/GZIP格式的压缩与解压工具
-
-### ✨ 功能特性
-- **ZIP格式**: 标准ZIP压缩，支持密码保护
-- **TAR.GZ格式**: GNU zip压缩的tar归档  
-- **GZIP格式**: 单文件gzip压缩
-- **实用功能**: 压缩、解压、列出内容、查看信息
-
-### 💻 使用示例
-```bash
-# 压缩文件夹为ZIP
-python file_compressor.py compress ./my_folder -o backup.zip
-
-# 解压ZIP文件
-python file_compressor.py extract backup.zip
-
-# 列出ZIP内容
-python file_compressor.py list backup.zip
-```
----
-
 
 # ASCII字符画生成器 (Day 19)
 
@@ -90,79 +65,72 @@ print(title)
 - 路径: `scripts/2026-02-02_19_ascii_art_generator.py`
 - 大小: 8.7 KB
 
----
+## Day 20: 文件压缩解压工具
 
-## Day 20: 正则表达式测试器
-
-📁 **文件**: `scripts/2026-02-02_020_regex_tester.py`  
-📝 **功能**: 交互式正则表达式测试工具，支持高亮显示匹配结果和模式解释
+📁 **文件**: `scripts/2026-02-02_020_file_compressor.py`
+📝 **功能**: 支持ZIP/TAR.GZ/GZIP格式的压缩与解压工具
 
 ### ✨ 功能特性
-- **交互测试**: 实时测试正则表达式匹配
-- **高亮显示**: 用 🔶 标记匹配文本
-- **捕获组信息**: 显示所有捕获组和命名组
-- **批量测试**: 支持一次性测试多个字符串
-- **模式解释**: 解释常见正则模式含义
-- **预置用例**: 包含邮箱、手机号、URL等常用测试用例
+- **ZIP格式**: 标准ZIP压缩，支持密码保护
+- **TAR.GZ格式**: GNU zip压缩的tar归档
+- **GZIP格式**: 单文件gzip压缩
+- **实用功能**: 压缩、解压、列出内容、查看信息
 
-### 💻 使用示例
-```bash
-# 交互模式
-python regex_tester.py
-
-# 快速测试
-python regex_tester.py "\d+" "测试123文本456"
-
-# 批量测试
-python regex_tester.py --batch "^\w+@\w+\.\w+$" "test@example.com" "invalid"
-```
-
-### 🎨 交互示例
-```
-请输入正则表达式: \d+
-请输入测试文本: 包含123数字456
-
-==================================================
-✅ 匹配成功!
-📍 位置: 4 - 7
-📝 匹配文本: '123'
-
-🔢 捕获组 (0个):
-
-🎨 高亮结果:
-   包含🔶123🔶数字456
-```
+### 📊 文件大小
+- 18.5 KB
 
 ---
 
-## Day 21: Markdown表格生成器 🛠️
+# Day 21: Markdown表格生成器
 
-🤖 **创建者**: OpenClaw
+📁 **文件**: `scripts/2026-02-02_21_markdown_table_generator.py`
+📝 **功能**: CSV/TSV转Markdown表格的智能转换工具
 
-**文件**: `scripts/2026-02-02_021_markdown_table_generator.py`
+### ✨ 功能特性
+- **智能格式化**: 自动计算列宽并对齐
+- **多格式支持**: CSV、TSV、JSON转Markdown
+- **Markdown表格**: 生成标准Markdown表格语法
+- **文件处理**: 支持文件输入和命令行参数
+- **输出保存**: 自动保存结果到文件
 
-**功能亮点**:
-- 支持CSV和TSV格式输入
-- 自动计算列宽并格式化
-- 生成标准Markdown表格
-- 支持命令行参数和文件输入
-- 自动保存输出到文件
+### 📊 文件大小
+- 6.5 KB
 
-**使用示例**:
-```python
-# 命令行使用
-python markdown_table_generator.py data.csv
-python markdown_table_generator.py data.tsv --tsv
+---
 
-# 直接输入数据
-python markdown_table_generator.py 'a,b,c\n1,2,3'
+# Day 22: Pomodoro Timer - 番茄钟计时器
+
+📁 **文件**: `scripts/2026-02-02_22_pomodoro_timer.py`
+📝 **功能**: 智能番茄钟时间管理工具
+
+### ✨ 功能特性
+- **🍅 番茄工作法**: 默认25分钟工作+5分钟短休息
+- **💼 智能休息**: 4个番茄钟后触发15分钟长休息
+- **🔔 多重提醒**: 桌面通知 + 语音提示
+- **📊 统计追踪**: 记录工作时长和完成数量
+- **⏸️ 灵活控制**: 暂停/跳过/重置功能
+- **⚙️ 自定义设置**: 可调整工作/休息时长
+- **💾 数据持久化**: 自动保存历史记录
+
+### 📊 文件大小
+- 10.0 KB
+
+### 使用方法
+```bash
+python scripts/2026-02-02_22_pomodoro_timer.py
 ```
 
-**输出示例**:
-```markdown
-| name   | age | city    |
-|--------|-----|---------|
-| Alice  | 25  | NewYork |
-| Bob    | 30  | London  |
-```
+### 交互命令
+- **[Enter]** - 开始/暂停/继续
+- **[p]** - 暂停/继续
+- **[s]** - 跳过当前阶段
+- **[r]** - 重置
+- **[t]** - 设置时长
+- **[i]** - 查看统计
+- **[q]** - 退出
 
+### 依赖安装
+```bash
+# 可选：安装桌面通知支持
+pip install plyer
+```
