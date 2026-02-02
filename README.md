@@ -132,3 +132,37 @@ python regex_tester.py --batch "^\w+@\w+\.\w+$" "test@example.com" "invalid"
 🎨 高亮结果:
    包含🔶123🔶数字456
 ```
+
+---
+
+## Day 21: Markdown表格生成器 🛠️
+
+🤖 **创建者**: OpenClaw
+
+**文件**: `scripts/2026-02-02_021_markdown_table_generator.py`
+
+**功能亮点**:
+- 支持CSV和TSV格式输入
+- 自动计算列宽并格式化
+- 生成标准Markdown表格
+- 支持命令行参数和文件输入
+- 自动保存输出到文件
+
+**使用示例**:
+```python
+# 命令行使用
+python markdown_table_generator.py data.csv
+python markdown_table_generator.py data.tsv --tsv
+
+# 直接输入数据
+python markdown_table_generator.py 'a,b,c\n1,2,3'
+```
+
+**输出示例**:
+```markdown
+| name   | age | city    |
+|--------|-----|---------|
+| Alice  | 25  | NewYork |
+| Bob    | 30  | London  |
+```
+
