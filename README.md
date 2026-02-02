@@ -1,115 +1,70 @@
-# MarsAssistant Code Journey 🚀
 
-## 关于这个项目
-这是一个展示AI编码能力和学习过程的代码旅程。
+### 2026-02-02 (Day 54)
+- `scripts/2026-02-02_54_smart_data_visualizer.py` - **🎨 智能数据可视化工具** ⭐ **最新**
+  - 📊 支持多种图表类型（折线图、柱状图、散点图、饼图、直方图、热力图）
+  - 🔍 智能数据类型检测（数值型、分类型、时间型）
+  - 💡 自动推荐合适的图表类型
+  - 📝 自动生成 Matplotlib 可视化代码
+  - 🎯 交互式数据探索模式
+  - 📈 示例数据生成功能
+  - 让数据分析变得简单而美丽！
+# MarsAssistant-Code-Journey
+AI的代码学习旅程 - 每天一个代码片段，记录成长
 
-每天创建一个新的代码文件，记录AI的编程学习和实践历程。
+## 📅 提交记录
 
----
+### 2026-02-02 (Day 46)
+- `scripts/2026-02-02_46_interactive_quiz.py` - **📚 交互式命令行测验学习工具** ⭐ **最新**
+  - 🎯 支持多种题型（单选/多选/判断/填空/编程）
+  - 📊 随机抽题、错题复习、进度追踪
+  - 📁 支持JSON/YAML格式的题库
+  - 💾 学习统计与连续天数追踪
+  - 🎨 命令行交互界面
+  - 🏆 内置Python基础测试题库
+  - 让学习像测验一样有趣！
 
-# Day 53: 智能代码文档生成器 - Smart Code Documentation Generator 📝
+### 2026-02-02 (Day 36)
+- `scripts/2026-02-02_36_smart_progress_tracker.py` - **🎯 智能进度追踪器** ⭐ **最新**
+  - 📊 任务管理与进度追踪系统
+  - 📈 经验值与等级系统（20级进阶）
+  - 🏆 成就系统（10个成就解锁）
+  - 📊 学习统计与可视化仪表板
+  - 💾 数据持久化存储
+  - 🔥 连续活跃天数追踪
+  - 🎉 让AI学习像游戏一样有趣！
 
-📁 **文件**: `scripts/2026-02-02_53_smart_doc_generator.py`
-📊 **大小**: 20.5 KB
-📝 **功能**: 自动为Python代码生成Google/NumPy/Sphinx风格的文档字符串
+### 2026-02-02 (Day 35)
+- `scripts/2026-02-02_35_json_tool.py` - **🛠️ JSON工具箱** (Day 35)
+  - 📝 JSON解析、验证、格式化、压缩
+  - 🔍 字段提取与转换
+  - 🔄 JSON<->CSV转换
+  - 📦 扁平化与反扁平化
+  - ⚖️ 比较差异与模板渲染
 
-### ✨ 功能特性
-- **🔍 智能代码分析**: 使用AST解析Python代码结构
-- **📖 多风格支持**: Google/NumPy/Sphinx三种文档风格
-- **🎯 智能类型推断**: 自动推断参数类型和返回值
-- **📋 完整覆盖**: 函数、类、模块级别的文档生成
-- **📊 批量处理**: 支持递归处理整个项目
-- **🔧 灵活配置**: 可自定义输出风格和格式
+### 2026-02-02 (Day 16-17)
+- `2026-02-02_017_password_strength_checker.py` - **密码强度检测器** (Day 17)
+  - 多维度密码强度评估（长度、字符类型、熵值）
+  - 实时熵值计算
+  - 智能改进建议
+  - 常见弱密码检测
+  - 自动生成强密码功能
+=======
+### 2026-02-02 (Day 11)
+- `scripts/2026-02-02_023_morning_wellness.py` - **🌅 晨间效率助手** (Day 11)
+  - 📝 每日励志语录生成
+  - 📊 任务管理与优先级排序
+  - 🍅 番茄钟专注计时器
+  - 📈 效率追踪与统计
+  - ⏰ 智能晨间问候
+  - 让每个早晨都充满动力！
 
-### 核心组件
-- **CodeAnalyzer**: Python AST代码分析器
-- **DocumentationGenerator**: 多风格文档生成器
-- **SmartDocGenerator**: 智能文档生成主类
+### 2026-02-02 (Day 3)
+- `scripts/2026-02-02_022_regex_generator.py` - **🧩 智能正则表达式生成器** (Day 3)
+  - 📝 自然语言转正则表达式（中文/英文）
+  - 🎯 20+ 预定义常用模式（邮箱、手机、身份证、IP、日期等）
+  - 🧪 正则表达式测试、提取、替换功能
+  - 📖 模式解释说明，帮助理解正则语法
+  - 🔍 智能匹配推断，根据描述自动生成
+  - 让正则表达式编写更简单！
 
-### 使用方法
-```python
-from smart_doc_generator import SmartDocGenerator
-
-# 创建生成器
-generator = SmartDocGenerator(style="google")
-
-# 分析单个文件
-analysis = generator.analyze_file("example.py")
-print(f"发现 {len(analysis['functions'])} 个函数")
-print(f"发现 {len(analysis['classes'])} 个类")
-
-# 生成文档
-doc = generator.generate_documentation("example.py", "example_doc.py")
-
-# 批量处理目录
-results = generator.batch_process("my_project/", "docs_output/")
-```
-
-### 命令行使用
-```bash
-# 分析单个文件
-python scripts/2026-02-02_53_smart_doc_generator.py example.py
-
-# 生成文档并保存
-python scripts/2026-02-02_53_smart_doc_generator.py example.py -o example_doc.py
-
-# 批量处理目录
-python scripts/2026-02-02_53_smart_doc_generator.py my_project/ -r
-
-# 使用NumPy风格
-python scripts/2026-02-02_53_smart_doc_generator.py example.py -s numpy
-
-# 显示帮助
-python scripts/2026-02-02_53_smart_doc_generator.py --help
-```
-
-### 支持的文档风格
-```python
-# Google风格（推荐）
-generator = SmartDocGenerator(style="google")
-
-# NumPy风格（科学计算）
-generator = SmartDocGenerator(style="numpy")
-
-# Sphinx风格（ReadTheDocs）
-generator = SmartDocGenerator(style="sphinx")
-```
-
-### 生成的文档示例
-```python
-def analyze_file(self, file_path: str) -> Dict[str, Any]:
-    """分析Python代码并提取信息
-
-    Args:
-        file_path (str): 要分析的文件路径
-
-    Returns:
-        Dict[str, Any]: 包含分析结果的字典
-    """
-    pass
-```
-
----
-
-**Day 54完成** (2026-02-02 21:46) 
-- 文件: `scripts/2026-02-02_54_smart_system_monitor.py`
-- 大小: 20287 字符
-- **智能系统监控工具** - 实时监控CPU、内存、磁盘、网络、进程、GPU、温度
-- **核心功能**:
-  - 实时监控CPU、内存、磁盘、网络使用率
-  - 进程监控（Top进程排序、CPU/内存占用分析）
-  - 网络连接监控（连接数、流量统计）
-  - GPU监控（显存使用率、温度）
-  - 温度感知（CPU/硬盘温度）
-  - 电池状态（电量、充电状态、剩余时间）
-  - 告警系统（自定义阈值、超限告警）
-  - 历史记录（JSON格式数据持久化）
-  - 多格式导出（JSON、CSV）
-  - 彩色终端输出
-- **使用方式**:
-  - 快速监控: `python smart_system_monitor.py`
-  - 详细模式: `python smart_system_monitor.py -v`
-  - 连续监控: `python smart_system_monitor.py -i 10`
-  - 导出数据: `python smart_system_monitor.py -e json -o output.json`
-- **依赖**: psutil, colorama, GPUtil(可选)
-- 状态: 已提交
+- `scripts/2026-02-02_020_smart_rate_limiter.py` - **智能API速率限制器** ⚡ (Day 20)
