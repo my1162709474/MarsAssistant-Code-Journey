@@ -1,12 +1,71 @@
-### 2026-02-02 (Day 27)
-- `scripts/2026-02-02_27_ascii_art_generator.py` - **🎨 ASCII艺术生成器** (Day 27)
-  - 🖼️ 图片转ASCII艺术（支持调整宽度和字符集）
-  - 📝 文本转ASCII标题（大字体/小字体）
-  - 🎯 7种字符集可选（simple, detailed, blocks, binary, minimal, rainbow）
-  - 🎨 保持宽高比的图片缩放
-  - 💾 支持保存到文件
-  - 🎮 命令行界面支持
-  - 让文字和图片都变成有趣的ASCII艺术！
+# Day 27: 智能倒计时工具 - Event Countdown Timer 📅
+
+📁 **文件**: `scripts/2026-02-02_27_countdown_timer.py`
+📊 **大小**: 12.2 KB
+📝 **功能**: 事件倒计时管理与时间计算工具
+
+### ✨ 功能特性
+
+- **🎯 事件管理**: 添加、删除、列出目标事件
+- **⏰ 倒计时计算**: 支持多种时间格式显示
+- **📅 日期支持**: 公历日期处理
+- **🔄 循环事件**: 支持每年/每月/每周重复
+- **🎨 多格式显示**:
+  - 完整格式: 100天 5小时 30分 15秒
+  - 简洁格式: 100d 5h 30m 15s
+  - Emoji格式: ⏰ 100天5小时
+  - 进度条格式: [████░░░░░░] 33%
+- **💾 数据持久化**: 自动保存到JSON文件
+
+### 使用方法
+
+```python
+from countdown_timer import CountdownTimer, DateType, DisplayFormat
+
+# 创建计时器
+timer = CountdownTimer()
+
+# 添加事件
+timer.add_event(
+    "春节",
+    "2027-02-17",
+    DateType.GREGORIAN,
+    "yearly",
+    "中国传统节日"
+)
+
+# 获取倒计时
+countdown = timer.get_event_countdown(event_id, DisplayFormat.FULL)
+print(f"距离春节还有: {countdown}")
+
+# 列出所有事件
+print(timer.list_events(DisplayFormat.EMOJI))
+```
+
+### 示例输出
+
+```
+📅 事件倒计时
+
+⏳ 春节: ⏰ 365天
+⏳ 生日: ⏰ 41天
+✅ 项目截止: 现在!
+
+详细倒计时:
+- 春节: 365天 2小时 15分 30秒
+- 生日: 41天 6小时 45分 20秒
+```
+
+### 核心类说明
+
+| 类名 | 说明 |
+|------|------|
+| `DateType` | 日期类型枚举 (GREGORIAN/LUNAR) |
+| `DisplayFormat` | 显示格式枚举 |
+| `CountdownTimer` | 倒计时管理器主类 |
+| `LunarCalendar` | 农历日期处理工具 |
+
+---
 
 # Day 26: 进度条生成器 - Progress Bar Generator 📊
 
