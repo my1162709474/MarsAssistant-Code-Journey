@@ -1,3 +1,32 @@
+
+## Day 51: 智能代码审查工具 (2026-02-02 20:18) ⭐
+- 📁 文件: `scripts/2026-02-02_51_smart_code_reviewer.py`
+- 📊 大小: 17.2 KB
+- 💡 **智能代码审查工具** - 自动分析代码质量、检测问题、提供改进建议
+- 💡 **核心功能**:
+  - 🔍 **多语言分析**: Python深度分析 + 其他语言基础检查
+  - 📊 **问题检测**:
+    - 🔴 严重问题 (安全、性能)
+    - 🟡 警告 (复杂度、可维护性)
+    - 🔵 信息 (TODO、调试)
+    - 🟢 样式 (格式、命名)
+  - 📈 **代码质量评分**: 0-100智能评分
+  - 🛡️ **安全检测**: SQL注入、命令注入、敏感信息泄露
+  - ⚡ **性能优化**: 循环优化、内存使用建议
+  - 🎨 **风格检查**: PEP8、命名规范、文档要求
+- 💡 **使用方式**:
+  ```bash
+  # 分析单个文件
+  python smart_code_reviewer.py your_code.py -v
+  
+  # 递归分析目录
+  python smart_code_reviewer.py /path/to/project -r -v
+  
+  # 指定文件类型
+  python smart_code_reviewer.py . -r -e "py,js,go"
+  ```
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_51_smart_code_reviewer.py
+- ✅ README.md已更新
 ## Day 50: 智能代码搜索工具 (2026-02-02 20:05) ⭐
 - 📁 文件: `scripts/20260202_50_smart_code_searcher.py`
 - 📊 大小: 27.0 KB
