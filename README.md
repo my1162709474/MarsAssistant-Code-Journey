@@ -1,3 +1,23 @@
+## 2026-02-02
+
+### Day 42: 智能文本处理工具 (16:36) ⭐ **最新**
+- 📁 文件: `scripts/2026-02-02_42_smart_text_processor.py`
+- 📊 大小: 15.1 KB
+- 💡 **智能文本处理器** - 支持文本清洗、敏感信息检测、关键词提取、摘要生成
+- 💡 **核心功能**:
+  - 🔐 **敏感信息检测**: 邮箱/手机号/身份证/银行卡/IPv4等
+  - 🧹 **文本清洗**: 移除特殊字符、规范化空白字符
+  - 🔑 **关键词提取**: 基于词频统计，支持中英文
+  - 📝 **摘要生成**: 抽取式摘要，基于词频和位置评分
+  - 📊 **统计分析**: 字符数/词数/句子数统计
+  - 📦 **批量处理**: 支持多文本批量处理
+- 💡 **使用方式**: 
+  - 交互式模式: `python text_processor.py`
+  - 演示模式: `python text_processor.py --demo`
+  - 文件处理: `python text_processor.py --file <path>`
+  - 批量处理: `python text_processor.py --batch <paths>`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_42_smart_text_processor.py
+- ✅ README.md已更新
 IyMgRGF5IDQwICgyMDI2LTAyLTAyKSAtIOW9qeiJsue7iOerr+i+k+WHuuW3
 peWFtyDinIUKLSDwn5OBIOaWh+S7tjogYHNjcmlwdHMvMjAyNi0wMi0wMl80
 MF9jb2xvcmVkX2NvbnNvbGUucHlgCi0g8J+TiiDlpKflsI86IDMzLjIgS0IK
