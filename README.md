@@ -1,648 +1,712 @@
-### Day 52: 智能数据可视化工具 (20:48) ⭐ **最新**
-- 📁 文件: `scripts/2026-02-02_52_smart_data_visualizer.py`
-- 📊 大小: 22.9 KB
-- 💡 **智能数据可视化工具** - 支持多种图表类型自动推荐和生成
+
+## Day 38 (2026-02-02) - 文件哈希验证工具 ✅
+- 📁 文件: `scripts/2026-02-02_38_file_hash_tool.py`
+- 📊 大小: 11.0 KB
+- 💡 **文件哈希验证工具** - 支持多种哈希算法(MD5/SHA-1/SHA-256/SHA-512)
 - 💡 **核心功能**:
-  - 📊 **自动图表推荐**: 基于数据特征智能推荐最佳图表类型
-  - 📈 **多图表支持**: 折线图/柱状图/散点图/饼图/热力图/箱线图/直方图/面积图
-  - 🔍 **数据分析**: 自动识别数据类型并计算统计信息
-  - 🎨 **智能配色**: 5种预设配色方案
-  - 📁 **多格式导出**: PNG/SVG/HTML格式输出
-  - 💻 **交互模式**: 命令行交互式数据可视化
-- 💡 **使用方式**:
-  - 交互模式: `python smart_data_visualizer.py`
-  - 演示模式: `python smart_data_visualizer.py --demo`
-  - API模式: `python smart_data_visualizer.py --api`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_52_smart_data_visualizer.py
-- ✅ README.md已更新
-
-### Day 47: 智能聊天机器人框架 (20:32) ⭐ **最新**
-- 📁 文件: `scripts/2026-02-02_47_smart_chatbot_framework.py`
-- 📊 大小: 9.0 KB
-- 💡 **智能聊天机器人框架** - 支持多种聊天API、上下文管理、对话历史、插件扩展
-- 💡 **核心功能**:
-  - 🎯 **多提供商支持**: OpenAI、Anthropic等API统一接口
-  - 💬 **对话管理**: 创建/管理多个对话，保存历史记录
-  - 🔌 **插件系统**: 可扩展的插件架构，支持前置/后置处理
-  - 🧠 **记忆插件**: 自动总结和压缩对话历史
-  - 🛡️ **敏感词过滤**: 内置敏感词检测和过滤功能
-  - 📊 **上下文管理**: 智能管理对话上下文，支持历史裁剪
-- 💡 **使用方式**:
-  - 创建机器人: `manager.create_bot("bot_id", provider, system_prompt)`
-  - 发送消息: `bot.chat(conv_id, "你好!")`
-  - 获取历史: `bot.get_history(conv_id)`
-  - 添加插件: `bot.add_plugin(MemoryPlugin())`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_47_smart_chatbot_framework.py
-- ✅ README.md已更新
-
-### Day 46: 智能剪贴板管理器 (17:56)
-- 📁 文件: `scripts/2026-02-02_46_smart_clipboard_manager.py`
-- 📊 大小: 26.4 KB
-- 💡 **智能剪贴板管理器** - 功能强大的命令行剪贴板历史管理工具
-- 💡 **核心功能**:
-  - 📝 **历史记录**: 自动保存剪贴板内容，支持去重
-  - 🔍 **智能搜索**: 按内容、标题、标签搜索
-  - 🏷️ **标签系统**: 支持自定义标签和分类
-  - ⭐ **收藏功能**: 标记重要条目
-  - 📊 **使用统计**: 统计使用频率和分布
-  - 💾 **导入导出**: 支持JSON格式导出导入
-  - 🎯 **交互模式**: 提供命令行交互界面
-- 💡 **支持的内容类型**:
-  - 📄 纯文本
-  - 💻 代码片段
-  - 🔗 URL链接
-  - 📧 邮箱地址
-  - 📁 文件路径
-  - 📋 JSON数据
-- 💡 **使用方式**:
-  - 添加内容: `python clipboard_manager.py add "内容"`
-  - 列出历史: `python clipboard_manager.py list --limit 20`
-  - 搜索内容: `python clipboard_manager.py search "关键词"`
-  - 进入交互: `python clipboard_manager.py interactive`
-  - 查看统计: `python clipboard_manager.py stats`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_46_smart_clipboard_manager.py
-- ✅ README.md已更新
-
-### Day 45: 正则表达式测试器 (17:27)
-- 📁 文件: `scripts/2026-02-02_45_smart_regex_tester.py`
-- 📊 大小: 20.2 KB
-- 💡 **正则表达式测试器和学习工具** - 功能强大的正则表达式测试和学习工具
-- 💡 **核心功能**:
-  - 🎯 **交互式测试模式** - 实时测试正则表达式匹配效果
-  - 📚 **常用模板库** - 20+预定义正则表达式模板（邮箱、手机、URL、IP地址、日期等）
-  - 🔍 **智能解释器** - 自动解析正则表达式语法并提供说明
-  - 🎨 **彩色高亮显示** - 终端输出高亮匹配结果
-  - 📊 **多种匹配模式** - 支持findall/search/match/finditer
-  - 🔧 **灵活标志设置** - 支持i/m/s/x/u标志组合
-  - 📜 **使用历史记录** - 自动记录最近使用的正则表达式
-  - 📖 **详细帮助系统** - 内置完整的使用帮助
-- 💡 **支持场景**:
-  - 开发调试正则表达式
-  - 学习正则表达式语法
-  - 快速验证匹配规则
-  - 数据提取和清洗
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_45_smart_regex_tester.py
-- ✅ README.md已更新
-
-### Day 52: 智能API测试与文档生成器 (21:06) ⭐ **最新**
-- 📁 文件: `scripts/20260202_52_smart_api_tester.py`
-- 📊 大小: 7.2 KB
-- 💡 **智能API测试与文档生成器** - 自动分析API端点、生成测试用例和文档
-- 💡 **核心功能**:
-  - 🎯 **端点管理** - 添加、测试多种HTTP方法(GET/POST/PUT/DELETE)
-  - 🧪 **自动化测试** - 支持请求参数、请求体、自动处理响应
-  - 📖 **文档生成** - 自动生成Markdown格式的API文档
-  - 📦 **Postman集合** - 导出兼容Postman的JSON集合文件
-  - 📊 **测试摘要** - 统计通过/失败数量，彩色输出结果
-- 💡 **使用方式**:
-  - 初始化测试器: `tester = SmartAPITester(base_url, headers)`
-  - 添加端点: `tester.add_endpoint("GET", "/users", "获取用户列表")`
-  - 运行测试: `tester.test_all()`
-  - 生成文档: `doc = tester.generate_documentation()`
-  - 导出Postman: `collection = tester.export_postman_collection()`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260202_52_smart_api_tester.py
-- ✅ README.md已更新
-
-### Day 44: 命令行参数解析器 (17:02)
-- 📁 文件: `scripts/2026-02-02_44_argparse_demo.py`
-- 📊 大小: 25.8 KB
-- 💡 **命令行参数解析器** - 功能强大的CLI参数处理工具，支持多种参数风格和验证
-- 💡 **核心功能**:
-  - 🎯 **多种参数风格**: UNIX (-o, --option)、DOS (/option)、GNU (--long)、SHORT (-)
-  - 🔒 **参数验证**: 内置邮箱、URL、路径、整数、浮点数验证器
-  - 📊 **类型转换**: 自动字符串、整数、浮点数、布尔值转换
-  - 🔧 **参数约束**: 必需参数、默认值、选择列表、范围限制
-  - 🛠️ **子命令支持**: 支持嵌套子命令（类似git命令）
-  - 📖 **智能帮助**: 自动生成格式化的帮助信息
-- 💡 **使用方式**: 
-  - 创建解析器: `parser = ArgumentParser(prog="myapp", description="我的应用")`
-  - 添加参数: `parser.add_argument("-n", "--name", required=True, help="姓名")`
-  - 解析参数: `args = parser.parse_args()`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_44_argparse_demo.py
-- ✅ README.md已更新
-
-- 📁 文件: `scripts/2026-02-02_43_smart_file_manager.py`
-- 📊 大小: 24.3 KB
-- 💡 **智能文件管理器** - 功能强大的命令行文件管理工具
-- 💡 **核心功能**:
-  - 📁 **文件操作**: 复制/移动/删除/重命名
-  - 🔍 **高级搜索**: 按名称/大小/时间/类型/内容搜索
-  - 📊 **批量重命名**: 序号/日期/正则替换
-  - 🏷️ **属性管理**: 权限修改/时间戳设置
-  - 📈 **磁盘分析**: 使用统计/大文件查找
-  - 🗜️ **压缩解压**: ZIP/TAR格式支持
-  - 🔗 **符号链接**: 创建/查找损坏链接
-- 💡 **使用方式**: 
-  - 复制: `python file_manager.py copy src dst`
-  - 搜索: `python file_manager.py search "*.py" --dir /project`
-  - 重命名: `python file_manager.py rename "*.txt" "*.md" --apply`
-  - 磁盘分析: `python file_manager.py du /project`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_43_smart_file_manager.py
-- ✅ README.md已更新
+  - 🔐 多种哈希算法支持
+  - 📦 批量目录处理和递归扫描
+  - ✅ 校验和文件生成与验证
+  - 🔄 增量备份模式
+  - 📊 文件完整性检查
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_38_file_hash_tool.py
 
 
-## 2026-02-02
+# Day 36: 数据验证与清洗工具 - Data Validation & Sanitization Library 🛡️
 
-### Day 42: 智能文本处理工具 (16:36) ⭐ **最新**
-- 📁 文件: `scripts/2026-02-02_42_smart_text_processor.py`
-- 📊 大小: 15.1 KB
-- 💡 **智能文本处理器** - 支持文本清洗、敏感信息检测、关键词提取、摘要生成
-- 💡 **核心功能**:
-  - 🔐 **敏感信息检测**: 邮箱/手机号/身份证/银行卡/IPv4等
-  - 🧹 **文本清洗**: 移除特殊字符、规范化空白字符
-  - 🔑 **关键词提取**: 基于词频统计，支持中英文
-  - 📝 **摘要生成**: 抽取式摘要，基于词频和位置评分
-  - 📊 **统计分析**: 字符数/词数/句子数统计
-  - 📦 **批量处理**: 支持多文本批量处理
-- 💡 **使用方式**: 
-  - 交互式模式: `python text_processor.py`
-  - 演示模式: `python text_processor.py --demo`
-  - 文件处理: `python text_processor.py --file <path>`
-  - 批量处理: `python text_processor.py --batch <paths>`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_42_smart_text_processor.py
-- ✅ README.md已更新
-IyMgRGF5IDQwICgyMDI2LTAyLTAyKSAtIOW9qeiJsue7iOerr+i+k+WHuuW3
-peWFtyDinIUKLSDwn5OBIOaWh+S7tjogYHNjcmlwdHMvMjAyNi0wMi0wMl80
-MF9jb2xvcmVkX2NvbnNvbGUucHlgCi0g8J+TiiDlpKflsI86IDMzLjIgS0IK
-LSDwn5KhICoq5b2p6Imy57uI56uv6L6T5Ye65bel5YW3KiogLSDlip/og73k
-uLDlr4znmoRDTEnlvanoibLovpPlh7rlkozmoLzlvI/ljJblt6XlhbcKLSDw
-n5KhICoq5qC45b+D5Yqf6IO9Kio6CiAgLSDwn46oIOWkmuenjeminOiJsuaU
-r+aMge+8iOWfuuehgOiJsi/pq5jkuq7oibIv6IOM5pmv6ImyL+agt+W8j++8
-iQogIC0g8J+TnSDml6Xlv5fnuqfliKvovpPlh7rvvIhERUJVRy9JTkZPL1NV
-Q0NFU1MvV0FSTklORy9FUlJPUi9DUklUSUNBTO+8iQogIC0g8J+TiiDooajm
-oLzovpPlh7rvvIjmlK/mjIHnvZHmoLzjgIHlr7npvZDmlrnlvI/vvIkKICAt
-IPCfk4gg6L+b5bqm5p2h5ZKM5Yqg6L295Yqo55S7CiAgLSDwn4yIIOW9qeiZ
-ueWSjOa4kOWPmOaWh+acrOaViOaenAogIC0g8J+TpiDmoJHlvaLnu5PmnoTl
-sZXnpLoKICAtIPCfkqwg5Luj56CB5Z2X5ZKM5byV55So5qC35byPCiAgLSDi
-mqDvuI8g6K2m5ZGK5qGG5ZKM5L+h5oGv5qGGCiAgLSDwn5SnIOe8qei/m+eu
-oeeQhuWSjOiHquWumuS5iemFjee9rgotIPCflJcgaHR0cHM6Ly9naXRodWIu
-Y29tL215MTE2MjcwOTQ3NC9NYXJzQXNzaXN0YW50LUNvZGUtSm91cm5leS9i
-bG9iL21haW4vc2NyaXB0cy8yMDI2LTAyLTAyXzQwX2NvbG9yZWRfY29uc29s
-ZS5weQoKCiMjIERheSAzOSAoMjAyNi0wMi0wMikgLSDlrp7ml7bmlofku7bn
-s7vnu5/nm5Hmjqflmagg4pyFCi0g8J+TgSDmlofku7Y6IGBzY3JpcHRzLzIw
-MjYtMDItMDJfMzlfZmlsZV9tb25pdG9yLnB5YAotIPCfk4og5aSn5bCPOiAx
-Ni44IEtCCi0g8J+SoSAqKuWunuaXtuaWh+S7tuezu+e7n+ebkeaOp+WZqCoq
-IC0g5a6e5pe255uR5o6n55uu5b2VL+aWh+S7tueahOWIm+W7uuOAgeS/ruaU
-ueOAgeWIoOmZpOS6i+S7tgotIPCfkqEgKirmoLjlv4Plip/og70qKjoKICAt
-IPCflI0g5a6e5pe25paH5Lu25LqL5Lu255uR5o6nCiAgLSDwn5OKIOWumuaX
-tuaxh+aAu+aKpeWRigogIC0g8J+OryDmraPliJnooajovr7lvI/ov4fmu6QK
-ICAtIPCfk4gg5LqL5Lu257uf6K6h5YiG5p6QCiAgLSDwn5K+IOaUr+aMgeWk
-muenjei+k+WHuuagvOW8j++8iOaWh+acrC9KU09O77yJCiAgLSDwn46tIOWk
-muenjeebkeaOp+aooeW8j++8muS6pOS6kuW8jy/lrojmiqTov5vnqIsv5a6a
-5pe25oql5ZGKL+S7heebkeaOp+aWsOaWh+S7tgogIC0g8J+TgSDmlK/mjIHp
-gJLlvZLnm5HmjqflrZDnm67lvZUKICAtIPCfk48g5paH5Lu25aSn5bCP5qC8
-5byP5YyW5pi+56S6CiAgLSDwn5SQIOaWh+S7tuWTiOW4jOWAvOiuoeeul++8
-iE1ENe+8iQogIC0g8J+TiCDkuovku7bnsbvlnovliIbluIPnu5/orqEKLSDw
-n5SXIGh0dHBzOi8vZ2l0aHViLmNvbS9teTExNjI3MDk0NzQvTWFyc0Fzc2lz
-dGFudC1Db2RlLUpvdXJuZXkvYmxvYi9tYWluL3NjcmlwdHMvMjAyNi0wMi0w
-Ml8zOV9maWxlX21vbml0b3IucHkKCgojIyBEYXkgMzggKDIwMjYtMDItMDIp
-IC0g5paH5Lu25ZOI5biM6aqM6K+B5bel5YW3IOKchQotIPCfk4Eg5paH5Lu2
-OiBgc2NyaXB0cy8yMDI2LTAyLTAyXzM4X2ZpbGVfaGFzaF90b29sLnB5YAot
-IPCfk4og5aSn5bCPOiAxMS4wIEtCCi0g8J+SoSAqKuaWh+S7tuWTiOW4jOmq
-jOivgeW3peWFtyoqIC0g5pSv5oyB5aSa56eN5ZOI5biM566X5rOVKE1ENS9T
-SEEtMS9TSEEtMjU2L1NIQS01MTIpCi0g8J+SoSAqKuaguOW/g+WKn+iDvSoq
-OgogIC0g8J+UkCDlpJrnp43lk4jluIznrpfms5XmlK/mjIEKICAtIPCfk6Yg
-5om56YeP55uu5b2V5aSE55CG5ZKM6YCS5b2S5omr5o+PCiAgLSDinIUg5qCh
-6aqM5ZKM5paH5Lu255Sf5oiQ5LiO6aqM6K+BCiAgLSDwn5SEIOWinumHj+Wk
-h+S7veaooeW8jwogIC0g8J+TiiDmlofku7blrozmlbTmgKfmo4Dmn6UKLSDw
-n5SXIGh0dHBzOi8vZ2l0aHViLmNvbS9teTExNjI3MDk0NzQvTWFyc0Fzc2lz
-dGFudC1Db2RlLUpvdXJuZXkvYmxvYi9tYWluL3NjcmlwdHMvMjAyNi0wMi0w
-Ml8zOF9maWxlX2hhc2hfdG9vbC5weQoKCiMgRGF5IDM2OiDmlbDmja7pqozo
-r4HkuI7muIXmtJflt6XlhbcgLSBEYXRhIFZhbGlkYXRpb24gJiBTYW5pdGl6
-YXRpb24gTGlicmFyeSDwn5uh77iPCgrwn5OBICoq5paH5Lu2Kio6IGBzY3Jp
-cHRzLzIwMjYtMDItMDJfMzZfZGF0YV92YWxpZGF0b3IucHlgCvCfk4ogKirl
-pKflsI8qKjogMjMuOCBLQgrwn5OdICoq5Yqf6IO9Kio6IOWFqOmdoueahOaV
-sOaNrumqjOivgeWSjOa4hea0l+W6k++8jOaUr+aMgeWkmuenjeaVsOaNruex
-u+Wei+eahOmqjOivgeWSjOWHgOWMlgoKIyMjIOKcqCDlip/og73nibnmgKcK
-LSAqKvCfk6cg6YKu566x6aqM6K+BKio6IFJGQyA1MzIy5qCH5YeG5qC85byP
-6aqM6K+BCi0gKirwn5SXIFVSTOmqjOivgSoqOiBIVFRQL0hUVFBTL0ZUUOmT
-vuaOpemqjOivgQotICoq8J+TsSDmiYvmnLrlj7fpqozor4EqKjog5aSa5Zu9
-5a6255S16K+d5Y+356CB5pSv5oyB77yIQ04vVVMvVUsvSlDnrYnvvIkKLSAq
-KvCflJIgU1FM5rOo5YWl6Ziy5oqkKio6IOWkmue6p+WIq1NRTOazqOWFpeaj
-gOa1i+WSjOa4hea0lwotICoq8J+aqyBYU1PmlLvlh7vpmLLmiqQqKjog5aSa
-56eNWFNT5pS75Ye75qih5byP5qOA5rWL5ZKM6L+H5rukCi0gKirwn5OKIOaV
-sOaNruexu+Wei+mqjOivgSoqOiDlrZfnrKbkuLLjgIHmlbDlrZfjgIHliJfo
-oajnrYnnsbvlnovpqozor4EKLSAqKvCfk4sgSlNPTiBTY2hlbWHpqozor4Eq
-Kjog57G75Ly8SlNPTiBTY2hlbWHnmoTpqozor4Hop4TliJkKLSAqKvCflKcg
-6Ieq5a6a5LmJ6aqM6K+BKio6IOaUr+aMgea3u+WKoOiHquWumuS5iemqjOiv
-geWZqAotICoq8J+SrCDlpJror63oqIDmj5DnpLoqKjog5Lit6Iux5paH6ZSZ
-6K+v5o+Q56S65pSv5oyBCi0gKirwn5OIIOmqjOivgee7n+iuoSoqOiDpqozo
-r4Hnu5Pmnpznu5/orqHmiqXlkYoKCiMjIyDkvb/nlKjmlrnms5UKYGBgcHl0
-aG9uCmZyb20gZGF0YV92YWxpZGF0b3IgaW1wb3J0IERhdGFWYWxpZGF0b3Is
-IFZhbGlkYXRpb25SZXN1bHQKCiMg5Yib5bu66aqM6K+B5ZmoCnZhbGlkYXRv
-ciA9IERhdGFWYWxpZGF0b3IoKQoKIyDpgq7nrrHpqozor4EKcmVzdWx0ID0g
-dmFsaWRhdG9yLnZhbGlkYXRlX2VtYWlsKCJ1c2VyQGV4YW1wbGUuY29tIikK
-cHJpbnQoZiJWYWxpZDoge3Jlc3VsdC5pc192YWxpZH0sIENsZWFuZWQ6IHty
-ZXN1bHQuY2xlYW5lZF92YWx1ZX0iKQoKIyBVUkzpqozor4EKcmVzdWx0ID0g
-dmFsaWRhdG9yLnZhbGlkYXRlX3VybCgiaHR0cHM6Ly93d3cuZXhhbXBsZS5j
-b20iKQpwcmludChmIlZhbGlkOiB7cmVzdWx0LmlzX3ZhbGlkfSIpCgojIOaJ
-i+acuuWPt+mqjOivgQpyZXN1bHQgPSB2YWxpZGF0b3IudmFsaWRhdGVfcGhv
-bmUoIjEzODEyMzQ1Njc4IiwgIkNOIikKcHJpbnQoZiJWYWxpZDoge3Jlc3Vs
-dC5pc192YWxpZH0iKQoKIyBTUUzms6jlhaXmo4DmtYsKZGV0ZWN0ZWQsIHBh
-dHRlcm5zID0gdmFsaWRhdG9yLmRldGVjdF9zcWxfaW5qZWN0aW9uKCJub3Jt
-YWwgdGV4dCIpCnByaW50KGYiU1FMIEluamVjdGlvbjoge2RldGVjdGVkfSIp
-CgojIFhTU+ajgOa1iwpkZXRlY3RlZCwgcGF0dGVybnMgPSB2YWxpZGF0b3Iu
-ZGV0ZWN0X3hzcygiPHNjcmlwdD5hbGVydCgneHNzJyk8L3NjcmlwdD4iKQpw
-cmludChmIlhTUyBBdHRhY2s6IHtkZXRlY3RlZH0iKQoKIyDovpPlhaXmuIXm
-tJcKY2xlYW4gPSB2YWxpZGF0b3Iuc2FuaXRpemVfaW5wdXQoIiAgPHNjcmlw
-dD5hbGVydCgneHNzJyk8L3NjcmlwdD4gICcgT1IgJzEnPScxICAiKQpwcmlu
-dChmIkNsZWFuZWQ6IHtjbGVhbn0iKQoKIyBTY2hlbWHpqozor4EKc2NoZW1h
-ID0gewogICAgJ25hbWUnOiB7J3R5cGUnOiAnc3RyaW5nJywgJ3JlcXVpcmVk
-JzogVHJ1ZSwgJ21heF9sZW5ndGgnOiA1MH0sCiAgICAnYWdlJzogeyd0eXBl
-JzogJ251bWJlcicsICdtaW4nOiAwLCAnbWF4JzogMTUwfSwKICAgICdlbWFp
-bCc6IHsndHlwZSc6ICdzdHJpbmcnLCAncmVxdWlyZWQnOiBUcnVlfQp9CmRh
-dGEgPSB7J25hbWUnOiAn5byg5LiJJywgJ2FnZSc6IDI1LCAnZW1haWwnOiAn
-dGVzdEBleGFtcGxlLmNvbSd9CnJlc3VsdHMgPSB2YWxpZGF0b3IudmFsaWRh
-dGVfd2l0aF9zY2hlbWEoZGF0YSwgc2NoZW1hKQpgYGAKCiMjIyDlkb3ku6To
-oYzkvb/nlKgKYGBgYmFzaAojIOi/kOihjOa8lOekugpweXRob24gc2NyaXB0
-cy8yMDI2LTAyLTAyXzM2X2RhdGFfdmFsaWRhdG9yLnB5CmBgYAoKIyMjIOmq
-jOivgee6p+WIqwpgYGBweXRob24KZnJvbSBkYXRhX3ZhbGlkYXRvciBpbXBv
-cnQgU2FuaXRpemF0aW9uTGV2ZWwKCiMg5Z+656GA5riF5rSXCmNsZWFuID0g
-dmFsaWRhdG9yLnNhbml0aXplX3NxbChpbnB1dF90ZXh0LCBTYW5pdGl6YXRp
-b25MZXZlbC5CQVNJQykKCiMg5Lit562J5riF5rSX77yI5o6o6I2Q77yJCmNs
-ZWFuID0gdmFsaWRhdG9yLnNhbml0aXplX3NxbChpbnB1dF90ZXh0LCBTYW5p
-dGl6YXRpb25MZXZlbC5NT0RFUkFURSkKCiMg5r+A6L+b5riF5rSXCmNsZWFu
-ID0gdmFsaWRhdG9yLnNhbml0aXplX3NxbChpbnB1dF90ZXh0LCBTYW5pdGl6
-YXRpb25MZXZlbC5BR0dSRVNTSVZFKQpgYGAKCi0tLQoKIyBEYXkgMzU6IEpT
-T07lt6XlhbfnrrEgLSBKU09OIFRvb2xraXQg8J+TpgoK8J+TgSAqKuaWh+S7
-tioqOiBgc2NyaXB0cy8yMDI2LTAyLTAyXzM1X2pzb25fdG9vbC5weWAK8J+T
-iiAqKuWkp+WwjyoqOiAxMy43IEtCCvCfk50gKirlip/og70qKjogSlNPTuin
-o+aekOmqjOivgeagvOW8j+WMlui9rOaNouW3peWFtwoKIyMjIOKcqCDlip/o
-g73nibnmgKcKLSAqKuKchSBKU09O6K+t5rOV6aqM6K+BKio6IOajgOa1i0pT
-T07or63ms5XplJnor68KLSAqKvCfk50g5qC85byP5YyWL+WOi+e8qSoqOiDn
-vo7ljJbmiJbljovnvKlKU09O6L6T5Ye6Ci0gKirwn5SNIOWtl+auteaPkOWP
-lioqOiDku45KU09O5Lit5o+Q5Y+W5oyH5a6a5a2X5q61Ci0gKirwn5SEIEpT
-T048LT5DU1bovazmjaIqKjog5pSv5oyB5Y+M5ZCR6L2s5o2iCi0gKirwn5OL
-IOaJgeW5s+WMli/lj43miYHlubPljJYqKjog5bWM5aWXSlNPTuS4juaJgeW5
-s+WMluS6kui9rAotICoq4pqW77iPIOavlOi+g+W3ruW8gioqOiDlr7nmr5Tk
-uKTkuKpKU09O5a+56LGh55qE5beu5byCCi0gKirwn5OEIOaooeadv+a4suaf
-kyoqOiDln7rkuo5KU09O5qih5p2/55Sf5oiQ5YaF5a65CgojIyMg5L2/55So
-5pa55rOVCmBgYHB5dGhvbgpmcm9tIGpzb25fdG9vbGJveCBpbXBvcnQgSlNP
-TlRvb2xib3gKCnRvb2xib3ggPSBKU09OVG9vbGJveCgpCgojIOmqjOivgUpT
-T04KaXNfdmFsaWQgPSB0b29sYm94LnZhbGlkYXRlX2pzb24oJ3sibmFtZSI6
-ICJKb2huIn0nKQoKIyDmoLzlvI/ljJYKZm9ybWF0dGVkID0gdG9vbGJveC5m
-b3JtYXRfanNvbigneyJuYW1lIjoiSm9obiJ9JykKCiMg5o+Q5Y+W5a2X5q61
-CmRhdGEgPSB7InVzZXIiOiB7InByb2ZpbGUiOiB7Im5hbWUiOiAiSm9obiJ9
-fX0KcmVzdWx0ID0gdG9vbGJveC5leHRyYWN0X2ZpZWxkKGRhdGEsICJ1c2Vy
-LnByb2ZpbGUubmFtZSIpCgojIOaJgeW5s+WMlgpmbGF0ID0gdG9vbGJveC5m
-bGF0dGVuKHsiYSI6IHsiYiI6IHsiYyI6IDF9fX0pCiMg57uT5p6cOiB7ImEu
-Yi5jIjogMX0KCiMg5q+U6L6D5beu5byCCmRpZmYgPSB0b29sYm94LmNvbXBh
-cmVfZGlmZigKICAgIHsiYSI6IDEsICJiIjogMn0sCiAgICB7ImEiOiAxLCAi
-YyI6IDN9CikKYGBgCgojIyMg5ZG95Luk6KGM5L2/55SoCmBgYGJhc2gKIyDk
-uqTkupLmqKHlvI8KcHl0aG9uIHNjcmlwdHMvMjAyNi0wMi0wMl8zNV9qc29u
-X3Rvb2wucHkKCiMg6aqM6K+BSlNPTuaWh+S7tgpweXRob24gc2NyaXB0cy8y
-MDI2LTAyLTAyXzM1X2pzb25fdG9vbC5weSB2YWxpZGF0ZSBkYXRhLmpzb24K
-CiMg5qC85byP5YyW5bm26L6T5Ye6CnB5dGhvbiBzY3JpcHRzLzIwMjYtMDIt
-MDJfMzVfanNvbl90b29sLnB5IGZvcm1hdCBjb21wYWN0Lmpzb24gcHJldHR5
-Lmpzb24KCiMg5o+Q5Y+W5a2X5q61CnB5dGhvbiBzY3JpcHRzLzIwMjYtMDIt
-MDJfMzVfanNvbl90b29sLnB5IGV4dHJhY3QgY29uZmlnLmpzb24gImRhdGFi
-YXNlLmhvc3QiCgojIENTVui9rEpTT04KcHl0aG9uIHNjcmlwdHMvMjAyNi0w
-Mi0wMl8zNV9qc29uX3Rvb2wucHkgY3N2Mmpzb24gZGF0YS5jc3YgZGF0YS5q
-c29uCgojIEpTT07ovaxDU1YKcHl0aG9uIHNjcmlwdHMvMjAyNi0wMi0wMl8z
-NV9qc29uX3Rvb2wucHkganNvbjJjc3YgZGF0YS5qc29uIGRhdGEuY3N2Cgoj
-IOaJgeW5s+WMlgpweXRob24gc2NyaXB0cy8yMDI2LTAyLTAyXzM1X2pzb25f
-dG9vbC5weSBmbGF0dGVuIG5lc3RlZC5qc29uIGZsYXQuanNvbgoKIyDlj43m
-iYHlubPljJYKcHl0aG9uIHNjcmlwdHMvMjAyNi0wMi0wMl8zNV9qc29uX3Rv
-b2wucHkgdW5mbGF0dGVuIGZsYXQuanNvbiBuZXN0ZWQuanNvbgoKIyDmr5To
-voPlt67lvIIKcHl0aG9uIHNjcmlwdHMvMjAyNi0wMi0wMl8zNV9qc29uX3Rv
-b2wucHkgZGlmZiBvbGQuanNvbiBuZXcuanNvbgoKIyDmqKHmnb/muLLmn5MK
-cHl0aG9uIHNjcmlwdHMvMjAyNi0wMi0wMl8zNV9qc29uX3Rvb2wucHkgcmVu
-ZGVyIHRlbXBsYXRlLmpzb24gY29udGV4dC5qc29uCmBgYAoKLS0tCgojIERh
-eSAzNDog5pm66IO95paH5pys5pGY6KaB5ZmoIC0gU21hcnQgVGV4dCBTdW1t
-YXJpemVyIPCfk5oKCvCfk4EgKirmlofku7YqKjogYHNjcmlwdHMvMjAyNi0w
-Mi0wMl8zNF9zbWFydF90ZXh0X3N1bW1hcml6ZXIucHlgCvCfk4ogKirlpKfl
-sI8qKjogMTcuNiBLQgrwn5OdICoq5Yqf6IO9Kio6IOaUr+aMgVRGLUlERuaK
-veWPluW8j+aRmOimgeOAgeWFs+mUruefreivreaPkOWPluOAgeWkmuivreio
-gOaUr+aMgQoKIyMjIOKcqCDlip/og73nibnmgKcKLSAqKvCfk4ogVEYtSURG
-5oq95Y+W5byP5pGY6KaBKio6IOWfuuS6juivjemikS3pgIbmlofmoaPpopHn
-jofnrpfms5UKLSAqKvCflJEg5YWz6ZSu55+t6K+t5o+Q5Y+WKio6IOiHquWK
-qOivhuWIq+mHjeimgeefreivrQotICoq8J+MkCDlpJror63oqIDmlK/mjIEq
-Kjog5Lit6Iux5paH562J6K+t6KiA5pSv5oyBCi0gKirimpnvuI8g5Y+v6LCD
-5Y+C5pWwKio6IOaRmOimgemVv+W6puOAgeWPpeWtkOaVsOetiQotICoq8J+T
-iCDnu5/orqHkv6Hmga8qKjog6K+N6aKR44CB5Y+l5a2Q6YeN6KaB5oCn562J
-57uf6K6hCgojIyMg5L2/55So5pa55rOVCmBgYHB5dGhvbgpmcm9tIHNtYXJ0
-X3RleHRfc3VtbWFyaXplciBpbXBvcnQgU21hcnRUZXh0U3VtbWFyaXplciwg
-U3VtbWFyeUNvbmZpZwoKIyDpu5jorqTphY3nva4Kc3VtbWFyaXplciA9IFNt
-YXJ0VGV4dFN1bW1hcml6ZXIoKQoKIyDmir3lj5blvI/mkZjopoEKc3VtbWFy
-eSA9IHN1bW1hcml6ZXIuZXh0cmFjdGl2ZV9zdW1tYXJpemUoCiAgICAi6ZW/
-5paH5pys5YaF5a65Li4uIiwKICAgIG1heF9zZW50ZW5jZXM9MwopCgojIOWF
-s+mUruefreivreaPkOWPlgprZXl3b3JkcyA9IHN1bW1hcml6ZXIuZXh0cmFj
-dF9rZXl3b3JkcygKICAgICLmlofmnKzlhoXlrrkuLi4iLAogICAgdG9wX249
-MTAKKQoKIyDoh6rlrprkuYnphY3nva4KY29uZmlnID0gU3VtbWFyeUNvbmZp
-ZygKICAgIG1heF9zZW50ZW5jZXM9NSwKICAgIG1pbl9zZW50ZW5jZV9sZW5n
-dGg9NSwKICAgIG1heF9zZW50ZW5jZV9sZW5ndGg9MTAwLAogICAgdXNlX3N0
-ZW1taW5nPVRydWUKKQpzdW1tYXJpemVyID0gU21hcnRUZXh0U3VtbWFyaXpl
-cihjb25maWcpCmBgYAoKIyMjIOWRveS7pOihjOS9v+eUqApgYGBiYXNoCiMg
-6L+Q6KGM5ryU56S6CnB5dGhvbiBzY3JpcHRzLzIwMjYtMDItMDJfMzRfc21h
-cnRfdGV4dF9zdW1tYXJpemVyLnB5CgojIOeUn+aIkOaRmOimgQpweXRob24g
-c2NyaXB0cy8yMDI2LTAyLTAyXzM0X3NtYXJ0X3RleHRfc3VtbWFyaXplci5w
-eSBzdW1tYXJpemUgYXJ0aWNsZS50eHQKCiMg5o+Q5Y+W5YWz6ZSu55+t6K+t
-CnB5dGhvbiBzY3JpcHRzLzIwMjYtMDItMDJfMzRfc21hcnRfdGV4dF9zdW1t
-YXJpemVyLnB5IGtleXdvcmRzIGFydGljbGUudHh0CgojIOaJuemHj+WkhOeQ
-hgpweXRob24gc2NyaXB0cy8yMDI2LTAyLTAyXzM0X3NtYXJ0X3RleHRfc3Vt
-bWFyaXplci5weSBiYXRjaCBhcnRpY2xlcy8KCiMg5oyH5a6a6L6T5Ye66ZW/
-5bqmCnB5dGhvbiBzY3JpcHRzLzIwMjYtMDItMDJfMzRfc21hcnRfdGV4dF9z
-dW1tYXJpemVyLnB5IHN1bW1hcml6ZSBhcnRpY2xlLnR4dCAtLXNlbnRlbmNl
-cyA1IC0tcmF0aW8gMC4zCmBgYAoKIyMjIOS+nei1luWuieijhQpgYGBiYXNo
-CnBpcCBpbnN0YWxsIG5sdGsKYGBgCgotLS0KCiMgRGF5IDMzOiDpmo/mnLrl
-r4bnoIHnlJ/miJDlmaggLSBSYW5kb20gUGFzc3dvcmQgR2VuZXJhdG9yIPCf
-lJAKCvCfk4EgKirmlofku7YqKjogYHNjcmlwdHMvMjAyNi0wMi0wMl8zM19w
-YXNzd29yZF9nZW5lcmF0b3IucHlgCvCfk4ogKirlpKflsI8qKjogMTAuNCBL
-Qgrwn5OdICoq5Yqf6IO9Kio6IOWvhueggeWtpuWuieWFqOeahOmaj+acuuWv
-hueggeeUn+aIkOWZqO+8jOaUr+aMgeWkmuenjeW8uuW6puWSjOagvOW8jwoK
-IyMjIOKcqCDlip/og73nibnmgKcKLSAqKvCflJIg6auY5a6J5YWo5oCnKio6
-IOS9v+eUqCBgc2VjcmV0c2Ag5qih5Z2X77yI5a+G56CB5a2m5a6J5YWo6ZqP
-5py65pWw77yJCi0gKirwn46vIOWkmuW8uuW6pue6p+WIqyoqOiDkvY4v5Lit
-L+mrmC/mnoHpq5gg5Zub56eN5a6J5YWo57qn5YirCi0gKirwn5SkIOWtl+es
-puaOp+WItioqOiDlj6/oh6rlrprkuYnlpKflsI/lhpnjgIHmlbDlrZfjgIHn
-rKblj7cKLSAqKvCfmqsg5pm66IO95o6S6ZmkKio6IOaOkumZpOaYk+a3t+a3
-huWtl+espu+8iDBPMWxJfO+8ieWSjOebuOS8vOWtl+espu+8iDBPRDhCNkfv
-vIkKLSAqKvCflJEg5aSa5qih5byP55Sf5oiQKio6CiAgLSDpq5jlvLrluqbp
-mo/mnLrlr4bnoIEKICAtIOaYk+iusOWPo+S7pO+8iHdvcmQtcGhyYXNl5qC8
-5byP77yJCiAgLSDmlbDlrZdQSU7noIEKICAtIEJhc2U2NOmaj+acuuefreiv
-rQotICoq8J+TiiDlvLrluqbor4TkvLAqKjog5YaF572u5a+G56CB5by65bqm
-6K+E5YiG5ZKM5Y+N6aaI57O757ufCgojIyMg5L2/55So5pa55rOVCmBgYHB5
-dGhvbgpmcm9tIHBhc3N3b3JkX2dlbmVyYXRvciBpbXBvcnQgUGFzc3dvcmRH
-ZW5lcmF0b3IsIFBhc3N3b3JkU3RyZW5ndGgKCiMg6auY5by65bqm5a+G56CB
-77yI6buY6K6k77yJCmdlbmVyYXRvciA9IFBhc3N3b3JkR2VuZXJhdG9yKCkK
-cGFzc3dvcmQgPSBnZW5lcmF0b3IuZ2VuZXJhdGUoKQoKIyDoh6rlrprkuYnp
-hY3nva4KY29uZmlnID0gUGFzc3dvcmRDb25maWcoCiAgICBsZW5ndGg9MjAs
-CiAgICBzdHJlbmd0aD1QYXNzd29yZFN0cmVuZ3RoLkVYVFJFTUUsCiAgICB1
-c2Vfc3ltYm9scz1UcnVlCikKcGFzc3dvcmQgPSBQYXNzd29yZEdlbmVyYXRv
-cihjb25maWcpLmdlbmVyYXRlKCkKCiMg5piT6K6w5Y+j5LukCm1lbW9yYWJs
-ZSA9IGdlbmVyYXRvci5nZW5lcmF0ZV9tZW1vcmFibGUod29yZF9jb3VudD00
-KQoKIyBQSU7noIEKcGluID0gZ2VuZXJhdG9yLmdlbmVyYXRlX3BpbihsZW5n
-dGg9NikKCiMg5by65bqm6K+E5LywCnJlc3VsdCA9IGV2YWx1YXRlX3Bhc3N3
-b3JkX3N0cmVuZ3RoKHBhc3N3b3JkKQpwcmludChmIuivhOWIhjoge3Jlc3Vs
-dFsncmF0aW5nJ119ICh7cmVzdWx0WydzY29yZSddfeWIhikiKQpgYGAKCiMj
-IyDlkb3ku6TooYzkvb/nlKgKYGBgYmFzaAojIOS6pOS6kuaooeW8jwpweXRo
-b24gc2NyaXB0cy8yMDI2LTAyLTAyXzMzX3Bhc3N3b3JkX2dlbmVyYXRvci5w
-eQoKIyDnlJ/miJDljZXkuKrlr4bnoIEKcHl0aG9uIHNjcmlwdHMvMjAyNi0w
-Mi0wMl8zM19wYXNzd29yZF9nZW5lcmF0b3IucHkgLWcKCiMg55Sf5oiQUElO
-56CBCnB5dGhvbiBzY3JpcHRzLzIwMjYtMDItMDJfMzNfcGFzc3dvcmRfZ2Vu
-ZXJhdG9yLnB5IC1wCgojIOi/kOihjOa8lOekugpweXRob24gc2NyaXB0cy8y
-MDI2LTAyLTAyXzMzX3Bhc3N3b3JkX2dlbmVyYXRvci5weSBkZW1vCmBgYAoK
-IyMjIOekuuS+i+i+k+WHugpgYGAK8J+UkCDpmo/mnLrlr4bnoIHnlJ/miJDl
-majmvJTnpLogLSBEYXkgMzMKPT09PT09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PT0KCjEuIOmrmOW8uuW6puWvhueggToK
-ICAgSzkjbU5wJDJ2TDdAcVI0IQogICDlvLrluqY6IOW8ugoKMi4g5piT6K6w
-5Y+j5LukOgogICBPY2Vhbi1UaWdlci1BbGVydC1CcmlnaHQtNzMhCiAgIOW8
-uuW6pjog5by6CgozLiBQSU7noIE6CiAgIDg0NzI5MwoKNC4g5om56YeP55Sf
-5oiQNeS4quWvhueggToKICAgMS4gaEo4QG1uUDMka0w1IXFXICjlvLopCiAg
-IDIuIFI3I3Z3WDIkeU45JmpaICjlvLopCiAgIC4uLgpgYGAKCi0tLQoKIyBE
-YXkgMzI6IOaWh+S7tuaQnOe0ouafpeaJvuWZqCAtIE11bHRpLUNyaXRlcmlh
-IEZpbGUgU2VhcmNoZXIg8J+UjQoK8J+TgSAqKuaWh+S7tioqOiBgc2NyaXB0
-cy8yMDI2LTAyLTAyXzMyX2ZpbGVfc2VhcmNoZXIucHlgCvCfk4ogKirlpKfl
-sI8qKjogMTQuMSBLQgrwn5OdICoq5Yqf6IO9Kio6IOaUr+aMgeaWh+S7tuWQ
-jeaooeW8jy/lhoXlrrkv57G75Z6LL+Wkp+Wwjy/ml7bpl7TnrYnlpJrmnaHk
-u7bnu4TlkIjmkJzntKIKCiMjIyDinKgg5Yqf6IO954m55oCnCi0gKirwn5OC
-IOWkmuadoeS7tuaQnOe0oioqOiDmlofku7blkI3mqKHlvI/jgIHlhoXlrrnl
-jLnphY3jgIHmlofku7bnsbvlnovjgIHlpKflsI/ojIPlm7TjgIHml7bpl7To
-jIPlm7QKLSAqKvCflI0g5aSa56eN5pCc57Si5qih5byPKio6IOeyvuehruWM
-uemFjeOAgeaooeeziuWMuemFjeOAgeato+WImeihqOi+vuW8jwotICoq8J+T
-iiDlpJrnp43ovpPlh7rmoLzlvI8qKjog6KGo5qC844CB5YiX6KGo44CBSlNP
-TuOAgeeugOa0geaooeW8jwotICoq8J+TiCDmkJzntKLnu5/orqEqKjog5paH
-5Lu257uf6K6h44CB5aSn5bCP57uf6K6h44CB57G75Z6L5YiG5biDCi0gKirw
-n5SnIOmrmOe6p+WKn+iDvSoqOiDmjpLpmaTmqKHlvI/jgIHmt7HluqbpmZDl
-iLbjgIHmjpLluo/pgInpobkKCiMjIyDkvb/nlKjmlrnms5UKYGBgcHl0aG9u
-CmZyb20gZmlsZV9zZWFyY2hlciBpbXBvcnQgRmlsZVNlYXJjaGVyCgpzZWFy
-Y2hlciA9IEZpbGVTZWFyY2hlcigpCgojIOaMieaWh+S7tuWQjeaQnOe0ogpy
-ZXN1bHRzID0gc2VhcmNoZXIuc2VhcmNoKG5hbWU9IioucHkiKQoKIyDmjInl
-hoXlrrnmkJzntKIKcmVzdWx0cyA9IHNlYXJjaGVyLnNlYXJjaChjb250ZW50
-PSJkZWYgbWFpbiIpCgojIOaMieexu+Wei+WSjOWkp+Wwj+aQnOe0ogpyZXN1
-bHRzID0gc2VhcmNoZXIuc2VhcmNoKAogICAgZXh0ZW5zaW9ucz1bIi5weSIs
-ICIuanMiXSwKICAgIHNpemVfbWluPSIxS0IiLAogICAgc2l6ZV9tYXg9IjFN
-QiIKKQoKIyDnu4TlkIjmkJzntKIKcmVzdWx0cyA9IHNlYXJjaGVyLnNlYXJj
-aCgKICAgIG5hbWU9InRlc3QiLAogICAgY29udGVudD0iaW1wb3J0IiwKICAg
-IHNpemVfbWluPSIxMDBCIgopCmBgYAoKLS0tCgojIERheSAzMTogQUnpo47m
-oLzlr7nor53nlJ/miJDlmaggLSBBSSBQZXJzb25hIERpYWxvZ3VlIEdlbmVy
-YXRvciDwn46tCgrwn5OBICoq5paH5Lu2Kio6IGBzY3JpcHRzLzIwMjYtMDIt
-MDJfMzFfYWlfZGlhbG9ndWVfZ2VuZXJhdG9yLnB5YArwn5OKICoq5aSn5bCP
-Kio6IDEyLjcgS0IK8J+TnSAqKuWKn+iDvSoqOiDmqKHmi59DaGF0R1BUL0Ns
-YXVkZS9HZW1pbmkvRGVlcFNlZWsvU2FyZGF1a2Fy5LqU56eNQUnkurrmoLzn
-moTlr7nor53po47moLwKCiMjIyDinKgg5Yqf6IO954m55oCnCi0gKirwn46t
-IDXnp41BSeS6uuagvCoqOiBDaGF0R1BU44CBQ2xhdWRl44CBR2VtaW5p44CB
-RGVlcFNlZWvjgIFTYXJkYXVrYXIKLSAqKvCfkqwg5beu5byC5YyW5a+56K+d
-Kio6IOavj+enjeS6uuagvOacieeLrOeJueeahOWbnuWkjemjjuagvOWSjOih
-qOi+vuaWueW8jwotICoq8J+TnSDljoblj7LorrDlvZUqKjog6Ieq5Yqo5L+d
-5a2Y5a+56K+d5Y6G5Y+yCi0gKirwn5SEIOWkmui9ruWvueivnSoqOiDmlK/m
-jIHkuIrkuIvmlofov57otK/nmoTov57nu63lr7nor50KLSAqKvCfk4og57uf
-6K6h5Yqf6IO9Kio6IOWvueivnee7n+iuoeWSjOS6uuagvOWIhuaekAoKIyMj
-IOS9v+eUqOaWueazlQpgYGBweXRob24KZnJvbSBhaV9kaWFsb2d1ZV9nZW5l
-cmF0b3IgaW1wb3J0ICgKICAgIENoYXRHUFQsIENsYXVkZSwgR2VtaW5pLCBE
-ZWVwU2VlaywgU2FyZGF1a2FyLAogICAgUGVyc29uYUNvbmZpZwopCgojIOWI
-m+W7ukFJ5Lq65qC8CmNoYXRncHQgPSBDaGF0R1BUKCkKY2xhdWRlID0gQ2xh
-dWRlKCkKCiMg5Y2V6L2u5a+56K+dCnJlc3BvbnNlID0gY2hhdGdwdC5jaGF0
-KCLkvaDlpb3vvIzor7fku4vnu43kuIDkuIvoh6rlt7EiKQpwcmludChyZXNw
-b25zZSkKCiMg5aSa6L2u5a+56K+dCmNsYXVkZS5jb252ZXJzYXRpb25fc3Rh
-cnQoKQpjbGF1ZGUuY2hhdCgi5oiR5oOz5a2m5LmgUHl0aG9uIikKY2xhdWRl
-LmNoYXQoIuacieS7gOS5iOW7uuiuruWQl++8nyIpCmhpc3RvcnkgPSBjbGF1
-ZGUuZ2V0X2NvbnZlcnNhdGlvbl9oaXN0b3J5KCkKYGBgCgotLS0KCiMgRGF5
-IDMwOiDkuqTkupLlvI9DTEnoj5zljZXlt6XlhbcgLSBJbnRlcmFjdGl2ZSBD
-TEkgTWVudSDwn46vCgrwn5OBICoq5paH5Lu2Kio6IGBzY3JpcHRzLzIwMjYt
-MDItMDJfMzBfaW50ZXJhY3RpdmVfbWVudS5weWAK8J+TiiAqKuWkp+Wwjyoq
-OiAxNi40IEtCCvCfk50gKirlip/og70qKjog5Lqk5LqS5byP5ZG95Luk6KGM
-6I+c5Y2V5bel5YW377yM5pSv5oyB6ZSu55uY5a+86Iiq5ZKM6byg5qCH54K5
-5Ye7CgojIyMg4pyoIOWKn+iDveeJueaApwotICoq4oyo77iPIOmUruebmOWv
-vOiIqioqOiDkuIrkuIvlt6blj7Pnrq3lpLTjgIFFbnRlcuehruiupOOAgUVT
-Q+i/lOWbngotICoq8J+Wse+4jyDpvKDmoIfmlK/mjIEqKjog54K55Ye76YCJ
-5oup6I+c5Y2V6aG5Ci0gKirwn5OCIOWkmue6p+WtkOiPnOWNlSoqOiDmlK/m
-jIHltYzlpZflrZDoj5zljZXnu5PmnoQKLSAqKvCfjqgg5Yqo5oCB6I+c5Y2V
-55Sf5oiQKio6IOi/kOihjOaXtuWKqOaAgea3u+WKoC/liKDpmaToj5zljZXp
-obkKLSAqKuKMqO+4jyDlv6vmjbfplK7mlK/mjIEqKjog5b+r6YCf6K6/6Zeu
-6I+c5Y2V6aG5Ci0gKirwn5SNIOiPnOWNleaQnOe0oioqOiDlv6vpgJ/mn6Xm
-ib7oj5zljZXpobkKLSAqKvCfjqgg5Li76aKY5a6a5Yi2Kio6IOWkmuWll+mi
-hOiuvuS4u+mimO+8iOm7mOiupC/nroDnuqYv5aSN5Y+k77yJCgojIyMg5L2/
-55So5pa55rOVCmBgYHB5dGhvbgpmcm9tIGludGVyYWN0aXZlX21lbnUgaW1w
-b3J0IE1lbnUsIE1lbnVJdGVtLCBERUZBVUxUX1NUWUxFCgojIOWIm+W7uuiP
-nOWNlQptZW51ID0gTWVudSgi5oiR55qE5bqU55SoIiwgc3R5bGU9REVGQVVM
-VF9TVFlMRSkKCiMg5re75Yqg6I+c5Y2V6aG5Cm1lbnUuYWRkX2l0ZW0oIvCf
-k4Eg5paH5Lu25pON5L2cIikKbWVudS5hZGRfaXRlbSgi4pqZ77iPIOezu+e7
-n+iuvue9riIpCm1lbnUuYWRkX3NlcGFyYXRvcigpCgojIOa3u+WKoOWtkOiP
-nOWNlQpzdWJtZW51ID0gbWVudS5hZGRfc3VibWVudSgi5biu5YqpIikKc3Vi
-bWVudS5hZGRfaXRlbSgi8J+TliDkvb/nlKjor7TmmI4iKQpzdWJtZW51LmFk
-ZF9pdGVtKCLinZMg5bi46KeB6Zeu6aKYIikKCiMg6L+Q6KGM6I+c5Y2VCnJl
-c3VsdCA9IG1lbnUucnVuKCkKYGBgCgojIyMg5Li76aKY5qC35byPCmBgYHB5
-dGhvbgojIOm7mOiupOS4u+mimApERUZBVUxUX1NUWUxFID0gTWVudVN0eWxl
-KCkKCiMg566A57qm5Li76aKYClNJTVBMRV9TVFlMRSA9IE1lbnVTdHlsZShw
-cmVmaXg9Ij4gIikKCiMg5aSN5Y+k5Li76aKYClJFVFJPX1NUWUxFID0gTWVu
-dVN0eWxlKHByZWZpeD0iPT4gIikKYGBgCgotLS0KCiMgRGF5IDI2OiDov5vl
-uqbmnaHnlJ/miJDlmaggLSBQcm9ncmVzcyBCYXIgR2VuZXJhdG9yIPCfk4oK
-CvCfk4EgKirmlofku7YqKjogYHNjcmlwdHMvMjAyNi0wMi0wMl8yNl9wcm9n
-cmVzc19iYXIucHlgCvCfk4ogKirlpKflsI8qKjogMTMuOSBLQgrwn5OdICoq
-5Yqf6IO9Kio6IOWkmuWKn+iDvUNMSei/m+W6puadoeWSjOWKoOi9veWKqOeU
-u+W3peWFtwoKIyMjIOKcqCDlip/og73nibnmgKcKLSAqKvCfjqgg5aSa56eN
-5qC35byPKio6IOe7j+WFuOOAgeeCueOAgeWdl+OAgeibh+W9ouOAgeeureWk
-tOOAgeW8uei3s+WKqOeUuwotICoq8J+MiCDoh6rlrprkuYnpopzoibIqKjog
-57qiL+e7vy/pu4Qv6JOdL+e0qy/pnZIv55m9Ci0gKirij7HvuI8gRVRB5pi+
-56S6Kio6IOWunuaXtumihOiuoeWujOaIkOaXtumXtAotICoq8J+UhCDliqDo
-vb3liqjnlLsqKjog5LiN56Gu5a6a6L+b5bqm55qE5peL6L2s5Yqo55S7Ci0g
-Kirwn5OLIOWkmuS7u+WKoeeuoeeQhioqOiDlubbooYzov5vluqbov73ouKoK
-LSAqKvCfm6HvuI8g57q/56iL5a6J5YWoKio6IOaUr+aMgeW5tuWPkeabtOaW
-sAotICoq8J+SrCDoh6rlrprkuYnmlofmnKwqKjog54G15rS755qE54q25oCB
-5pi+56S6CgojIyMg5L2/55So5pa55rOVCmBgYHB5dGhvbgpmcm9tIHByb2dy
-ZXNzX2JhciBpbXBvcnQgUHJvZ3Jlc3NCYXIsIEFuaW1hdGVkU3Bpbm5lcgoK
-IyDnu4/lhbjov5vluqbmnaEKYmFyID0gUHJvZ3Jlc3NCYXIoMTAwLCBwcmVm
-aXg9J0Rvd25sb2FkaW5nJywgc3VmZml4PSdDb21wbGV0ZScsIGNvbG9yPSdn
-cmVlbicpCmJhci5zdGFydCgpCmZvciBpIGluIHJhbmdlKDEwMSk6CiAgICB0
-aW1lLnNsZWVwKDAuMSkKICAgIGJhci51cGRhdGUoKQpiYXIuZmluaXNoKCkK
-CiMg5Yqg6L295Yqo55S7CnNwaW5uZXIgPSBBbmltYXRlZFNwaW5uZXIoJ0xv
-YWRpbmcnLCBzdHlsZT0nZG90cycsIGNvbG9yPSdjeWFuJykKc3Bpbm5lci5z
-dGFydCgpCnRpbWUuc2xlZXAoMykKc3Bpbm5lci5zdG9wKCkKYGBgCgojIyMg
-6L+b5bqm5p2h5qC35byPCmBgYHB5dGhvbgojIOe7j+WFuOagt+W8jzog4paI
-4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paR4paR
-4paR4paRCiMg54K55qC35byPOiAgIOKgi+KgmeKgueKWl+KWluKWmOKWneKW
-l+KWluKWmOKWneKWlwojIOibh+W9ouagt+W8jzog4paW4paY4pad4paX4paW
-4paY4pad4paXCiMg566t5aS05qC35byPOiDihpDihpbihpHihpfihpLihpji
-hpPihpkKYGBgCgotLS0KCiMg5a6e55So5a+G56CB5qOA5rWL5bel5YW3Cgoj
-IOWvhueggeW8uuW6puajgOa1i+WZqCAoRGF5IDE3KQoK6L+Z5Liq6ISa5pys
-5Y+v5Lul5qOA5rWL5a+G56CB55qE5by65bqm77yM5bm25o+Q5L6b5pS56L+b
-5bu66K6u44CCCgojIyDlip/og70KLSDmo4DmtYvlr4bnoIHplb/luqYKLSDm
-o4Dmn6XlpKflsI/lhpnlrZfmr40KLSDmo4Dmn6XmlbDlrZcKLSDmo4Dmn6Xn
-ibnmrorlrZfnrKYKLSDorqHnrpfnhrXlgLwKLSDnu5nlh7rlvLrluqbor4Tl
-iIblkozkvJjljJblu7rorq4KCiMjIOS9v+eUqOaWueazlQpgYGBweXRob24K
-cHl0aG9uIHBhc3N3b3JkX3N0cmVuZ3RoLnB5CiMg6L6T5YWl5a+G56CB6L+b
-6KGM5rWL6K+VCmBgYAoKIyMg6K+E5YiG5qCH5YeGCi0g5byxOiAwLTQw5YiG
-Ci0g5LitOiA0MS02MOWIhgotIOW8ujogNjEtODDliIYKLSDlvojlvLo6IDgx
-LTEwMOWIhgoKCi0tLQoKIyBBU0NJSeWtl+espueUu+eUn+aIkOWZqCAoRGF5
-IDE5KQoK6L+Z5piv5LiA5Liq5bCG5Zu+54mH5ZKM5paH5pys6L2s5o2i5Li6
-QVNDSUnlrZfnrKbnlLvnmoTlt6XlhbfjgIIKCiMjIOWKn+iDvQotIOWbvueJ
-h+i9rEFTQ0lJ6Im65pyvCi0g5paH5pys6L2sQVNDSUnmoIfpopgKLSDmlK/m
-jIHlpJrnp43lrZfnrKbpm4bvvIjnroDljZUv5a6M5pW077yJCi0g5Y+v6LCD
-5pW06L6T5Ye65a695bqm5ZKM5a+55q+U5bqmCgojIyDkvb/nlKjmlrnms5UK
-YGBgcHl0aG9uCmZyb20gYXNjaWlfYXJ0X2dlbmVyYXRvciBpbXBvcnQgQVND
-SUlBcnRHZW5lcmF0b3IKCiMg5Yib5bu655Sf5oiQ5ZmoCmdlbmVyYXRvciA9
-IEFTQ0lJQXJ0R2VuZXJhdG9yKCkKCiMg5Zu+54mH6L2sQVNDSUkKYXNjaWlf
-YXJ0ID0gZ2VuZXJhdG9yLmltYWdlX3RvX2FzY2lpKCdwaG90by5qcGcnLCB3
-aWR0aD04MCkKCiMg5paH5pys6L2sQVNDSUkKdGl0bGUgPSBnZW5lcmF0b3Iu
-dGV4dF90b19hc2NpaSgiSEVMTE8iKQpwcmludCh0aXRsZSkKYGBgCgojIyDn
-pLrkvovovpPlh7oKYGBgCiDilojilojilojilojiloggIOKWiOKWiOKWiOKW
-iOKWiOKWiCAg4paI4paI4paI4paI4paI4paIICDilojilojilojilojiloji
-loggIOKWiOKWiOKWiOKWiOKWiOKWiCAK4paI4paIICAg4paI4paIIOKWiOKW
-iCAgIOKWiOKWiCDilojiloggICDilojilogg4paI4paIICAg4paI4paIIOKW
-iOKWiCAgIOKWiOKWiArilojilojilojilojilojilojilogg4paI4paIICAg
-4paI4paIIOKWiOKWiCAgIOKWiOKWiCDilojiloggICDilojilogg4paI4paI
-4paI4paI4paI4paIIArilojiloggICDilojilogg4paI4paIICAg4paI4paI
-IOKWiOKWiCAgIOKWiOKWiCDilojiloggICDilojilogg4paI4paIICAg4paI
-4paICuKWiOKWiCAgIOKWiOKWiCDilojilojilojilojilojiloggIOKWiOKW
-iOKWiOKWiOKWiOKWiCAg4paI4paI4paI4paI4paI4paIICDilojiloggICDi
-lojilogKYGBgCgojIyDmlofku7bkvY3nva4KLSDot6/lvoQ6IGBzY3JpcHRz
-LzIwMjYtMDItMDJfMTlfYXNjaWlfYXJ0X2dlbmVyYXRvci5weWAKLSDlpKfl
-sI86IDguNyBLQgoKIyMgRGF5IDIwOiDmlofku7bljovnvKnop6Pljovlt6Xl
-hbcKCvCfk4EgKirmlofku7YqKjogYHNjcmlwdHMvMjAyNi0wMi0wMl8wMjBf
-ZmlsZV9jb21wcmVzc29yLnB5YArwn5OdICoq5Yqf6IO9Kio6IOaUr+aMgVpJ
-UC9UQVIuR1ovR1pJUOagvOW8j+eahOWOi+e8qeS4juino+WOi+W3peWFtwoK
-IyMjIOKcqCDlip/og73nibnmgKcKLSAqKlpJUOagvOW8jyoqOiDmoIflh4Za
-SVDljovnvKnvvIzmlK/mjIHlr4bnoIHkv53miqQKLSAqKlRBUi5HWuagvOW8
-jyoqOiBHTlUgemlw5Y6L57yp55qEdGFy5b2S5qGjCi0gKipHWklQ5qC85byP
-Kio6IOWNleaWh+S7tmd6aXDljovnvKkKLSAqKuWunueUqOWKn+iDvSoqOiDl
-jovnvKnjgIHop6PljovjgIHliJflh7rlhoXlrrnjgIHmn6XnnIvkv6Hmga8K
-CiMjIyDwn5OKIOaWh+S7tuWkp+WwjwotIDE4LjUgS0IKCi0tLQoKIyBEYXkg
-MjE6IE1hcmtkb3du6KGo5qC855Sf5oiQ5ZmoCgrwn5OBICoq5paH5Lu2Kio6
-IGBzY3JpcHRzLzIwMjYtMDItMDJfMjFfbWFya2Rvd25fdGFibGVfZ2VuZXJh
-dG9yLnB5YArwn5OdICoq5Yqf6IO9Kio6IENTVi9UU1bovaxNYXJrZG93buih
-qOagvOeahOaZuuiDvei9rOaNouW3peWFtwoKIyMjIOKcqCDlip/og73nibnm
-gKcKLSAqKuaZuuiDveagvOW8j+WMlioqOiDoh6rliqjorqHnrpfliJflrr3l
-ubblr7npvZAKLSAqKuWkmuagvOW8j+aUr+aMgSoqOiBDU1bjgIFUU1bjgIFK
-U09O6L2sTWFya2Rvd24KLSAqKk1hcmtkb3du6KGo5qC8Kio6IOeUn+aIkOag
-h+WHhk1hcmtkb3du6KGo5qC86K+t5rOVCi0gKirmlofku7blpITnkIYqKjog
-5pSv5oyB5paH5Lu26L6T5YWl5ZKM5ZG95Luk6KGM5Y+C5pWwCi0gKirovpPl
-h7rkv53lrZgqKjog6Ieq5Yqo5L+d5a2Y57uT5p6c5Yiw5paH5Lu2CgojIyMg
-8J+TiiDmlofku7blpKflsI8KLSA2LjUgS0IKCi0tLQoKIyBEYXkgMjI6IFBv
-bW9kb3JvIFRpbWVyIC0g55Wq6IyE6ZKf6K6h5pe25ZmoCgrwn5OBICoq5paH
-5Lu2Kio6IGBzY3JpcHRzLzIwMjYtMDItMDJfMjJfcG9tb2Rvcm9fdGltZXIu
-cHlgCvCfk50gKirlip/og70qKjog5pm66IO955Wq6IyE6ZKf5pe26Ze0566h
-55CG5bel5YW3CgojIyMg4pyoIOWKn+iDveeJueaApwotICoq8J+NhSDnlaro
-jITlt6XkvZzms5UqKjog6buY6K6kMjXliIbpkp/lt6XkvZwrNeWIhumSn+ef
-reS8keaBrwotICoq8J+SvCDmmbrog73kvJHmga8qKjogNOS4queVquiMhOmS
-n+WQjuinpuWPkTE15YiG6ZKf6ZW/5LyR5oGvCi0gKirwn5SUIOWkmumHjeaP
-kOmGkioqOiDmoYzpnaLpgJrnn6UgKyDor63pn7Pmj5DnpLoKLSAqKvCfk4og
-57uf6K6h6L+96LiqKio6IOiusOW9leW3peS9nOaXtumVv+WSjOWujOaIkOaV
-sOmHjwotICoq4o+477iPIOeBtea0u+aOp+WItioqOiDmmoLlgZwv6Lez6L+H
-L+mHjee9ruWKn+iDvQotICoq4pqZ77iPIOiHquWumuS5ieiuvue9rioqOiDl
-j6/osIPmlbTlt6XkvZwv5LyR5oGv5pe26ZW/Ci0gKirwn5K+IOaVsOaNruaM
-geS5heWMlioqOiDoh6rliqjkv53lrZjljoblj7LorrDlvZUKCiMjIyDwn5OK
-IOaWh+S7tuWkp+WwjwotIDEwLjAgS0IKCiMjIyDkvb/nlKjmlrnms5UKYGBg
-YmFzaApweXRob24gc2NyaXB0cy8yMDI2LTAyLTAyXzIyX3BvbW9kb3JvX3Rp
-bWVyLnB5CmBgYAoKIyMjIOS6pOS6kuWRveS7pAotICoqW0VudGVyXSoqIC0g
-5byA5aeLL+aaguWBnC/nu6fnu60KLSAqKltwXSoqIC0g5pqC5YGcL+e7p+e7
-rQotICoqW3NdKiogLSDot7Pov4flvZPliY3pmLbmrrUKLSAqKltyXSoqIC0g
-6YeN572uCi0gKipbdF0qKiAtIOiuvue9ruaXtumVvwotICoqW2ldKiogLSDm
-n6XnnIvnu5/orqEKLSAqKltxXSoqIC0g6YCA5Ye6CgojIyMg5L6d6LWW5a6J
-6KOFCmBgYGJhc2gKIyDlj6/pgInvvJrlronoo4XmoYzpnaLpgJrnn6XmlK/m
-jIEKcGlwIGluc3RhbGwgcGx5ZXIKYGBgCgotLS0KCiMgRGF5IDI4OiBBU0NJ
-SeWbvuihqOeUn+aIkOWZqCAtIFRlcm1pbmFsIEFTQ0lJIENoYXJ0IEdlbmVy
-YXRvciDwn5OKCgrwn5OBICoq5paH5Lu2Kio6IGBzY3JpcHRzLzIwMjYtMDIt
-MDJfMDI4X2FzY2lpX2NoYXJ0X2dlbmVyYXRvci5weWAK8J+TiiAqKuWkp+Ww
-jyoqOiAyMC40IEtCCvCfk50gKirlip/og70qKjog57uI56uvQVNDSUnlm77o
-oajlkozlm77lvaLnlJ/miJDlt6XlhbcKCiMjIyDinKgg5Yqf6IO954m55oCn
-Ci0gKirwn5OKIOWkmuenjeWbvuihqOexu+WeiyoqOiDmsLTlubPmnaHlvaLl
-m77jgIHlnoLnm7TmnaHlvaLlm77jgIHmipjnur/lm77jgIHloIblj6DmnaHl
-vaLlm74KLSAqKvCfjqgg6aKE6K6+6LCD6Imy5p2/Kio6IOW9qeiZueOAgemc
-k+iZueOAgeaflOWSjOOAgeWcsOeQg+iJsuOAgeeBsOW6pgotICoq8J+MiCDp
-opzoibLmlK/mjIEqKjog5L2/55SodGVybWNvbG9y5a6e546w5b2p6Imy6L6T
-5Ye6KOWPr+mAiSkKLSAqKvCfk5Ag5pm66IO95qCH562+5oiq5patKio6IOiH
-quWKqOWkhOeQhumVv+agh+etvihDSkvlhbzlrrkpCi0gKirwn5OBIOaWh+S7
-tuWvvOWHuioqOiDmlK/mjIHlsIblm77ooajkv53lrZjkuLrmlofmnKzmlofk
-u7YKLSAqKvCfk4gg5pWw5o2u5Y+v6KeG5YyWKio6IOWkmuaVsOaNrumbhuWv
-ueavlOWxleekugotICoq8J+UpyDpq5jluqblj6/lrprliLYqKjog5a695bqm
-44CB6auY5bqm44CB5a2X56ym5qC35byP6YO95Y+v6YWN572uCgojIyMg8J+T
-iiDmlofku7blpKflsI8KLSAyMC40IEtCCgojIyMg5L2/55So5pa55rOVCmBg
-YHB5dGhvbgpmcm9tIGFzY2lpX2NoYXJ0X2dlbmVyYXRvciBpbXBvcnQgQVND
-SUlHcmFwaGljcywgRGF0YVBvaW50CgojIOWIm+W7uueUn+aIkOWZqApnZW5l
-cmF0b3IgPSBBU0NJSUdyYXBoaWNzKHdpZHRoPTcwLCBoZWlnaHQ9MjUpCgoj
-IOawtOW5s+adoeW9ouWbvgpkYXRhID0gWwogICAgRGF0YVBvaW50KCJQeXRo
-b24iLCA5Mi41LCAiYmx1ZSIpLAogICAgRGF0YVBvaW50KCJKYXZhU2NyaXB0
-IiwgODguMiwgInllbGxvdyIpLAogICAgRGF0YVBvaW50KCJKYXZhIiwgNzYu
-MywgInJlZCIpLApdCmNoYXJ0ID0gZ2VuZXJhdG9yLmdlbmVyYXRlX2hvcml6
-b250YWxfYmFyX2NoYXJ0KGRhdGEsICJMYW5ndWFnZSBQb3B1bGFyaXR5IikK
-cHJpbnQoY2hhcnQpCgojIOaKmOe6v+WbvgpzdG9ja19kYXRhID0gWwogICAg
-eyd4JzogMSwgJ3knOiAxMDB9LAogICAgeyd4JzogMiwgJ3knOiAxMjB9LAog
-ICAgeyd4JzogMywgJ3knOiAxMTV9LApdCmNoYXJ0ID0gZ2VuZXJhdG9yLmdl
-bmVyYXRlX2xpbmVfY2hhcnQoc3RvY2tfZGF0YSwgIlN0b2NrIFRyZW5kIikK
-cHJpbnQoY2hhcnQpCgojIOWvvOWHuuWIsOaWh+S7tgpnZW5lcmF0b3IuZXhw
-b3J0X3RvX2ZpbGUoY2hhcnQsICJjaGFydC50eHQiKQpgYGAKCiMjIyDlkb3k
-u6TooYzkvb/nlKgKYGBgYmFzaAojIOi/kOihjOa8lOekugpweXRob24gc2Ny
-aXB0cy8yMDI2LTAyLTAyXzAyOF9hc2NpaV9jaGFydF9nZW5lcmF0b3IucHkK
-CiMg5pi+56S65biu5YqpCnB5dGhvbiBzY3JpcHRzLzIwMjYtMDItMDJfMDI4
-X2FzY2lpX2NoYXJ0X2dlbmVyYXRvci5weSAtLWhlbHAKYGBgCgojIyMg5L6d
-6LWW5a6J6KOFCmBgYGJhc2gKIyDlj6/pgInvvJrlronoo4XpopzoibLmlK/m
-jIEKcGlwIGluc3RhbGwgdGVybWNvbG9yCmBgYAoKIyMjIOekuuS+i+i+k+WH
-ugpgYGAK4pSM4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSQCuKUgiAgICAgICAgICAg8J+TiCBQcm9ncmFtbWluZyBM
-YW5ndWFnZSBQb3B1bGFyaXR5ICgyMDI2KSAgICAgICAg4pSCCuKUnOKUgOKU
-gOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
-gOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
-gOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKU
-gOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUpAri
-lIIgUHl0aG9uICAgICAgICAgICAg4pSCIOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiCA5Mi41IOKUggrilIIgSmF2YVNjcmlwdCAgICAgICAg4pSC
-IOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiCA4OC4yIOKUggrilIIgSmF2YSAg
-ICAgICAgICAgICAg4pSCIOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiCA3Ni4zICAg
-ICAgICAgICAgICAgICAgICAgIOKUggrilIIgVHlwZVNjcmlwdCAgICAgICAg
-4pSCIOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiCA3Mi4xICAgICAgICAgICAgICAgICAgICAg
-ICAg4pSCCuKUgiBDKysgICAgICAgICAgICAgICDilIIg4paI4paI4paI4paI
-4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI
-IDY4LjUgICAgICAgICAgICAgICAgICAgICAgICAg4pSCCuKUgiBHbyAgICAg
-ICAgICAgICAgICDilIIg4paI4paI4paI4paI4paI4paI4paI4paI4paI4paI
-4paI4paI4paI4paI4paI4paI4paI4paIIDY1LjggICAgICAgICAgICAgICAg
-ICAgICAgICAgIOKUggrilIIgUnVzdCAgICAgICAgICAgICAg4pSCIOKWiOKW
-iOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKWiOKW
-iCA1OC4zICAgICAgICAgICAgICAgICAgICAgICAgICAg4pSCCuKUgiBSdWJ5
-ICAgICAgICAgICAgICDilIIg4paI4paI4paI4paI4paI4paI4paI4paI4paI
-4paI4paIIDQ1LjIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDi
-lIIK4pSU4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-4pSA4pSA4pSYCmBgYAo=
+📁 **文件**: `scripts/2026-02-02_36_data_validator.py`
+📊 **大小**: 23.8 KB
+📝 **功能**: 全面的数据验证和清洗库，支持多种数据类型的验证和净化
 
+### ✨ 功能特性
+- **📧 邮箱验证**: RFC 5322标准格式验证
+- **🔗 URL验证**: HTTP/HTTPS/FTP链接验证
+- **📱 手机号验证**: 多国家电话号码支持（CN/US/UK/JP等）
+- **🔒 SQL注入防护**: 多级别SQL注入检测和清洗
+- **🚫 XSS攻击防护**: 多种XSS攻击模式检测和过滤
+- **📊 数据类型验证**: 字符串、数字、列表等类型验证
+- **📋 JSON Schema验证**: 类似JSON Schema的验证规则
+- **🔧 自定义验证**: 支持添加自定义验证器
+- **💬 多语言提示**: 中英文错误提示支持
+- **📈 验证统计**: 验证结果统计报告
+
+### 使用方法
+```python
+from data_validator import DataValidator, ValidationResult
+
+# 创建验证器
+validator = DataValidator()
+
+# 邮箱验证
+result = validator.validate_email("user@example.com")
+print(f"Valid: {result.is_valid}, Cleaned: {result.cleaned_value}")
+
+# URL验证
+result = validator.validate_url("https://www.example.com")
+print(f"Valid: {result.is_valid}")
+
+# 手机号验证
+result = validator.validate_phone("13812345678", "CN")
+print(f"Valid: {result.is_valid}")
+
+# SQL注入检测
+detected, patterns = validator.detect_sql_injection("normal text")
+print(f"SQL Injection: {detected}")
+
+# XSS检测
+detected, patterns = validator.detect_xss("<script>alert('xss')</script>")
+print(f"XSS Attack: {detected}")
+
+# 输入清洗
+clean = validator.sanitize_input("  <script>alert('xss')</script>  ' OR '1'='1  ")
+print(f"Cleaned: {clean}")
+
+# Schema验证
+schema = {
+    'name': {'type': 'string', 'required': True, 'max_length': 50},
+    'age': {'type': 'number', 'min': 0, 'max': 150},
+    'email': {'type': 'string', 'required': True}
+}
+data = {'name': '张三', 'age': 25, 'email': 'test@example.com'}
+results = validator.validate_with_schema(data, schema)
+```
+
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_36_data_validator.py
+```
+
+### 验证级别
+```python
+from data_validator import SanitizationLevel
+
+# 基础清洗
+clean = validator.sanitize_sql(input_text, SanitizationLevel.BASIC)
+
+# 中等清洗（推荐）
+clean = validator.sanitize_sql(input_text, SanitizationLevel.MODERATE)
+
+# 激进清洗
+clean = validator.sanitize_sql(input_text, SanitizationLevel.AGGRESSIVE)
+```
+
+---
+
+# Day 35: JSON工具箱 - JSON Toolkit 📦
+
+📁 **文件**: `scripts/2026-02-02_35_json_tool.py`
+📊 **大小**: 13.7 KB
+📝 **功能**: JSON解析验证格式化转换工具
+
+### ✨ 功能特性
+- **✅ JSON语法验证**: 检测JSON语法错误
+- **📝 格式化/压缩**: 美化或压缩JSON输出
+- **🔍 字段提取**: 从JSON中提取指定字段
+- **🔄 JSON<->CSV转换**: 支持双向转换
+- **📋 扁平化/反扁平化**: 嵌套JSON与扁平化互转
+- **⚖️ 比较差异**: 对比两个JSON对象的差异
+- **📄 模板渲染**: 基于JSON模板生成内容
+
+### 使用方法
+```python
+from json_toolbox import JSONToolbox
+
+toolbox = JSONToolbox()
+
+# 验证JSON
+is_valid = toolbox.validate_json('{"name": "John"}')
+
+# 格式化
+formatted = toolbox.format_json('{"name":"John"}')
+
+# 提取字段
+data = {"user": {"profile": {"name": "John"}}}
+result = toolbox.extract_field(data, "user.profile.name")
+
+# 扁平化
+flat = toolbox.flatten({"a": {"b": {"c": 1}}})
+# 结果: {"a.b.c": 1}
+
+# 比较差异
+diff = toolbox.compare_diff(
+    {"a": 1, "b": 2},
+    {"a": 1, "c": 3}
+)
+```
+
+### 命令行使用
+```bash
+# 交互模式
+python scripts/2026-02-02_35_json_tool.py
+
+# 验证JSON文件
+python scripts/2026-02-02_35_json_tool.py validate data.json
+
+# 格式化并输出
+python scripts/2026-02-02_35_json_tool.py format compact.json pretty.json
+
+# 提取字段
+python scripts/2026-02-02_35_json_tool.py extract config.json "database.host"
+
+# CSV转JSON
+python scripts/2026-02-02_35_json_tool.py csv2json data.csv data.json
+
+# JSON转CSV
+python scripts/2026-02-02_35_json_tool.py json2csv data.json data.csv
+
+# 扁平化
+python scripts/2026-02-02_35_json_tool.py flatten nested.json flat.json
+
+# 反扁平化
+python scripts/2026-02-02_35_json_tool.py unflatten flat.json nested.json
+
+# 比较差异
+python scripts/2026-02-02_35_json_tool.py diff old.json new.json
+
+# 模板渲染
+python scripts/2026-02-02_35_json_tool.py render template.json context.json
+```
+
+---
+
+# Day 34: 智能文本摘要器 - Smart Text Summarizer 📚
+
+📁 **文件**: `scripts/2026-02-02_34_smart_text_summarizer.py`
+📊 **大小**: 17.6 KB
+📝 **功能**: 支持TF-IDF抽取式摘要、关键短语提取、多语言支持
+
+### ✨ 功能特性
+- **📊 TF-IDF抽取式摘要**: 基于词频-逆文档频率算法
+- **🔑 关键短语提取**: 自动识别重要短语
+- **🌐 多语言支持**: 中英文等语言支持
+- **⚙️ 可调参数**: 摘要长度、句子数等
+- **📈 统计信息**: 词频、句子重要性等统计
+
+### 使用方法
+```python
+from smart_text_summarizer import SmartTextSummarizer, SummaryConfig
+
+# 默认配置
+summarizer = SmartTextSummarizer()
+
+# 抽取式摘要
+summary = summarizer.extractive_summarize(
+    "长文本内容...",
+    max_sentences=3
+)
+
+# 关键短语提取
+keywords = summarizer.extract_keywords(
+    "文本内容...",
+    top_n=10
+)
+
+# 自定义配置
+config = SummaryConfig(
+    max_sentences=5,
+    min_sentence_length=5,
+    max_sentence_length=100,
+    use_stemming=True
+)
+summarizer = SmartTextSummarizer(config)
+```
+
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_34_smart_text_summarizer.py
+
+# 生成摘要
+python scripts/2026-02-02_34_smart_text_summarizer.py summarize article.txt
+
+# 提取关键短语
+python scripts/2026-02-02_34_smart_text_summarizer.py keywords article.txt
+
+# 批量处理
+python scripts/2026-02-02_34_smart_text_summarizer.py batch articles/
+
+# 指定输出长度
+python scripts/2026-02-02_34_smart_text_summarizer.py summarize article.txt --sentences 5 --ratio 0.3
+```
+
+### 依赖安装
+```bash
+pip install nltk
+```
+
+---
+
+# Day 33: 随机密码生成器 - Random Password Generator 🔐
+
+📁 **文件**: `scripts/2026-02-02_33_password_generator.py`
+📊 **大小**: 10.4 KB
+📝 **功能**: 密码学安全的随机密码生成器，支持多种强度和格式
+
+### ✨ 功能特性
+- **🔒 高安全性**: 使用 `secrets` 模块（密码学安全随机数）
+- **🎯 多强度级别**: 低/中/高/极高 四种安全级别
+- **🔤 字符控制**: 可自定义大小写、数字、符号
+- **🚫 智能排除**: 排除易混淆字符（0O1lI|）和相似字符（0OD8B6G）
+- **🔑 多模式生成**:
+  - 高强度随机密码
+  - 易记口令（word-phrase格式）
+  - 数字PIN码
+  - Base64随机短语
+- **📊 强度评估**: 内置密码强度评分和反馈系统
+
+### 使用方法
+```python
+from password_generator import PasswordGenerator, PasswordStrength
+
+# 高强度密码（默认）
+generator = PasswordGenerator()
+password = generator.generate()
+
+# 自定义配置
+config = PasswordConfig(
+    length=20,
+    strength=PasswordStrength.EXTREME,
+    use_symbols=True
+)
+password = PasswordGenerator(config).generate()
+
+# 易记口令
+memorable = generator.generate_memorable(word_count=4)
+
+# PIN码
+pin = generator.generate_pin(length=6)
+
+# 强度评估
+result = evaluate_password_strength(password)
+print(f"评分: {result['rating']} ({result['score']}分)")
+```
+
+### 命令行使用
+```bash
+# 交互模式
+python scripts/2026-02-02_33_password_generator.py
+
+# 生成单个密码
+python scripts/2026-02-02_33_password_generator.py -g
+
+# 生成PIN码
+python scripts/2026-02-02_33_password_generator.py -p
+
+# 运行演示
+python scripts/2026-02-02_33_password_generator.py demo
+```
+
+### 示例输出
+```
+🔐 随机密码生成器演示 - Day 33
+==================================================
+
+1. 高强度密码:
+   K9#mNp$2vL7@qR4!
+   强度: 强
+
+2. 易记口令:
+   Ocean-Tiger-Alert-Bright-73!
+   强度: 强
+
+3. PIN码:
+   847293
+
+4. 批量生成5个密码:
+   1. hJ8@mnP3$kL5!qW (强)
+   2. R7#vwX2$yN9&jZ (强)
+   ...
+```
+
+---
+
+# Day 32: 文件搜索查找器 - Multi-Criteria File Searcher 🔍
+
+📁 **文件**: `scripts/2026-02-02_32_file_searcher.py`
+📊 **大小**: 14.1 KB
+📝 **功能**: 支持文件名模式/内容/类型/大小/时间等多条件组合搜索
+
+### ✨ 功能特性
+- **📂 多条件搜索**: 文件名模式、内容匹配、文件类型、大小范围、时间范围
+- **🔍 多种搜索模式**: 精确匹配、模糊匹配、正则表达式
+- **📊 多种输出格式**: 表格、列表、JSON、简洁模式
+- **📈 搜索统计**: 文件统计、大小统计、类型分布
+- **🔧 高级功能**: 排除模式、深度限制、排序选项
+
+### 使用方法
+```python
+from file_searcher import FileSearcher
+
+searcher = FileSearcher()
+
+# 按文件名搜索
+results = searcher.search(name="*.py")
+
+# 按内容搜索
+results = searcher.search(content="def main")
+
+# 按类型和大小搜索
+results = searcher.search(
+    extensions=[".py", ".js"],
+    size_min="1KB",
+    size_max="1MB"
+)
+
+# 组合搜索
+results = searcher.search(
+    name="test",
+    content="import",
+    size_min="100B"
+)
+```
+
+---
+
+# Day 31: AI风格对话生成器 - AI Persona Dialogue Generator 🎭
+
+📁 **文件**: `scripts/2026-02-02_31_ai_dialogue_generator.py`
+📊 **大小**: 12.7 KB
+📝 **功能**: 模拟ChatGPT/Claude/Gemini/DeepSeek/Sardaukar五种AI人格的对话风格
+
+### ✨ 功能特性
+- **🎭 5种AI人格**: ChatGPT、Claude、Gemini、DeepSeek、Sardaukar
+- **💬 差异化对话**: 每种人格有独特的回复风格和表达方式
+- **📝 历史记录**: 自动保存对话历史
+- **🔄 多轮对话**: 支持上下文连贯的连续对话
+- **📊 统计功能**: 对话统计和人格分析
+
+### 使用方法
+```python
+from ai_dialogue_generator import (
+    ChatGPT, Claude, Gemini, DeepSeek, Sardaukar,
+    PersonaConfig
+)
+
+# 创建AI人格
+chatgpt = ChatGPT()
+claude = Claude()
+
+# 单轮对话
+response = chatgpt.chat("你好，请介绍一下自己")
+print(response)
+
+# 多轮对话
+claude.conversation_start()
+claude.chat("我想学习Python")
+claude.chat("有什么建议吗？")
+history = claude.get_conversation_history()
+```
+
+---
+
+# Day 30: 交互式CLI菜单工具 - Interactive CLI Menu 🎯
+
+📁 **文件**: `scripts/2026-02-02_30_interactive_menu.py`
+📊 **大小**: 16.4 KB
+📝 **功能**: 交互式命令行菜单工具，支持键盘导航和鼠标点击
+
+### ✨ 功能特性
+- **⌨️ 键盘导航**: 上下左右箭头、Enter确认、ESC返回
+- **🖱️ 鼠标支持**: 点击选择菜单项
+- **📂 多级子菜单**: 支持嵌套子菜单结构
+- **🎨 动态菜单生成**: 运行时动态添加/删除菜单项
+- **⌨️ 快捷键支持**: 快速访问菜单项
+- **🔍 菜单搜索**: 快速查找菜单项
+- **🎨 主题定制**: 多套预设主题（默认/简约/复古）
+
+### 使用方法
+```python
+from interactive_menu import Menu, MenuItem, DEFAULT_STYLE
+
+# 创建菜单
+menu = Menu("我的应用", style=DEFAULT_STYLE)
+
+# 添加菜单项
+menu.add_item("📁 文件操作")
+menu.add_item("⚙️ 系统设置")
+menu.add_separator()
+
+# 添加子菜单
+submenu = menu.add_submenu("帮助")
+submenu.add_item("📖 使用说明")
+submenu.add_item("❓ 常见问题")
+
+# 运行菜单
+result = menu.run()
+```
+
+### 主题样式
+```python
+# 默认主题
+DEFAULT_STYLE = MenuStyle()
+
+# 简约主题
+SIMPLE_STYLE = MenuStyle(prefix="> ")
+
+# 复古主题
+RETRO_STYLE = MenuStyle(prefix="=> ")
+```
+
+---
+
+# Day 26: 进度条生成器 - Progress Bar Generator 📊
+
+📁 **文件**: `scripts/2026-02-02_26_progress_bar.py`
+📊 **大小**: 13.9 KB
+📝 **功能**: 多功能CLI进度条和加载动画工具
+
+### ✨ 功能特性
+- **🎨 多种样式**: 经典、点、块、蛇形、箭头、弹跳动画
+- **🌈 自定义颜色**: 红/绿/黄/蓝/紫/青/白
+- **⏱️ ETA显示**: 实时预计完成时间
+- **🔄 加载动画**: 不确定进度的旋转动画
+- **📋 多任务管理**: 并行进度追踪
+- **🛡️ 线程安全**: 支持并发更新
+- **💬 自定义文本**: 灵活的状态显示
+
+### 使用方法
+```python
+from progress_bar import ProgressBar, AnimatedSpinner
+
+# 经典进度条
+bar = ProgressBar(100, prefix='Downloading', suffix='Complete', color='green')
+bar.start()
+for i in range(101):
+    time.sleep(0.1)
+    bar.update()
+bar.finish()
+
+# 加载动画
+spinner = AnimatedSpinner('Loading', style='dots', color='cyan')
+spinner.start()
+time.sleep(3)
+spinner.stop()
+```
+
+### 进度条样式
+```python
+# 经典样式: ██████████████░░░░
+# 点样式:   ⠋⠙⠹▗▖▘▝▗▖▘▝▗
+# 蛇形样式: ▖▘▝▗▖▘▝▗
+# 箭头样式: ←↖↑↗→↘↓↙
+```
+
+---
+
+# 实用密码检测工具
+
+# 密码强度检测器 (Day 17)
+
+这个脚本可以检测密码的强度，并提供改进建议。
+
+## 功能
+- 检测密码长度
+- 检查大小写字母
+- 检查数字
+- 检查特殊字符
+- 计算熵值
+- 给出强度评分和优化建议
+
+## 使用方法
+```python
+python password_strength.py
+# 输入密码进行测试
+```
+
+## 评分标准
+- 弱: 0-40分
+- 中: 41-60分
+- 强: 61-80分
+- 很强: 81-100分
+
+
+---
+
+# ASCII字符画生成器 (Day 19)
+
+这是一个将图片和文本转换为ASCII字符画的工具。
+
+## 功能
+- 图片转ASCII艺术
+- 文本转ASCII标题
+- 支持多种字符集（简单/完整）
+- 可调整输出宽度和对比度
+
+## 使用方法
+```python
+from ascii_art_generator import ASCIIArtGenerator
+
+# 创建生成器
+generator = ASCIIArtGenerator()
+
+# 图片转ASCII
+ascii_art = generator.image_to_ascii('photo.jpg', width=80)
+
+# 文本转ASCII
+title = generator.text_to_ascii("HELLO")
+print(title)
+```
+
+## 示例输出
+```
+ █████  ██████  ██████  ██████  ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+███████ ██   ██ ██   ██ ██   ██ ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+██   ██ ██████  ██████  ██████  ██   ██
+```
+
+## 文件位置
+- 路径: `scripts/2026-02-02_19_ascii_art_generator.py`
+- 大小: 8.7 KB
+
+## Day 20: 文件压缩解压工具
+
+📁 **文件**: `scripts/2026-02-02_020_file_compressor.py`
+📝 **功能**: 支持ZIP/TAR.GZ/GZIP格式的压缩与解压工具
+
+### ✨ 功能特性
+- **ZIP格式**: 标准ZIP压缩，支持密码保护
+- **TAR.GZ格式**: GNU zip压缩的tar归档
+- **GZIP格式**: 单文件gzip压缩
+- **实用功能**: 压缩、解压、列出内容、查看信息
+
+### 📊 文件大小
+- 18.5 KB
+
+---
+
+# Day 21: Markdown表格生成器
+
+📁 **文件**: `scripts/2026-02-02_21_markdown_table_generator.py`
+📝 **功能**: CSV/TSV转Markdown表格的智能转换工具
+
+### ✨ 功能特性
+- **智能格式化**: 自动计算列宽并对齐
+- **多格式支持**: CSV、TSV、JSON转Markdown
+- **Markdown表格**: 生成标准Markdown表格语法
+- **文件处理**: 支持文件输入和命令行参数
+- **输出保存**: 自动保存结果到文件
+
+### 📊 文件大小
+- 6.5 KB
+
+---
+
+# Day 22: Pomodoro Timer - 番茄钟计时器
+
+📁 **文件**: `scripts/2026-02-02_22_pomodoro_timer.py`
+📝 **功能**: 智能番茄钟时间管理工具
+
+### ✨ 功能特性
+- **🍅 番茄工作法**: 默认25分钟工作+5分钟短休息
+- **💼 智能休息**: 4个番茄钟后触发15分钟长休息
+- **🔔 多重提醒**: 桌面通知 + 语音提示
+- **📊 统计追踪**: 记录工作时长和完成数量
+- **⏸️ 灵活控制**: 暂停/跳过/重置功能
+- **⚙️ 自定义设置**: 可调整工作/休息时长
+- **💾 数据持久化**: 自动保存历史记录
+
+### 📊 文件大小
+- 10.0 KB
+
+### 使用方法
+```bash
+python scripts/2026-02-02_22_pomodoro_timer.py
+```
+
+### 交互命令
+- **[Enter]** - 开始/暂停/继续
+- **[p]** - 暂停/继续
+- **[s]** - 跳过当前阶段
+- **[r]** - 重置
+- **[t]** - 设置时长
+- **[i]** - 查看统计
+- **[q]** - 退出
+
+### 依赖安装
+```bash
+# 可选：安装桌面通知支持
+pip install plyer
+```
+
+---
+
+# Day 28: ASCII图表生成器 - Terminal ASCII Chart Generator 📊
+
+📁 **文件**: `scripts/2026-02-02_028_ascii_chart_generator.py`
+📊 **大小**: 20.4 KB
+📝 **功能**: 终端ASCII图表和图形生成工具
+
+### ✨ 功能特性
+- **📊 多种图表类型**: 水平条形图、垂直条形图、折线图、堆叠条形图
+- **🎨 预设调色板**: 彩虹、霓虹、柔和、地球色、灰度
+- **🌈 颜色支持**: 使用termcolor实现彩色输出(可选)
+- **📐 智能标签截断**: 自动处理长标签(CJK兼容)
+- **📁 文件导出**: 支持将图表保存为文本文件
+- **📈 数据可视化**: 多数据集对比展示
+- **🔧 高度可定制**: 宽度、高度、字符样式都可配置
+
+### 📊 文件大小
+- 20.4 KB
+
+### 使用方法
+```python
+from ascii_chart_generator import ASCIIGraphics, DataPoint
+
+# 创建生成器
+generator = ASCIIGraphics(width=70, height=25)
+
+# 水平条形图
+data = [
+    DataPoint("Python", 92.5, "blue"),
+    DataPoint("JavaScript", 88.2, "yellow"),
+    DataPoint("Java", 76.3, "red"),
+]
+chart = generator.generate_horizontal_bar_chart(data, "Language Popularity")
+print(chart)
+
+# 折线图
+stock_data = [
+    {'x': 1, 'y': 100},
+    {'x': 2, 'y': 120},
+    {'x': 3, 'y': 115},
+]
+chart = generator.generate_line_chart(stock_data, "Stock Trend")
+print(chart)
+
+# 导出到文件
+generator.export_to_file(chart, "chart.txt")
+```
+
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_028_ascii_chart_generator.py
+
+# 显示帮助
+python scripts/2026-02-02_028_ascii_chart_generator.py --help
+```
+
+### 依赖安装
+```bash
+# 可选：安装颜色支持
+pip install termcolor
+```
+
+### 示例输出
+```
+┌────────────────────────────────────────────────────────────┐
+│           📈 Programming Language Popularity (2026)        │
+├────────────────────────────────────────────────────────────┤
+│ Python            │ ████████████████████████████████████████ 92.5 │
+│ JavaScript        │ ██████████████████████████████████████ 88.2 │
+│ Java              │ ██████████████████████ 76.3                      │
+│ TypeScript        │ ████████████████████ 72.1                        │
+│ C++               │ ███████████████████ 68.5                         │
+│ Go                │ ██████████████████ 65.8                          │
+│ Rust              │ █████████████████ 58.3                           │
+│ Ruby              │ ███████████ 45.2                                 │
+└────────────────────────────────────────────────────────────┘
+```
