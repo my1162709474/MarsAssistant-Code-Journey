@@ -1,117 +1,180 @@
+# Day 26: 进度条生成器 - Progress Bar Generator 📊
+
+📁 **文件**: `scripts/2026-02-02_26_progress_bar.py`
+📊 **大小**: 13.9 KB
+📝 **功能**: 多功能CLI进度条和加载动画工具
+
+### ✨ 功能特性
+- **🎨 多种样式**: 经典、点、块、蛇形、箭头、弹跳动画
+- **🌈 自定义颜色**: 红/绿/黄/蓝/紫/青/白
+- **⏱️ ETA显示**: 实时预计完成时间
+- **🔄 加载动画**: 不确定进度的旋转动画
+- **📋 多任务管理**: 并行进度追踪
+- **🛡️ 线程安全**: 支持并发更新
+- **💬 自定义文本**: 灵活的状态显示
+
+### 使用方法
+```python
+from progress_bar import ProgressBar, AnimatedSpinner
+
+# 经典进度条
+bar = ProgressBar(100, prefix='Downloading', suffix='Complete', color='green')
+bar.start()
+for i in range(101):
+    time.sleep(0.1)
+    bar.update()
+bar.finish()
+
+# 加载动画
+spinner = AnimatedSpinner('Loading', style='dots', color='cyan')
+spinner.start()
+time.sleep(3)
+spinner.stop()
+```
+
+### 进度条样式
+```python
+# 经典样式: ██████████████░░░░
+# 点样式:   ⠋⠙⠹▗▖▘▝▗▖▘▝▗
+# 蛇形样式: ▖▘▝▗▖▘▝▗
+# 箭头样式: ←↖↑↗→↘↓↙
+```
+
 ---
-## Day 23: URL编码解码工具 - 支持批量处理和查询字符串解析
 
-📁 文件: `scripts/2026-02-02_23_url_encoder_decoder.py`
-📊 大小: 4.9 KB
+# 实用密码检测工具
 
-**功能特性:**
-- ✅ URL编码（支持自定义保留字符）
-- ✅ URL解码（自动检测编码内容）
-- ✅ Query参数解析
-- ✅ 批量文件处理
-- ✅ 命令行交互
+# 密码强度检测器 (Day 17)
 
-**使用示例:**
-```bash
-python scripts/2026-02-02_23_url_encoder_decoder.py -t "Hello World!"  # 编码
-python scripts/2026-02-02_23_url_encoder_decoder.py -d -t "Hello%20World%21"  # 解码
-python scripts/2026-02-02_23_url_encoder_decoder.py -q "name=test&age=25"  # 解析查询字符串
-python scripts/2026-02-02_23_url_encoder_decoder.py -f input.txt -o output.txt  # 批量处理
+这个脚本可以检测密码的强度，并提供改进建议。
+
+## 功能
+- 检测密码长度
+- 检查大小写字母
+- 检查数字
+- 检查特殊字符
+- 计算熵值
+- 给出强度评分和优化建议
+
+## 使用方法
+```python
+python password_strength.py
+# 输入密码进行测试
 ```
 
-**技术要点:**
-- urllib.parse 标准库
-- argparse 命令行参数
-- 智能编码检测
-- 支持文件批量处理
+## 评分标准
+- 弱: 0-40分
+- 中: 41-60分
+- 强: 61-80分
+- 很强: 81-100分
 
-# MarsAssistant 代码旅程
 
-这是一个展示AI编码能力和学习过程的代码仓库。
+---
 
-## 📅 每日提交记录
+# ASCII字符画生成器 (Day 19)
 
-## Day 22: JSON格式化工具 - 支持格式化、压缩、验证、YAML转换
+这是一个将图片和文本转换为ASCII字符画的工具。
 
-📁 文件: `scripts/2026-02-02_22_json_formatter.py`
-📊 大小: 6.4 KB
-
-**功能特性:**
-- ✅ JSON格式化（支持自定义缩进）
-- ✅ JSON压缩（去除多余空格）
-- ✅ JSON格式验证
-- ✅ 简单的YAML转JSON
-- ✅ 交互模式支持
-- ✅ 命令行参数支持
-
-**使用示例:**
-```bash
-python scripts/2026-02-02_22_json_formatter.py file.json          # 格式化
-python scripts/2026-02-02_22_json_formatter.py file.json -m       # 压缩
-python scripts/2026-02-02_22_json_formatter.py file.json --validate  # 验证
-python scripts/2026-02-02_22_json_formatter.py -i                 # 交互模式
-```
-
-## Day 21: Markdown表格生成器 - CSV/TSV转Markdown
-
-📁 文件: `scripts/2026-02-02_21_markdown_table_generator.py`
-📊 大小: 6.5 KB
-
-**功能特性:**
-- 智能格式化（自动计算列宽）
-- 多格式支持（CSV、TSV、JSON）
-- 文件处理支持
-- 自动保存输出
-
-## Day 20: 正则表达式测试器
-
-📁 文件: `scripts/2026-02-02_20_regex_tester.py`
-📊 大小: 7.2 KB
-
-**功能特性:**
-- 交互式正则测试
-- 高亮显示匹配
-- 捕获组信息显示
-- 预置测试用例
-
-## Day 19: ASCII字符画生成器
-
-📁 文件: `scripts/2026-02-02_19_ascii_art_generator.py`
-📊 大小: 8.7 KB
-
-**功能特性:**
+## 功能
 - 图片转ASCII艺术
 - 文本转ASCII标题
-- 多种字符集支持
+- 支持多种字符集（简单/完整）
+- 可调整输出宽度和对比度
 
-## Day 18: Emoji Tools
+## 使用方法
+```python
+from ascii_art_generator import ASCIIArtGenerator
 
-📁 文件: `scripts/2026-02-02_18_emoji_tools.py`
-📊 大小: 25 KB
+# 创建生成器
+generator = ASCIIArtGenerator()
 
-**功能特性:**
-- Emoji提取和转换
-- Unicode编解码
-- Emoji含义查询
+# 图片转ASCII
+ascii_art = generator.image_to_ascii('photo.jpg', width=80)
 
-## Day 17: 密码强度检测器
+# 文本转ASCII
+title = generator.text_to_ascii("HELLO")
+print(title)
+```
 
-📁 文件: `scripts/2026-02-02_17_password_strength.py`
-📊 大小: 12 KB
+## 示例输出
+```
+ █████  ██████  ██████  ██████  ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+███████ ██   ██ ██   ██ ██   ██ ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+██   ██ ██████  ██████  ██████  ██   ██
+```
 
-**功能特性:**
-- 多维度强度评估
-- 熵值计算
-- 智能改进建议
-- 自动生成强密码
+## 文件位置
+- 路径: `scripts/2026-02-02_19_ascii_art_generator.py`
+- 大小: 8.7 KB
 
-## Day 16: 智能API请求构建器
+## Day 20: 文件压缩解压工具
 
-📁 文件: `scripts/2026-02-02_16_api_request_builder.py`
-📊 大小: 10 KB
+📁 **文件**: `scripts/2026-02-02_020_file_compressor.py`
+📝 **功能**: 支持ZIP/TAR.GZ/GZIP格式的压缩与解压工具
 
-**功能特性:**
-- 多HTTP方法支持
-- 多种认证方式
-- cURL和Python代码生成
+### ✨ 功能特性
+- **ZIP格式**: 标准ZIP压缩，支持密码保护
+- **TAR.GZ格式**: GNU zip压缩的tar归档
+- **GZIP格式**: 单文件gzip压缩
+- **实用功能**: 压缩、解压、列出内容、查看信息
 
+### 📊 文件大小
+- 18.5 KB
+
+---
+
+# Day 21: Markdown表格生成器
+
+📁 **文件**: `scripts/2026-02-02_21_markdown_table_generator.py`
+📝 **功能**: CSV/TSV转Markdown表格的智能转换工具
+
+### ✨ 功能特性
+- **智能格式化**: 自动计算列宽并对齐
+- **多格式支持**: CSV、TSV、JSON转Markdown
+- **Markdown表格**: 生成标准Markdown表格语法
+- **文件处理**: 支持文件输入和命令行参数
+- **输出保存**: 自动保存结果到文件
+
+### 📊 文件大小
+- 6.5 KB
+
+---
+
+# Day 22: Pomodoro Timer - 番茄钟计时器
+
+📁 **文件**: `scripts/2026-02-02_22_pomodoro_timer.py`
+📝 **功能**: 智能番茄钟时间管理工具
+
+### ✨ 功能特性
+- **🍅 番茄工作法**: 默认25分钟工作+5分钟短休息
+- **💼 智能休息**: 4个番茄钟后触发15分钟长休息
+- **🔔 多重提醒**: 桌面通知 + 语音提示
+- **📊 统计追踪**: 记录工作时长和完成数量
+- **⏸️ 灵活控制**: 暂停/跳过/重置功能
+- **⚙️ 自定义设置**: 可调整工作/休息时长
+- **💾 数据持久化**: 自动保存历史记录
+
+### 📊 文件大小
+- 10.0 KB
+
+### 使用方法
+```bash
+python scripts/2026-02-02_22_pomodoro_timer.py
+```
+
+### 交互命令
+- **[Enter]** - 开始/暂停/继续
+- **[p]** - 暂停/继续
+- **[s]** - 跳过当前阶段
+- **[r]** - 重置
+- **[t]** - 设置时长
+- **[i]** - 查看统计
+- **[q]** - 退出
+
+### 依赖安装
+```bash
+# 可选：安装桌面通知支持
+pip install plyer
+```
