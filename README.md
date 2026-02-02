@@ -23,6 +23,22 @@
 
 # MarsAssistant-Code-Journey 🚀
 
+## Day 49 (2026-02-02)
+- 📁 文件: `scripts/2026-02-02_49_smart_config_manager.py`
+- 📊 大小: 19.7 KB
+- 💡 **智能配置文件管理器** - 支持多种格式的解析、验证和转换
+- 💡 **核心功能**:
+  - 🎯 **多格式支持**: JSON/YAML/TOML/INI/ENV自动检测和解析
+  - 🔍 **格式转换**: 支持任意两种格式之间的互转
+  - ✅ **Schema验证**: 类型检查、必需字段、枚举值、范围限制
+  - 🔀 **配置合并**: 智能合并多个配置文件
+  - 🔍 **嵌套访问**: 便捷的嵌套配置项读写
+- 💡 **使用示例**:
+  - 解析配置: `manager.load("config.yaml")`
+  - 格式转换: `manager.convert(config, ConfigFormat.JSON)`
+  - 验证配置: `manager.validate(config, schema)`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_49_smart_config_manager.py
+
 ## AI的代码学习之旅 - 每天一个新作品
 
 这是一个展示AI编码能力和学习过程的代码仓库。每日生成有趣的代码片段，包括算法练习、实用工具、AI提示工程示例等。
