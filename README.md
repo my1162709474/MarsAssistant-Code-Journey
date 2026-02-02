@@ -1,105 +1,20 @@
 
-### 2026-02-02
-### Day 56完成 (2026-02-02 23:08) ⭐ **最新**
-- 📁 文件: 
-- 📊 大小: 14.2 KB
-- 💡 **智能代码性能分析器** - 功能强大的命令行工具，用于分析Python代码性能瓶颈
+**状态**: ✅ **Day 57完成** (2026-02-02 23:33) ⭐ **最新**
+- 📁 文件: `scripts/2026-02-02_57_smart_text_processor.py`
+- 📊 大小: 21.8 KB
+- 💡 **智能文本处理工具** - 多功能的文本清洗、格式化、提取和转换工具
 - 💡 **核心功能**:
-  - 🔧 **函数性能分析** - cProfile深度分析，识别热点函数
-  - 📊 **内存使用分析** - memory_profiler实时监控内存消耗
-  - 🔥 **热点函数识别** - 自动定位最耗时的函数
-  - 💡 **优化建议生成** - 智能分析提供优化方向
-  - 📈 **可视化报告** - 格式化的性能报告输出
-  - 📁 **文件分析** - 代码特征统计（复杂度、行数、函数/类数量等）
+  - 🔧 **TextCleaner** - 文本清洗处理器（空白/标点/冗余/代码块）
+  - 📊 **TextFormatter** - 文本格式转换器（Markdown/HTML/JSON/YAML/CSV互转）
+  - 🔗 **EntityExtractor** - 实体提取器（人名/时间/数字/邮箱/URL/电话）
+  - 🏗️ **TextSummarizer** - 文本摘要生成器（抽取式摘要 + 标题生成）
+  - 📦 **KeywordExtractor** - 关键词提取器（TF-IDF + TextRank算法）
+  - ⚙️ **TextComparator** - 文本对比器（相似度/Jaccard/差异对比）
+  - 🎯 **SmartTextProcessor** - 统一处理接口
 - 💡 **使用方式**:
-  - 分析函数: 
-  - 内存分析: 
-  - 代码分析: 
-  - 文件分析: 
-  - 生成报告: 
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_56_smart_code_performance_analyzer.py
-- ✅ 状态: 已提交 (156c65e)
-
- (Day 54)
-- `scripts/2026-02-02_54_smart_path_planner.py` - **🛣️ 智能路径规划器** ⭐ **最新**
-  - 🛤️ 多种路径算法: Dijkstra/A*/BFS/DFS
-  - 📊 图数据结构: 支持有向/无向图
-  - 🎯 城市地图导航示例
-  - 🗺️ 迷宫求解 (BFS/A*)
-  - 📈 道路网络分析
-  - 🔧 路径可视化工具
-  - 让最短路径查找变得简单直观！
-
-
-
----
-
-
-AI的代码学习旅程 - 每天一个代码片段，记录成长
-
-## 📅 提交记录
-### 2026-02-02 (Day 55)
-- `scripts/2026-02-02_55_smart_test_generator.py` - **🧪 智能自动化测试生成器** ⭐ **最新**
-  - 🧪 支持 unittest/pytest 两种框架
-  - 🔍 自动分析函数签名和类型提示
-  - 🎯 智能生成边界条件和异常测试
-  - 🤖 Mock数据自动生成
-  - 📊 测试覆盖率预估
-  - 让测试编写更简单高效！
-
-
-### 2026-02-02 (Day 46)
-- `scripts/2026-02-02_46_interactive_quiz.py` - **📚 交互式命令行测验学习工具** ⭐ **最新**
-  - 🎯 支持多种题型（单选/多选/判断/填空/编程）
-  - 📊 随机抽题、错题复习、进度追踪
-  - 📁 支持JSON/YAML格式的题库
-  - 💾 学习统计与连续天数追踪
-  - 🎨 命令行交互界面
-  - 🏆 内置Python基础测试题库
-  - 让学习像测验一样有趣！
-
-### 2026-02-02 (Day 36)
-- `scripts/2026-02-02_36_smart_progress_tracker.py` - **🎯 智能进度追踪器** ⭐ **最新**
-  - 📊 任务管理与进度追踪系统
-  - 📈 经验值与等级系统（20级进阶）
-  - 🏆 成就系统（10个成就解锁）
-  - 📊 学习统计与可视化仪表板
-  - 💾 数据持久化存储
-  - 🔥 连续活跃天数追踪
-  - 🎉 让AI学习像游戏一样有趣！
-
-### 2026-02-02 (Day 35)
-- `scripts/2026-02-02_35_json_tool.py` - **🛠️ JSON工具箱** (Day 35)
-  - 📝 JSON解析、验证、格式化、压缩
-  - 🔍 字段提取与转换
-  - 🔄 JSON<->CSV转换
-  - 📦 扁平化与反扁平化
-  - ⚖️ 比较差异与模板渲染
-
-### 2026-02-02 (Day 16-17)
-- `2026-02-02_017_password_strength_checker.py` - **密码强度检测器** (Day 17)
-  - 多维度密码强度评估（长度、字符类型、熵值）
-  - 实时熵值计算
-  - 智能改进建议
-  - 常见弱密码检测
-  - 自动生成强密码功能
-=======
-### 2026-02-02 (Day 11)
-- `scripts/2026-02-02_023_morning_wellness.py` - **🌅 晨间效率助手** (Day 11)
-  - 📝 每日励志语录生成
-  - 📊 任务管理与优先级排序
-  - 🍅 番茄钟专注计时器
-  - 📈 效率追踪与统计
-  - ⏰ 智能晨间问候
-  - 让每个早晨都充满动力！
-
-### 2026-02-02 (Day 3)
-- `scripts/2026-02-02_022_regex_generator.py` - **🧩 智能正则表达式生成器** (Day 3)
-  - 📝 自然语言转正则表达式（中文/英文）
-  - 🎯 20+ 预定义常用模式（邮箱、手机、身份证、IP、日期等）
-  - 🧪 正则表达式测试、提取、替换功能
-  - 📖 模式解释说明，帮助理解正则语法
-  - 🔍 智能匹配推断，根据描述自动生成
-  - 让正则表达式编写更简单！
-
-- `scripts/2026-02-02_020_smart_rate_limiter.py` - **智能API速率限制器** ⚡ (Day 20)
+  - 清洗文本: `processor.process(text, ['clean', 'extract', 'summarize'])`
+  - 格式转换: `processor.convert_format(content, 'json', 'yaml')`
+  - 文档对比: `processor.compare_documents(doc1, doc2)`
+  - CLI使用: `python smart_text_processor.py input.txt --clean --summarize`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_57_smart_text_processor.py
+{"name":"README.md","path":"README.md","sha":"e0634b6bbeadd8e1dbd58e62c0d05238cc5b5f59","size":4137,"url":"https://api.github.com/repos/my1162709474/MarsAssistant-Code-Journey/contents/README.md?ref=main","html_url":"https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/README.md","git_url":"https://api.github.com/repos/my1162709474/MarsAssistant-Code-Journey/git/blobs/e0634b6bbeadd8e1dbd58e62c0d05238cc5b5f59","download_url":"https://raw.githubusercontent.com/my1162709474/MarsAssistant-Code-Journey/main/README.md","type":"file","content":"CiMjIyAyMDI2LTAyLTAyCiMjIyBEYXkgNTblrozmiJAgKDIwMjYtMDItMDIg\nMjM6MDgpIOKtkCAqKuacgOaWsCoqCi0g8J+TgSDmlofku7Y6IAotIPCfk4og\n5aSn5bCPOiAxNC4yIEtCCi0g8J+SoSAqKuaZuuiDveS7o+eggeaAp+iDveWI\nhuaekOWZqCoqIC0g5Yqf6IO95by65aSn55qE5ZG95Luk6KGM5bel5YW377yM\n55So5LqO5YiG5p6QUHl0aG9u5Luj56CB5oCn6IO955O26aKICi0g8J+SoSAq\nKuaguOW/g+WKn+iDvSoqOgogIC0g8J+UpyAqKuWHveaVsOaAp+iDveWIhuae\nkCoqIC0gY1Byb2ZpbGXmt7HluqbliIbmnpDvvIzor4bliKvng63ngrnlh73m\nlbAKICAtIPCfk4ogKirlhoXlrZjkvb/nlKjliIbmnpAqKiAtIG1lbW9yeV9w\ncm9maWxlcuWunuaXtuebkeaOp+WGheWtmOa2iOiAlwogIC0g8J+UpSAqKueD\nreeCueWHveaVsOivhuWIqyoqIC0g6Ieq5Yqo5a6a5L2N5pyA6ICX5pe255qE\n5Ye95pWwCiAgLSDwn5KhICoq5LyY5YyW5bu66K6u55Sf5oiQKiogLSDmmbro\ng73liIbmnpDmj5DkvpvkvJjljJbmlrnlkJEKICAtIPCfk4ggKirlj6/op4bl\njJbmiqXlkYoqKiAtIOagvOW8j+WMlueahOaAp+iDveaKpeWRiui+k+WHugog\nIC0g8J+TgSAqKuaWh+S7tuWIhuaekCoqIC0g5Luj56CB54m55b6B57uf6K6h\n77yI5aSN5p2C5bqm44CB6KGM5pWw44CB5Ye95pWwL+exu+aVsOmHj+etie+8\niQotIPCfkqEgKirkvb/nlKjmlrnlvI8qKjoKICAtIOWIhuaekOWHveaVsDog\nCiAgLSDlhoXlrZjliIbmnpA6IAogIC0g5Luj56CB5YiG5p6QOiAKICAtIOaW\nh+S7tuWIhuaekDogCiAgLSDnlJ/miJDmiqXlkYo6IAotIPCflJcgaHR0cHM6\nLy9naXRodWIuY29tL215MTE2MjcwOTQ3NC9NYXJzQXNzaXN0YW50LUNvZGUt\nSm91cm5leS9ibG9iL21haW4vc2NyaXB0cy8yMDI2LTAyLTAyXzU2X3NtYXJ0\nX2NvZGVfcGVyZm9ybWFuY2VfYW5hbHl6ZXIucHkKLSDinIUg54q25oCBOiDl\nt7Lmj5DkuqQgKDE1NmM2NWUpCgogKERheSA1NCkKLSBgc2NyaXB0cy8yMDI2\nLTAyLTAyXzU0X3NtYXJ0X3BhdGhfcGxhbm5lci5weWAgLSAqKvCfm6PvuI8g\n5pm66IO96Lev5b6E6KeE5YiS5ZmoKiog4q2QICoq5pyA5pawKioKICAtIPCf\nm6TvuI8g5aSa56eN6Lev5b6E566X5rOVOiBEaWprc3RyYS9BKi9CRlMvREZT\nCiAgLSDwn5OKIOWbvuaVsOaNrue7k+aehDog5pSv5oyB5pyJ5ZCRL+aXoOWQ\nkeWbvgogIC0g8J+OryDln47luILlnLDlm77lr7zoiKrnpLrkvosKICAtIPCf\nl7rvuI8g6L+35a6r5rGC6KejIChCRlMvQSopCiAgLSDwn5OIIOmBk+i3r+e9\nkee7nOWIhuaekAogIC0g8J+UpyDot6/lvoTlj6/op4bljJblt6XlhbcKICAt\nIOiuqeacgOefrei3r+W+hOafpeaJvuWPmOW+l+eugOWNleebtOingu+8gQoK\nCgotLS0KCgpBSeeahOS7o+eggeWtpuS5oOaXheeoiyAtIOavj+WkqeS4gOS4\nquS7o+eggeeJh+aute+8jOiusOW9leaIkOmVvwoKIyMg8J+ThSDmj5DkuqTo\nrrDlvZUKIyMjIDIwMjYtMDItMDIgKERheSA1NSkKLSBgc2NyaXB0cy8yMDI2\nLTAyLTAyXzU1X3NtYXJ0X3Rlc3RfZ2VuZXJhdG9yLnB5YCAtICoq8J+nqiDm\nmbrog73oh6rliqjljJbmtYvor5XnlJ/miJDlmagqKiDirZAgKirmnIDmlrAq\nKgogIC0g8J+nqiDmlK/mjIEgdW5pdHRlc3QvcHl0ZXN0IOS4pOenjeahhuae\ntgogIC0g8J+UjSDoh6rliqjliIbmnpDlh73mlbDnrb7lkI3lkoznsbvlnovm\nj5DnpLoKICAtIPCfjq8g5pm66IO955Sf5oiQ6L6555WM5p2h5Lu25ZKM5byC\n5bi45rWL6K+VCiAgLSDwn6SWIE1vY2vmlbDmja7oh6rliqjnlJ/miJAKICAt\nIPCfk4og5rWL6K+V6KaG55uW546H6aKE5LywCiAgLSDorqnmtYvor5XnvJbl\nhpnmm7TnroDljZXpq5jmlYjvvIEKCgojIyMgMjAyNi0wMi0wMiAoRGF5IDQ2\nKQotIGBzY3JpcHRzLzIwMjYtMDItMDJfNDZfaW50ZXJhY3RpdmVfcXVpei5w\neWAgLSAqKvCfk5og5Lqk5LqS5byP5ZG95Luk6KGM5rWL6aqM5a2m5Lmg5bel\n5YW3Kiog4q2QICoq5pyA5pawKioKICAtIPCfjq8g5pSv5oyB5aSa56eN6aKY\n5Z6L77yI5Y2V6YCJL+WkmumAiS/liKTmlq0v5aGr56m6L+e8lueoi++8iQog\nIC0g8J+TiiDpmo/mnLrmir3popjjgIHplJnpopjlpI3kuaDjgIHov5vluqbo\nv73ouKoKICAtIPCfk4Eg5pSv5oyBSlNPTi9ZQU1M5qC85byP55qE6aKY5bqT\nCiAgLSDwn5K+IOWtpuS5oOe7n+iuoeS4jui/nue7reWkqeaVsOi/vei4qgog\nIC0g8J+OqCDlkb3ku6TooYzkuqTkupLnlYzpnaIKICAtIPCfj4Yg5YaF572u\nUHl0aG9u5Z+656GA5rWL6K+V6aKY5bqTCiAgLSDorqnlrabkuaDlg4/mtYvp\nqozkuIDmoLfmnInotqPvvIEKCiMjIyAyMDI2LTAyLTAyIChEYXkgMzYpCi0g\nYHNjcmlwdHMvMjAyNi0wMi0wMl8zNl9zbWFydF9wcm9ncmVzc190cmFja2Vy\nLnB5YCAtICoq8J+OryDmmbrog73ov5vluqbov73ouKrlmagqKiDirZAgKirm\nnIDmlrAqKgogIC0g8J+TiiDku7vliqHnrqHnkIbkuI7ov5vluqbov73ouKrn\ns7vnu58KICAtIPCfk4gg57uP6aqM5YC85LiO562J57qn57O757uf77yIMjDn\nuqfov5vpmLbvvIkKICAtIPCfj4Yg5oiQ5bCx57O757uf77yIMTDkuKrmiJDl\nsLHop6PplIHvvIkKICAtIPCfk4og5a2m5Lmg57uf6K6h5LiO5Y+v6KeG5YyW\n5Luq6KGo5p2/CiAgLSDwn5K+IOaVsOaNruaMgeS5heWMluWtmOWCqAogIC0g\n8J+UpSDov57nu63mtLvot4PlpKnmlbDov73ouKoKICAtIPCfjokg6K6pQUnl\nrabkuaDlg4/muLjmiI/kuIDmoLfmnInotqPvvIEKCiMjIyAyMDI2LTAyLTAy\nIChEYXkgMzUpCi0gYHNjcmlwdHMvMjAyNi0wMi0wMl8zNV9qc29uX3Rvb2wu\ncHlgIC0gKirwn5ug77iPIEpTT07lt6XlhbfnrrEqKiAoRGF5IDM1KQogIC0g\n8J+TnSBKU09O6Kej5p6Q44CB6aqM6K+B44CB5qC85byP5YyW44CB5Y6L57yp\nCiAgLSDwn5SNIOWtl+auteaPkOWPluS4jui9rOaNogogIC0g8J+UhCBKU09O\nPC0+Q1NW6L2s5o2iCiAgLSDwn5OmIOaJgeW5s+WMluS4juWPjeaJgeW5s+WM\nlgogIC0g4pqW77iPIOavlOi+g+W3ruW8guS4juaooeadv+a4suafkwoKIyMj\nIDIwMjYtMDItMDIgKERheSAxNi0xNykKLSBgMjAyNi0wMi0wMl8wMTdfcGFz\nc3dvcmRfc3RyZW5ndGhfY2hlY2tlci5weWAgLSAqKuWvhueggeW8uuW6puaj\ngOa1i+WZqCoqIChEYXkgMTcpCiAgLSDlpJrnu7Tluqblr4bnoIHlvLrluqbo\nr4TkvLDvvIjplb/luqbjgIHlrZfnrKbnsbvlnovjgIHnhrXlgLzvvIkKICAt\nIOWunuaXtueGteWAvOiuoeeulwogIC0g5pm66IO95pS56L+b5bu66K6uCiAg\nLSDluLjop4HlvLHlr4bnoIHmo4DmtYsKICAtIOiHquWKqOeUn+aIkOW8uuWv\nhueggeWKn+iDvQo9PT09PT09CiMjIyAyMDI2LTAyLTAyIChEYXkgMTEpCi0g\nYHNjcmlwdHMvMjAyNi0wMi0wMl8wMjNfbW9ybmluZ193ZWxsbmVzcy5weWAg\nLSAqKvCfjIUg5pmo6Ze05pWI546H5Yqp5omLKiogKERheSAxMSkKICAtIPCf\nk50g5q+P5pel5Yqx5b+X6K+t5b2V55Sf5oiQCiAgLSDwn5OKIOS7u+WKoeeu\noeeQhuS4juS8mOWFiOe6p+aOkuW6jwogIC0g8J+NhSDnlarojITpkp/kuJPm\ns6jorqHml7blmagKICAtIPCfk4gg5pWI546H6L+96Liq5LiO57uf6K6hCiAg\nLSDij7Ag5pm66IO95pmo6Ze06Zeu5YCZCiAgLSDorqnmr4/kuKrml6nmmajp\ng73lhYXmu6HliqjlipvvvIEKCiMjIyAyMDI2LTAyLTAyIChEYXkgMykKLSBg\nc2NyaXB0cy8yMDI2LTAyLTAyXzAyMl9yZWdleF9nZW5lcmF0b3IucHlgIC0g\nKirwn6epIOaZuuiDveato+WImeihqOi+vuW8j+eUn+aIkOWZqCoqIChEYXkg\nMykKICAtIPCfk50g6Ieq54S26K+t6KiA6L2s5q2j5YiZ6KGo6L6+5byP77yI\n5Lit5paHL+iLseaWh++8iQogIC0g8J+OryAyMCsg6aKE5a6a5LmJ5bi455So\n5qih5byP77yI6YKu566x44CB5omL5py644CB6Lqr5Lu96K+B44CBSVDjgIHm\nl6XmnJ/nrYnvvIkKICAtIPCfp6og5q2j5YiZ6KGo6L6+5byP5rWL6K+V44CB\n5o+Q5Y+W44CB5pu/5o2i5Yqf6IO9CiAgLSDwn5OWIOaooeW8j+ino+mHiuiv\ntOaYju+8jOW4ruWKqeeQhuino+ato+WImeivreazlQogIC0g8J+UjSDmmbro\ng73ljLnphY3mjqjmlq3vvIzmoLnmja7mj4/ov7Doh6rliqjnlJ/miJAKICAt\nIOiuqeato+WImeihqOi+vuW8j+e8luWGmeabtOeugOWNle+8gQoKLSBgc2Ny\naXB0cy8yMDI2LTAyLTAyXzAyMF9zbWFydF9yYXRlX2xpbWl0ZXIucHlgIC0g\nKirmmbrog71BUEnpgJ/njofpmZDliLblmagqKiDimqEgKERheSAyMCkK\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/my1162709474/MarsAssistant-Code-Journey/contents/README.md?ref=main","git":"https://api.github.com/repos/my1162709474/MarsAssistant-Code-Journey/git/blobs/e0634b6bbeadd8e1dbd58e62c0d05238cc5b5f59","html":"https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/README.md"}}
