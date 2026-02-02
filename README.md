@@ -84,7 +84,26 @@
 - 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_45_smart_regex_tester.py
 - ✅ README.md已更新
 
-### Day 44: 命令行参数解析器 (17:02) ⭐ **最新**
+### Day 52: 智能API测试与文档生成器 (21:06) ⭐ **最新**
+- 📁 文件: `scripts/20260202_52_smart_api_tester.py`
+- 📊 大小: 7.2 KB
+- 💡 **智能API测试与文档生成器** - 自动分析API端点、生成测试用例和文档
+- 💡 **核心功能**:
+  - 🎯 **端点管理** - 添加、测试多种HTTP方法(GET/POST/PUT/DELETE)
+  - 🧪 **自动化测试** - 支持请求参数、请求体、自动处理响应
+  - 📖 **文档生成** - 自动生成Markdown格式的API文档
+  - 📦 **Postman集合** - 导出兼容Postman的JSON集合文件
+  - 📊 **测试摘要** - 统计通过/失败数量，彩色输出结果
+- 💡 **使用方式**:
+  - 初始化测试器: `tester = SmartAPITester(base_url, headers)`
+  - 添加端点: `tester.add_endpoint("GET", "/users", "获取用户列表")`
+  - 运行测试: `tester.test_all()`
+  - 生成文档: `doc = tester.generate_documentation()`
+  - 导出Postman: `collection = tester.export_postman_collection()`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260202_52_smart_api_tester.py
+- ✅ README.md已更新
+
+### Day 44: 命令行参数解析器 (17:02)
 - 📁 文件: `scripts/2026-02-02_44_argparse_demo.py`
 - 📊 大小: 25.8 KB
 - 💡 **命令行参数解析器** - 功能强大的CLI参数处理工具，支持多种参数风格和验证
