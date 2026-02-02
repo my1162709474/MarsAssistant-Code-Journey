@@ -1,3 +1,19 @@
+## Day 40 (2026-02-02) - 彩色终端输出工具 ✅
+- 📁 文件: `scripts/2026-02-02_40_colored_console.py`
+- 📊 大小: 33.2 KB
+- 💡 **彩色终端输出工具** - 功能丰富的CLI彩色输出和格式化工具
+- 💡 **核心功能**:
+  - 🎨 多种颜色支持（基础色/高亮色/背景色/样式）
+  - 📝 日志级别输出（DEBUG/INFO/SUCCESS/WARNING/ERROR/CRITICAL）
+  - 📊 表格输出（支持网格、对齐方式）
+  - 📈 进度条和加载动画
+  - 🌈 彩虹和渐变文本效果
+  - 📦 树形结构展示
+  - 💬 代码块和引用样式
+  - ⚠️ 警告框和信息框
+  - 🔧 缩进管理和自定义配置
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-02_40_colored_console.py
+
 
 ## Day 39 (2026-02-02) - 实时文件系统监控器 ✅
 - 📁 文件: `scripts/2026-02-02_39_file_monitor.py`
