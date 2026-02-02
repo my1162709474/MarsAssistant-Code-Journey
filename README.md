@@ -1,204 +1,698 @@
-# MarsAssistant-Code-Journey
-AI的代码学习旅程 - 每天一个代码片段，记录成长
+# Day 36: 数据验证与清洗工具 - Data Validation & Sanitization Library 🛡️
 
-## 📅 提交记录
+📁 **文件**: `scripts/2026-02-02_36_data_validator.py`
+📊 **大小**: 23.8 KB
+📝 **功能**: 全面的数据验证和清洗库，支持多种数据类型的验证和净化
 
-### 2026-02-02 (Day 36)
-- `scripts/2026-02-02_36_smart_progress_tracker.py` - **🎯 智能进度追踪器** ⭐ **最新**
-  - 📊 任务管理与进度追踪系统
-  - 📈 经验值与等级系统（20级进阶）
-  - 🏆 成就系统（10个成就解锁）
-  - 📊 学习统计与可视化仪表板
-  - 💾 数据持久化存储
-  - 🔥 连续活跃天数追踪
-  - 🎉 让AI学习像游戏一样有趣！
+### ✨ 功能特性
+- **📧 邮箱验证**: RFC 5322标准格式验证
+- **🔗 URL验证**: HTTP/HTTPS/FTP链接验证
+- **📱 手机号验证**: 多国家电话号码支持（CN/US/UK/JP等）
+- **🔒 SQL注入防护**: 多级别SQL注入检测和清洗
+- **🚫 XSS攻击防护**: 多种XSS攻击模式检测和过滤
+- **📊 数据类型验证**: 字符串、数字、列表等类型验证
+- **📋 JSON Schema验证**: 类似JSON Schema的验证规则
+- **🔧 自定义验证**: 支持添加自定义验证器
+- **💬 多语言提示**: 中英文错误提示支持
+- **📈 验证统计**: 验证结果统计报告
 
-### 2026-02-02 (Day 35)
-- `scripts/2026-02-02_35_json_tool.py` - **🛠️ JSON工具箱** (Day 35)
-  - 📝 JSON解析、验证、格式化、压缩
-  - 🔍 字段提取与转换
-  - 🔄 JSON<->CSV转换
-  - 📦 扁平化与反扁平化
-  - ⚖️ 比较差异与模板渲染
+### 使用方法
+```python
+from data_validator import DataValidator, ValidationResult
 
-### 2026-02-02 (Day 16-17)
-- `2026-02-02_017_password_strength_checker.py` - **密码强度检测器** (Day 17)
-  - 多维度密码强度评估（长度、字符类型、熵值）
-  - 实时熵值计算
-  - 智能改进建议
-  - 常见弱密码检测
-  - 自动生成强密码功能
-=======
-### 2026-02-02 (Day 11)
-- `scripts/2026-02-02_023_morning_wellness.py` - **🌅 晨间效率助手** (Day 11)
-  - 📝 每日励志语录生成
-  - 📊 任务管理与优先级排序
-  - 🍅 番茄钟专注计时器
-  - 📈 效率追踪与统计
-  - ⏰ 智能晨间问候
-  - 让每个早晨都充满动力！
+# 创建验证器
+validator = DataValidator()
 
-### 2026-02-02 (Day 3)
-- `scripts/2026-02-02_022_regex_generator.py` - **🧩 智能正则表达式生成器** (Day 3)
-  - 📝 自然语言转正则表达式（中文/英文）
-  - 🎯 20+ 预定义常用模式（邮箱、手机、身份证、IP、日期等）
-  - 🧪 正则表达式测试、提取、替换功能
-  - 📖 模式解释说明，帮助理解正则语法
-  - 🔍 智能匹配推断，根据描述自动生成
-  - 让正则表达式编写更简单！
+# 邮箱验证
+result = validator.validate_email("user@example.com")
+print(f"Valid: {result.is_valid}, Cleaned: {result.cleaned_value}")
 
-- `scripts/2026-02-02_020_smart_rate_limiter.py` - **智能API速率限制器** ⚡ (Day 20)
-  - 🌟 令牌桶算法实现，支持突发流量
-  - 🔄 滑动窗口计数器，更精确的限流
-  - 🛡️ 多客户端独立计数
-  - ⏳ 智能重试机制（指数退避）
-  - 📊 实时速率统计与监控
-  - 💾 状态持久化保存/恢复
-  - 🔒 线程安全设计，高并发场景稳定运行
-  - 构建可靠API客户端的必备工具！
+# URL验证
+result = validator.validate_url("https://www.example.com")
+print(f"Valid: {result.is_valid}")
 
-- `scripts/2026-02-02_01_quick_sort_visualization.py` - **快速排序可视化演示** 📚
-  - 🎯 经典分治算法：快速排序
-  - 📊 每一步分区操作可视化输出
-  - 🧮 支持随机数组生成和性能测试
-  - ⏱️ 时间复杂度分析：O(n log n) 平均
-  - 🎓 学习排序算法原理的理想工具
->>>>>>> Stashed changes
+# 手机号验证
+result = validator.validate_phone("13812345678", "CN")
+print(f"Valid: {result.is_valid}")
 
-- `2026-02-02_016_api_request_builder.py` - **智能API请求构建器** (Day 16)
-  - 支持GET/POST/PUT/PATCH/DELETE等方法
-  - 自动处理JSON请求/响应
-  - 认证支持（API Key、Bearer Token、Basic Auth）
-  - 自动生成cURL命令和Python代码
-  - 响应分析和状态码解读
+# SQL注入检测
+detected, patterns = validator.detect_sql_injection("normal text")
+print(f"SQL Injection: {detected}")
 
-- `2026-02-02_015_markdown_parser.py` - **Markdown文档解析器** (Day 15)
-  - 解析标题(H1-H6)、段落、列表、代码块
-  - 支持链接和图片解析
-  - 文档结构分析（元素统计、单词数）
-  - 纯文本内容提取
-  - 元素类型枚举支持（12种类型）
+# XSS检测
+detected, patterns = validator.detect_xss("<script>alert('xss')</script>")
+print(f"XSS Attack: {detected}")
 
-### 2026-02-01 (Day 11-19)
-- `2026-02-01_019_git_sync_tracker.py` - **Git同步追踪器** (Day 19)
-  - 自动同步并追踪Git仓库进度
-  - 获取仓库状态（分支、提交、文件）
-  - 拉取和推送代码
-  - 同步历史记录与统计
-  - 连续同步成功次数追踪
+# 输入清洗
+clean = validator.sanitize_input("  <script>alert('xss')</script>  ' OR '1'='1  ")
+print(f"Cleaned: {clean}")
 
-- `2026-02-01_018_markdown_parser.py` - **智能Markdown解析器** (Day 18)
-  - 标题解析（1-6级）
-  - 链接和图片提取
-  - 代码块识别
-  - 表格解析
-  - 待办事项列表
-  - 引用和分隔线
-  - 生成目录（TOC）
-  - 转换为JSON/HTML格式
-
-- `2026-02-01_017_code_statistics.py` - **代码统计器** (Day 17)
-  - 统计代码行数（总行数、代码行、注释行、空行）
-  - 统计字符数和字节数
-  - 识别编程语言
-  - 统计函数、类、导入等元素
-  - 生成详细的代码分析报告
-  - 支持批量分析目录
-
-- `2026-02-01_016_data_validator.py` - **智能数据验证器** (Day 16)
-  - 数据类型自动检测与验证
-  - 邮箱、电话号码、URL、身份证等格式验证
-  - 自定义验证规则
-  - 批量数据验证
-  - 验证报告生成
-
-- `2026-02-01_015_api_cache_manager.py` - **API响应缓存管理器** (Day 15)
-  - 智能缓存API响应，减少重复请求
-  - 支持TTL过期机制
-  - 缓存统计与清理功能
-  - 基于MD5键的缓存管理
-
-- `2026-02-01_014_text_summarizer.py` - **智能文本摘要生成器** (Day 14)
-  - 提取式摘要（提取关键句子）
-  - 基于TF-IDF的关键词提取
-  - 文本压缩与摘要评分
-  - 支持中英文文本
-
-- `2026-02-01_013_palindrome_checker.py` - **回文数检测器** (Day 13)
-  - 数字回文检测（正向反向数字相同）
-  - 字符串回文检测（忽略大小写和符号）
-  - 递归回文检测实现
-  - 最长回文子串查找（动态规划+中心扩展法）
-  - 回文子串计数
-
-- `2026-02-01_012_smart_task_manager.py` - **智能待办事项管理器** (Day 12)
-  - 创建、列出、完成、删除待办事项
-  - 优先级设置（高/中/低）
-  - 截止日期提醒与分类标签
-  - 数据持久化存储（JSON）
-  - 包含演示示例
-
-- `2026-02-01_011_huffman_compression.py` - **Huffman压缩工具** (Day 11)
-  - 基于Huffman算法的文件压缩/解压缩
-  - 频率统计与字符编码
-  - 压缩比率计算
-  - 包含完整的演示示例
-
-- `2026-02-01_006_lcs_algorithm.py` - **最长公共子序列(LCS)算法** (Day 10)
-  - 传统动态规划解法
-  - 空间优化版本（只用两行）
-  - 只返回长度的最优版本
-  - 包含中英文测试用例
-
-### 2026-02-01 (Day 1-9)
-- `2026-02-01_005_file_finder.py` - 智能文件搜索器
-- `2026-02-01_004_password_generator.py` - **智能密码生成器** (Day 9)
-  - 随机密码生成（支持自定义字符集）
-  - 易记语音密码（如 KAXI-MEPO-BUNO）
-  - 密码强度检测与分析
-- `2026-02-01_003_text_similarity.py` - **文本相似度计算器** (Day 8)
-  - 余弦相似度、Jaccard相似度
-  - Levenshtein编辑距离
-  - SimHash算法用于去重
-- `2026-02-01_002_sorting_algorithms.py` - 排序算法合集
-- `2026-02-01_001_quicksort.py` - 快速排序实现
-
-### 2026-01-31 (Day 1-6)
-- AI提示工程工具
-- 算法工具包
-- 配置管理器
-- 更多实用工具
-
-## 🚀 开始
-```bash
-python scripts/2026-02-02_017_password_strength_checker.py
+# Schema验证
+schema = {
+    'name': {'type': 'string', 'required': True, 'max_length': 50},
+    'age': {'type': 'number', 'min': 0, 'max': 150},
+    'email': {'type': 'string', 'required': True}
+}
+data = {'name': '张三', 'age': 25, 'email': 'test@example.com'}
+results = validator.validate_with_schema(data, schema)
 ```
 
-## 📈 统计
-<<<<<<< Updated upstream
-- 总提交: 20+
-- 代码文件: 20+
-- 算法涵盖: 排序、搜索、动态规划、字符串处理、压缩算法、回文检测、文本摘要、缓存管理、数据验证、代码分析、Git操作、密码安全
-=======
-- 总提交: 21+
-- 代码文件: 21+
-- 算法涵盖: 排序、搜索、动态规划、字符串处理、压缩算法、回文检测、文本摘要、缓存管理、数据验证、代码分析、Git操作、AI提示词管理
->>>>>>> Stashed changes
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_36_data_validator.py
+```
 
-## 🎯 目标
-创建一个持续增长的代码旅程，展示AI的编码能力和学习过程。
+### 验证级别
+```python
+from data_validator import SanitizationLevel
+
+# 基础清洗
+clean = validator.sanitize_sql(input_text, SanitizationLevel.BASIC)
+
+# 中等清洗（推荐）
+clean = validator.sanitize_sql(input_text, SanitizationLevel.MODERATE)
+
+# 激进清洗
+clean = validator.sanitize_sql(input_text, SanitizationLevel.AGGRESSIVE)
+```
 
 ---
 
-*AI生成的代码，通过GitHub Actions自动提交*
+# Day 35: JSON工具箱 - JSON Toolkit 📦
 
-## 2026-02-02 (Day 18)
-- `scripts/2026-02-02_18_emoji_tools.py` - 🎯 Emoji 解析器与工具集 (Day 18)
-  - 🎨 提取文本中的所有 Emoji
-  - 🔄 Emoji 转 Unicode 字符串
-  - 🔙 Unicode 字符串转 Emoji
-  - 🔍 简单的 Emoji 搜索
-  - 📖 Emoji 含义查询
-  - 📊 统计文本中的 Emoji 数量
-  - 包含 400+ 常用 Emoji 字典
+📁 **文件**: `scripts/2026-02-02_35_json_tool.py`
+📊 **大小**: 13.7 KB
+📝 **功能**: JSON解析验证格式化转换工具
 
+### ✨ 功能特性
+- **✅ JSON语法验证**: 检测JSON语法错误
+- **📝 格式化/压缩**: 美化或压缩JSON输出
+- **🔍 字段提取**: 从JSON中提取指定字段
+- **🔄 JSON<->CSV转换**: 支持双向转换
+- **📋 扁平化/反扁平化**: 嵌套JSON与扁平化互转
+- **⚖️ 比较差异**: 对比两个JSON对象的差异
+- **📄 模板渲染**: 基于JSON模板生成内容
+
+### 使用方法
+```python
+from json_toolbox import JSONToolbox
+
+toolbox = JSONToolbox()
+
+# 验证JSON
+is_valid = toolbox.validate_json('{"name": "John"}')
+
+# 格式化
+formatted = toolbox.format_json('{"name":"John"}')
+
+# 提取字段
+data = {"user": {"profile": {"name": "John"}}}
+result = toolbox.extract_field(data, "user.profile.name")
+
+# 扁平化
+flat = toolbox.flatten({"a": {"b": {"c": 1}}})
+# 结果: {"a.b.c": 1}
+
+# 比较差异
+diff = toolbox.compare_diff(
+    {"a": 1, "b": 2},
+    {"a": 1, "c": 3}
+)
+```
+
+### 命令行使用
+```bash
+# 交互模式
+python scripts/2026-02-02_35_json_tool.py
+
+# 验证JSON文件
+python scripts/2026-02-02_35_json_tool.py validate data.json
+
+# 格式化并输出
+python scripts/2026-02-02_35_json_tool.py format compact.json pretty.json
+
+# 提取字段
+python scripts/2026-02-02_35_json_tool.py extract config.json "database.host"
+
+# CSV转JSON
+python scripts/2026-02-02_35_json_tool.py csv2json data.csv data.json
+
+# JSON转CSV
+python scripts/2026-02-02_35_json_tool.py json2csv data.json data.csv
+
+# 扁平化
+python scripts/2026-02-02_35_json_tool.py flatten nested.json flat.json
+
+# 反扁平化
+python scripts/2026-02-02_35_json_tool.py unflatten flat.json nested.json
+
+# 比较差异
+python scripts/2026-02-02_35_json_tool.py diff old.json new.json
+
+# 模板渲染
+python scripts/2026-02-02_35_json_tool.py render template.json context.json
+```
+
+---
+
+# Day 34: 智能文本摘要器 - Smart Text Summarizer 📚
+
+📁 **文件**: `scripts/2026-02-02_34_smart_text_summarizer.py`
+📊 **大小**: 17.6 KB
+📝 **功能**: 支持TF-IDF抽取式摘要、关键短语提取、多语言支持
+
+### ✨ 功能特性
+- **📊 TF-IDF抽取式摘要**: 基于词频-逆文档频率算法
+- **🔑 关键短语提取**: 自动识别重要短语
+- **🌐 多语言支持**: 中英文等语言支持
+- **⚙️ 可调参数**: 摘要长度、句子数等
+- **📈 统计信息**: 词频、句子重要性等统计
+
+### 使用方法
+```python
+from smart_text_summarizer import SmartTextSummarizer, SummaryConfig
+
+# 默认配置
+summarizer = SmartTextSummarizer()
+
+# 抽取式摘要
+summary = summarizer.extractive_summarize(
+    "长文本内容...",
+    max_sentences=3
+)
+
+# 关键短语提取
+keywords = summarizer.extract_keywords(
+    "文本内容...",
+    top_n=10
+)
+
+# 自定义配置
+config = SummaryConfig(
+    max_sentences=5,
+    min_sentence_length=5,
+    max_sentence_length=100,
+    use_stemming=True
+)
+summarizer = SmartTextSummarizer(config)
+```
+
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_34_smart_text_summarizer.py
+
+# 生成摘要
+python scripts/2026-02-02_34_smart_text_summarizer.py summarize article.txt
+
+# 提取关键短语
+python scripts/2026-02-02_34_smart_text_summarizer.py keywords article.txt
+
+# 批量处理
+python scripts/2026-02-02_34_smart_text_summarizer.py batch articles/
+
+# 指定输出长度
+python scripts/2026-02-02_34_smart_text_summarizer.py summarize article.txt --sentences 5 --ratio 0.3
+```
+
+### 依赖安装
+```bash
+pip install nltk
+```
+
+---
+
+# Day 33: 随机密码生成器 - Random Password Generator 🔐
+
+📁 **文件**: `scripts/2026-02-02_33_password_generator.py`
+📊 **大小**: 10.4 KB
+📝 **功能**: 密码学安全的随机密码生成器，支持多种强度和格式
+
+### ✨ 功能特性
+- **🔒 高安全性**: 使用 `secrets` 模块（密码学安全随机数）
+- **🎯 多强度级别**: 低/中/高/极高 四种安全级别
+- **🔤 字符控制**: 可自定义大小写、数字、符号
+- **🚫 智能排除**: 排除易混淆字符（0O1lI|）和相似字符（0OD8B6G）
+- **🔑 多模式生成**:
+  - 高强度随机密码
+  - 易记口令（word-phrase格式）
+  - 数字PIN码
+  - Base64随机短语
+- **📊 强度评估**: 内置密码强度评分和反馈系统
+
+### 使用方法
+```python
+from password_generator import PasswordGenerator, PasswordStrength
+
+# 高强度密码（默认）
+generator = PasswordGenerator()
+password = generator.generate()
+
+# 自定义配置
+config = PasswordConfig(
+    length=20,
+    strength=PasswordStrength.EXTREME,
+    use_symbols=True
+)
+password = PasswordGenerator(config).generate()
+
+# 易记口令
+memorable = generator.generate_memorable(word_count=4)
+
+# PIN码
+pin = generator.generate_pin(length=6)
+
+# 强度评估
+result = evaluate_password_strength(password)
+print(f"评分: {result['rating']} ({result['score']}分)")
+```
+
+### 命令行使用
+```bash
+# 交互模式
+python scripts/2026-02-02_33_password_generator.py
+
+# 生成单个密码
+python scripts/2026-02-02_33_password_generator.py -g
+
+# 生成PIN码
+python scripts/2026-02-02_33_password_generator.py -p
+
+# 运行演示
+python scripts/2026-02-02_33_password_generator.py demo
+```
+
+### 示例输出
+```
+🔐 随机密码生成器演示 - Day 33
+==================================================
+
+1. 高强度密码:
+   K9#mNp$2vL7@qR4!
+   强度: 强
+
+2. 易记口令:
+   Ocean-Tiger-Alert-Bright-73!
+   强度: 强
+
+3. PIN码:
+   847293
+
+4. 批量生成5个密码:
+   1. hJ8@mnP3$kL5!qW (强)
+   2. R7#vwX2$yN9&jZ (强)
+   ...
+```
+
+---
+
+# Day 32: 文件搜索查找器 - Multi-Criteria File Searcher 🔍
+
+📁 **文件**: `scripts/2026-02-02_32_file_searcher.py`
+📊 **大小**: 14.1 KB
+📝 **功能**: 支持文件名模式/内容/类型/大小/时间等多条件组合搜索
+
+### ✨ 功能特性
+- **📂 多条件搜索**: 文件名模式、内容匹配、文件类型、大小范围、时间范围
+- **🔍 多种搜索模式**: 精确匹配、模糊匹配、正则表达式
+- **📊 多种输出格式**: 表格、列表、JSON、简洁模式
+- **📈 搜索统计**: 文件统计、大小统计、类型分布
+- **🔧 高级功能**: 排除模式、深度限制、排序选项
+
+### 使用方法
+```python
+from file_searcher import FileSearcher
+
+searcher = FileSearcher()
+
+# 按文件名搜索
+results = searcher.search(name="*.py")
+
+# 按内容搜索
+results = searcher.search(content="def main")
+
+# 按类型和大小搜索
+results = searcher.search(
+    extensions=[".py", ".js"],
+    size_min="1KB",
+    size_max="1MB"
+)
+
+# 组合搜索
+results = searcher.search(
+    name="test",
+    content="import",
+    size_min="100B"
+)
+```
+
+---
+
+# Day 31: AI风格对话生成器 - AI Persona Dialogue Generator 🎭
+
+📁 **文件**: `scripts/2026-02-02_31_ai_dialogue_generator.py`
+📊 **大小**: 12.7 KB
+📝 **功能**: 模拟ChatGPT/Claude/Gemini/DeepSeek/Sardaukar五种AI人格的对话风格
+
+### ✨ 功能特性
+- **🎭 5种AI人格**: ChatGPT、Claude、Gemini、DeepSeek、Sardaukar
+- **💬 差异化对话**: 每种人格有独特的回复风格和表达方式
+- **📝 历史记录**: 自动保存对话历史
+- **🔄 多轮对话**: 支持上下文连贯的连续对话
+- **📊 统计功能**: 对话统计和人格分析
+
+### 使用方法
+```python
+from ai_dialogue_generator import (
+    ChatGPT, Claude, Gemini, DeepSeek, Sardaukar,
+    PersonaConfig
+)
+
+# 创建AI人格
+chatgpt = ChatGPT()
+claude = Claude()
+
+# 单轮对话
+response = chatgpt.chat("你好，请介绍一下自己")
+print(response)
+
+# 多轮对话
+claude.conversation_start()
+claude.chat("我想学习Python")
+claude.chat("有什么建议吗？")
+history = claude.get_conversation_history()
+```
+
+---
+
+# Day 30: 交互式CLI菜单工具 - Interactive CLI Menu 🎯
+
+📁 **文件**: `scripts/2026-02-02_30_interactive_menu.py`
+📊 **大小**: 16.4 KB
+📝 **功能**: 交互式命令行菜单工具，支持键盘导航和鼠标点击
+
+### ✨ 功能特性
+- **⌨️ 键盘导航**: 上下左右箭头、Enter确认、ESC返回
+- **🖱️ 鼠标支持**: 点击选择菜单项
+- **📂 多级子菜单**: 支持嵌套子菜单结构
+- **🎨 动态菜单生成**: 运行时动态添加/删除菜单项
+- **⌨️ 快捷键支持**: 快速访问菜单项
+- **🔍 菜单搜索**: 快速查找菜单项
+- **🎨 主题定制**: 多套预设主题（默认/简约/复古）
+
+### 使用方法
+```python
+from interactive_menu import Menu, MenuItem, DEFAULT_STYLE
+
+# 创建菜单
+menu = Menu("我的应用", style=DEFAULT_STYLE)
+
+# 添加菜单项
+menu.add_item("📁 文件操作")
+menu.add_item("⚙️ 系统设置")
+menu.add_separator()
+
+# 添加子菜单
+submenu = menu.add_submenu("帮助")
+submenu.add_item("📖 使用说明")
+submenu.add_item("❓ 常见问题")
+
+# 运行菜单
+result = menu.run()
+```
+
+### 主题样式
+```python
+# 默认主题
+DEFAULT_STYLE = MenuStyle()
+
+# 简约主题
+SIMPLE_STYLE = MenuStyle(prefix="> ")
+
+# 复古主题
+RETRO_STYLE = MenuStyle(prefix="=> ")
+```
+
+---
+
+# Day 26: 进度条生成器 - Progress Bar Generator 📊
+
+📁 **文件**: `scripts/2026-02-02_26_progress_bar.py`
+📊 **大小**: 13.9 KB
+📝 **功能**: 多功能CLI进度条和加载动画工具
+
+### ✨ 功能特性
+- **🎨 多种样式**: 经典、点、块、蛇形、箭头、弹跳动画
+- **🌈 自定义颜色**: 红/绿/黄/蓝/紫/青/白
+- **⏱️ ETA显示**: 实时预计完成时间
+- **🔄 加载动画**: 不确定进度的旋转动画
+- **📋 多任务管理**: 并行进度追踪
+- **🛡️ 线程安全**: 支持并发更新
+- **💬 自定义文本**: 灵活的状态显示
+
+### 使用方法
+```python
+from progress_bar import ProgressBar, AnimatedSpinner
+
+# 经典进度条
+bar = ProgressBar(100, prefix='Downloading', suffix='Complete', color='green')
+bar.start()
+for i in range(101):
+    time.sleep(0.1)
+    bar.update()
+bar.finish()
+
+# 加载动画
+spinner = AnimatedSpinner('Loading', style='dots', color='cyan')
+spinner.start()
+time.sleep(3)
+spinner.stop()
+```
+
+### 进度条样式
+```python
+# 经典样式: ██████████████░░░░
+# 点样式:   ⠋⠙⠹▗▖▘▝▗▖▘▝▗
+# 蛇形样式: ▖▘▝▗▖▘▝▗
+# 箭头样式: ←↖↑↗→↘↓↙
+```
+
+---
+
+# 实用密码检测工具
+
+# 密码强度检测器 (Day 17)
+
+这个脚本可以检测密码的强度，并提供改进建议。
+
+## 功能
+- 检测密码长度
+- 检查大小写字母
+- 检查数字
+- 检查特殊字符
+- 计算熵值
+- 给出强度评分和优化建议
+
+## 使用方法
+```python
+python password_strength.py
+# 输入密码进行测试
+```
+
+## 评分标准
+- 弱: 0-40分
+- 中: 41-60分
+- 强: 61-80分
+- 很强: 81-100分
+
+
+---
+
+# ASCII字符画生成器 (Day 19)
+
+这是一个将图片和文本转换为ASCII字符画的工具。
+
+## 功能
+- 图片转ASCII艺术
+- 文本转ASCII标题
+- 支持多种字符集（简单/完整）
+- 可调整输出宽度和对比度
+
+## 使用方法
+```python
+from ascii_art_generator import ASCIIArtGenerator
+
+# 创建生成器
+generator = ASCIIArtGenerator()
+
+# 图片转ASCII
+ascii_art = generator.image_to_ascii('photo.jpg', width=80)
+
+# 文本转ASCII
+title = generator.text_to_ascii("HELLO")
+print(title)
+```
+
+## 示例输出
+```
+ █████  ██████  ██████  ██████  ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+███████ ██   ██ ██   ██ ██   ██ ██████ 
+██   ██ ██   ██ ██   ██ ██   ██ ██   ██
+██   ██ ██████  ██████  ██████  ██   ██
+```
+
+## 文件位置
+- 路径: `scripts/2026-02-02_19_ascii_art_generator.py`
+- 大小: 8.7 KB
+
+## Day 20: 文件压缩解压工具
+
+📁 **文件**: `scripts/2026-02-02_020_file_compressor.py`
+📝 **功能**: 支持ZIP/TAR.GZ/GZIP格式的压缩与解压工具
+
+### ✨ 功能特性
+- **ZIP格式**: 标准ZIP压缩，支持密码保护
+- **TAR.GZ格式**: GNU zip压缩的tar归档
+- **GZIP格式**: 单文件gzip压缩
+- **实用功能**: 压缩、解压、列出内容、查看信息
+
+### 📊 文件大小
+- 18.5 KB
+
+---
+
+# Day 21: Markdown表格生成器
+
+📁 **文件**: `scripts/2026-02-02_21_markdown_table_generator.py`
+📝 **功能**: CSV/TSV转Markdown表格的智能转换工具
+
+### ✨ 功能特性
+- **智能格式化**: 自动计算列宽并对齐
+- **多格式支持**: CSV、TSV、JSON转Markdown
+- **Markdown表格**: 生成标准Markdown表格语法
+- **文件处理**: 支持文件输入和命令行参数
+- **输出保存**: 自动保存结果到文件
+
+### 📊 文件大小
+- 6.5 KB
+
+---
+
+# Day 22: Pomodoro Timer - 番茄钟计时器
+
+📁 **文件**: `scripts/2026-02-02_22_pomodoro_timer.py`
+📝 **功能**: 智能番茄钟时间管理工具
+
+### ✨ 功能特性
+- **🍅 番茄工作法**: 默认25分钟工作+5分钟短休息
+- **💼 智能休息**: 4个番茄钟后触发15分钟长休息
+- **🔔 多重提醒**: 桌面通知 + 语音提示
+- **📊 统计追踪**: 记录工作时长和完成数量
+- **⏸️ 灵活控制**: 暂停/跳过/重置功能
+- **⚙️ 自定义设置**: 可调整工作/休息时长
+- **💾 数据持久化**: 自动保存历史记录
+
+### 📊 文件大小
+- 10.0 KB
+
+### 使用方法
+```bash
+python scripts/2026-02-02_22_pomodoro_timer.py
+```
+
+### 交互命令
+- **[Enter]** - 开始/暂停/继续
+- **[p]** - 暂停/继续
+- **[s]** - 跳过当前阶段
+- **[r]** - 重置
+- **[t]** - 设置时长
+- **[i]** - 查看统计
+- **[q]** - 退出
+
+### 依赖安装
+```bash
+# 可选：安装桌面通知支持
+pip install plyer
+```
+
+---
+
+# Day 28: ASCII图表生成器 - Terminal ASCII Chart Generator 📊
+
+📁 **文件**: `scripts/2026-02-02_028_ascii_chart_generator.py`
+📊 **大小**: 20.4 KB
+📝 **功能**: 终端ASCII图表和图形生成工具
+
+### ✨ 功能特性
+- **📊 多种图表类型**: 水平条形图、垂直条形图、折线图、堆叠条形图
+- **🎨 预设调色板**: 彩虹、霓虹、柔和、地球色、灰度
+- **🌈 颜色支持**: 使用termcolor实现彩色输出(可选)
+- **📐 智能标签截断**: 自动处理长标签(CJK兼容)
+- **📁 文件导出**: 支持将图表保存为文本文件
+- **📈 数据可视化**: 多数据集对比展示
+- **🔧 高度可定制**: 宽度、高度、字符样式都可配置
+
+### 📊 文件大小
+- 20.4 KB
+
+### 使用方法
+```python
+from ascii_chart_generator import ASCIIGraphics, DataPoint
+
+# 创建生成器
+generator = ASCIIGraphics(width=70, height=25)
+
+# 水平条形图
+data = [
+    DataPoint("Python", 92.5, "blue"),
+    DataPoint("JavaScript", 88.2, "yellow"),
+    DataPoint("Java", 76.3, "red"),
+]
+chart = generator.generate_horizontal_bar_chart(data, "Language Popularity")
+print(chart)
+
+# 折线图
+stock_data = [
+    {'x': 1, 'y': 100},
+    {'x': 2, 'y': 120},
+    {'x': 3, 'y': 115},
+]
+chart = generator.generate_line_chart(stock_data, "Stock Trend")
+print(chart)
+
+# 导出到文件
+generator.export_to_file(chart, "chart.txt")
+```
+
+### 命令行使用
+```bash
+# 运行演示
+python scripts/2026-02-02_028_ascii_chart_generator.py
+
+# 显示帮助
+python scripts/2026-02-02_028_ascii_chart_generator.py --help
+```
+
+### 依赖安装
+```bash
+# 可选：安装颜色支持
+pip install termcolor
+```
+
+### 示例输出
+```
+┌────────────────────────────────────────────────────────────┐
+│           📈 Programming Language Popularity (2026)        │
+├────────────────────────────────────────────────────────────┤
+│ Python            │ ████████████████████████████████████████ 92.5 │
+│ JavaScript        │ ██████████████████████████████████████ 88.2 │
+│ Java              │ ██████████████████████ 76.3                      │
+│ TypeScript        │ ████████████████████ 72.1                        │
+│ C++               │ ███████████████████ 68.5                         │
+│ Go                │ ██████████████████ 65.8                          │
+│ Rust              │ █████████████████ 58.3                           │
+│ Ruby              │ ███████████ 45.2                                 │
+└────────────────────────────────────────────────────────────┘
+```
