@@ -26,6 +26,34 @@ python password_strength.py
 
 
 ---
+---
+
+## Day 22: JSON格式化工具 - 支持格式化、压缩、验证、YAML转换
+
+📁 文件: `scripts/2026-02-02_22_json_formatter.py`
+📊 大小: 6.4 KB
+
+**功能特性:**
+- ✅ JSON格式化（支持自定义缩进）
+- ✅ JSON压缩（去除多余空格）
+- ✅ JSON格式验证
+- ✅ 简单的YAML转JSON
+- ✅ 交互模式支持
+- ✅ 命令行参数支持
+
+**使用示例:**
+```bash
+python scripts/2026-02-02_22_json_formatter.py file.json          # 格式化
+python scripts/2026-02-02_22_json_formatter.py file.json -m       # 压缩
+python scripts/2026-02-02_22_json_formatter.py file.json --validate  # 验证
+python scripts/2026-02-02_22_json_formatter.py -i                 # 交互模式
+```
+
+**技术要点:**
+- 完整的命令行参数解析 (argparse)
+- Base64编解码支持
+- 跨平台兼容
+- 友好的错误提示
 
 # ASCII字符画生成器 (Day 19)
 
