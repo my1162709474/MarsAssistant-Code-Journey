@@ -1,3 +1,29 @@
+
+
+### Day 79: API Client Builder (23:20) ⭐ **最新**
+- 📁 文件: `scripts/20260204_079_api_client_builder.py`
+- 📊 大小: 15.3 KB
+- 💡 **API Client Builder** - 从OpenAPI/Swagger规范生成类型安全的API客户端
+- 💡 **核心功能**:
+  - 🎯 **多语言支持**: Python/TypeScript/Fetch/axios客户端生成
+  - 📖 **自动类型提示**: 生成的代码包含完整的类型注解
+  - 🔐 **认证处理**: 支持API Key/Bearer/Basic/OAuth2认证
+  - 📚 **OpenAPI解析**: 解析OpenAPI/Swagger JSON规范
+  - 🛠️ **端点生成**: 自动为每个API端点生成方法
+  - 📦 **依赖管理**: 自动识别所需的依赖包
+- 💡 **支持的语言**:
+  - Python (requests库)
+  - TypeScript (原生Fetch)
+  - JavaScript (Fetch API)
+  - JavaScript (axios库)
+- 💡 **使用方式**:
+  - 解析OpenAPI规范: `parse_openapi_spec(spec_dict)`
+  - 生成客户端: `builder.generate(Language.PYTHON)`
+  - 示例: `client = UserManagementClient(base_url, api_key)`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260204_079_api_client_builder.py
+- ✅ README.md已更新
+
+
 ### Day 78: 代码复杂度可视化工具 (23:09) ⭐ **最新**
 - 📁 文件: `scripts/20260204_078_code_complexity_visualizer.py`
 - 📊 大小: 18.7 KB
