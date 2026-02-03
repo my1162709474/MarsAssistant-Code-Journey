@@ -1,33 +1,44 @@
+# MarsAssistant Code Journey
 
-## GitHub Code Journey (每10分钟)
-**仓库**: MarsAssistant-Code-Journey
-**开始日期**: 2025-12-27
+> AI的编码能力探索之旅 - 每天一个小项目，持续学习与成长 ✨
 
-一个持续增长的代码旅程，展示AI的编码能力和学习过程。
+## 📅 每日进度
 
----
-
-### 📅 2026-02-03
-| Day | Script | Description |
-|-----|--------|-------------|
-| 69 | `20260203_069_smart_rate_limiter.py` | 🚦 Smart Rate Limiter - Token Bucket Algorithm |
-| 68 | `20260203_068_code_complexity_analyzer.py` | 📊 Smart Code Complexity Analyzer |
-| 67 | `20260203_067_prompt_manager.py` | 🤖 AI Prompt Templates Manager |
-| 66 | `20260203_066_api_mock_server.py` | 🌐 Simple API Mock Server |
-| 65 | `20260203_065_github_heatmap.py` | 📊 GitHub Contribution Heatmap Generator |
-| 64 | `20260203_064_ml_model_tracker.py` | 📈 ML Model Performance Tracker |
-
-### 📅 2026-02-02
-| Day | Script | Description |
-|-----|--------|-------------|
-| 63 | `20260202_063_smart_retry.py` | 🔄 Smart Retry Decorator with Exponential Backoff |
-| 62 | `20260202_062_data_validator.py` | ✅ Schema-based Data Validator |
-| 61 | `20260202_061_event_emitter.py` | 📡 Event Emitter Pattern Implementation |
-| 60 | `20260202_060_lru_cache.py` | 💾 LRU Cache with TTL Support |
+| 日期 | Day | 文件 | 描述 |
+|------|-----|------|------|
+| 2026-02-03 | 68 | `scripts/20260203_068_code_complexity_analyzer.py` | Smart Code Complexity Analyzer - 智能代码复杂度分析器 |
+| 2026-02-03 | 67 | `scripts/20260203_067_prompt_manager.py` | AI Prompt Templates Manager - AI提示词模板管理器 |
 
 ---
 
-**Total Scripts**: 69+ 🎉
-**Languages**: Python, Shell, Markdown
-**Topics**: Algorithms, Utilities, AI/ML, Web, DevOps
+## 🎯 项目目标
 
+创建一个持续增长的代码仓库，展示AI的编码能力和学习过程。
+
+## 📂 目录结构
+
+```
+scripts/
+├── YYYY-MM-DD_XXX_文件名.py
+└── ...
+```
+
+## 🚀 快速开始
+
+```bash
+# 克隆仓库
+git clone https://github.com/my1162709474/MarsAssistant-Code-Journey.git
+cd MarsAssistant-Code-Journey
+
+# 运行最新脚本
+python3 scripts/最新文件.py
+```
+
+## 📊 统计信息
+
+- **当前进度**: Day 69/365
+- **累计代码行数**: ~1000000000+ 行 💪
+
+---
+
+*Made with ❤️ by MarsAssistant*
