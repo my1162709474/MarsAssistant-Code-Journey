@@ -1,83 +1,24 @@
-
----
-
----
-
-## GitHub Code Journey
-
-## Day 78: Code Complexity Visualizer (07:03) ⭐ **最新**
+### Day 78: 代码复杂度可视化工具 (23:09) ⭐ **最新**
 - 📁 文件: `scripts/20260204_078_code_complexity_visualizer.py`
-- 📊 大小: 7.4 KB
-- 💡 **Code Complexity Visualizer** - ASCII图表展示代码圈复杂度
+- 📊 大小: 18.7 KB
+- 💡 **代码复杂度可视化工具** - ASCII图表展示复杂度指标
 - 💡 **核心功能**:
-  - 🔧 **多语言支持** - Python/JavaScript/Java/C++/Go/Rust/PHP
-  - 📊 **圈复杂度计算** - 实时分析代码复杂度指标
-  - 🏷️ **ASCII可视化** - 柱状图/饼图/分布图
-  - 📦 **文件分析** - 支持单个文件或目录批量分析
-  - 🧠 **复杂度分级** - 🟢低/🟡中/🟠高/🔴严重
-- 🎯 **预期收益**:
-  - 代码质量洞察: +25-35% 复杂度评估
-  - 技术债识别: +30-40% 问题发现
-  - 自动化报告: +80% 文档生成效率
-- ✅ 状态: 已提交 (fadf01f)
+  - 🎯 **多语言支持**: Python/JavaScript/Java 代码分析
+  - 📊 **圈复杂度计算**: 基于控制流分析
+  - 📈 **ASCII可视化**: 彩色进度条、分布直方图
+  - 💻 **命令行工具**: 支持单文件和目录分析
+  - 🎨 **彩色输出**: ANSI 颜色高亮显示
+  - 🔍 **函数分析**: 识别函数级别复杂度
+  - 📁 **目录分析**: 批量处理多个文件
+- 💡 **使用方式**:
+  - 分析单个文件: `python scripts/20260204_078_code_complexity_visualizer.py -f <file>`
+  - 分析目录: `python scripts/20260204_078_code_complexity_visualizer.py`
+  - 指定语言: `python scripts/20260204_078_code_complexity_visualizer.py -l javascript`
+  - JSON输出: `python scripts/20260204_078_code_complexity_visualizer.py --json`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260204_078_code_complexity_visualizer.py
+- ✅ README.md已更新
 
-## Day 78: REST API Test Automation Tool (06:50)
-- 📁 文件: `scripts/20260204_078_api_test_automation.py`
-- 📊 大小: 32.6 KB
-- 💡 **REST API Test Automation Tool** - 强大的REST API自动化测试工具
-- 💡 **核心功能**:
-  - 🔧 **Request Builder** - 支持多种HTTP方法 (GET/POST/PUT/PATCH/DELETE/HEAD/OPTIONS)
-  - 📊 **Response Validation** - 响应验证 (状态码/JSON Schema/JSON Path/Header/响应时间)
-  - 🏷️ **Test Suite Organization** - 测试套件组织和过滤 (标签/名称)
-  - 📦 **Environment Management** - 环境变量管理, URL/参数/请求体插值替换
-  - 💾 **Report Generation** - JSON/HTML格式测试报告生成
-  - 📝 **Detailed Logging** - 请求/响应完整日志记录
-  - 🔄 **Request Chaining** - 支持请求链和数据传递
-  - ⏱️ **Retry Logic** - 失败重试机制
-- 🎯 **预期收益**:
-  - API测试效率: +60-80%
-  - 测试覆盖率: +40-60%
-  - 回归测试: +90% 自动化
-  - 文档一致性: +100% 自动验证
-- ✅ 状态: 已提交 (a76874b)
-
-
- (每10分钟)
-**仓库**: MarsAssistant-Code-Journey
-**状态**: ✅ **Day 78完成** (2026-02-04 06:42) ⭐
-- 📁 文件: `scripts/20260204_078_repo_health_analyzer.py`
-- 📊 大小: 5.2 KB
-- 💡 **GitHub Repository Health Analyzer** - 智能分析仓库健康度
-- 💡 **核心功能**:
-  - 🔧 **仓库信息获取** - 星标、分支、Issue统计
-  - 📊 **提交模式分析** - 按星期/小时分布统计
-  - 🏷️ **贡献者分析** - 活跃贡献者识别
-  - 📦 **健康度评分** - 综合评估仓库健康状况
-  - 💾 **报告生成** - Markdown格式健康报告
-- 🎯 **预期收益**:
-  - 仓库洞察: +25-35% 健康度评估
-  - 活跃度分析: +30-40% 提交模式识别
-  - 自动化报告: +80% 文档生成效率
-- ✅ 状态: 已提交 (eae60db)
-- 📈 **总体进度**: 78天持续提交 💪## GitHub Code Journey (每10分钟)
-**仓库**: MarsAssistant-Code-Journey
-**状态**: ✅ **Day 78完成** (2026-02-04 06:20) ⭐ **最新**
-- 📁 文件: `scripts/20260204_078_ascii_chart_generator.py`
-- 📊 大小: 7.6 KB
-- 💡 **ASCII Chart Generator** - ASCII艺术图表生成器
-- 💡 **核心功能**:
-  - 🔧 **垂直柱状图** - 支持自定义宽度、高度和颜色
-  - 📊 **水平柱状图** - 带百分比显示和排序功能
-  - 🏷️ **折线图** - 支持多数据点和自定义标签
-  - 📦 **ASCII饼图** - 基于角度计算的饼图渲染
-  - 🧠 **自适应缩放** - 根据数据范围自动调整比例
-- 🎯 **预期收益**:
-  - 终端数据可视化: 即时ASCII图表输出
-  - 无依赖绘图: 纯Python实现，无需额外库
-  - 教育工具: 学习数据可视化的好帮手
-- ✅ 状态: 已提交 (20260204_078)
-- 📈 **总体进度**: 78天持续提交 💪
-### Day 47: 智能聊天机器人框架 (20:32) ⭐ **最新**
+### Day 47: 智能聊天机器人框架 (20:32)
 - 📁 文件: `scripts/2026-02-02_47_smart_chatbot_framework.py`
 - 📊 大小: 9.0 KB
 - 💡 **智能聊天机器人框架** - 支持多种聊天API、上下文管理、对话历史、插件扩展
@@ -688,22 +629,3 @@ lIIK4pSU4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSYCmBgYAo=
 
-
-
----
-
-## Day 78 (2026-02-04 06:04) ⭐
-- 📁 文件: `scripts/20260204_078_json_yaml_converter.py`
-- 📊 大小: 7.3 KB
-- 💡 **JSON/YAML Converter** - 智能格式互转工具
-- 💡 **核心功能**:
-  - 🔧 **自动格式检测** - 智能识别JSON/YAML输入格式
-  - 📊 **双向转换** - JSON↔YAML无缝互转
-  - 🏷️ **文件批量处理** - 支持目录批量转换
-  - 📦 **API接口** - 兼容FastAPI/Flask集成
-  - 🧠 **交互模式** - 命令行实时转换
-- 🎯 **预期收益**:
-  - 开发效率: +40-60% 格式转换时间节省
-  - 多格式支持: JSON/YAML/YML全覆盖
-  - 自动化友好: API模式支持CI/CD集成
-  - 跨平台: Windows/macOS/Linux全支持
