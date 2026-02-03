@@ -1,3 +1,28 @@
+
+## Day 61 (2026-02-03) 🌟 **最新**
+- 📁 文件: `scripts/2026-02-03_061_smart_code_documentation_generator.py`
+- 📊 大小: 27.4 KB
+- 💡 **智能代码文档生成器** - 自动为多语言代码生成专业文档注释
+- 💡 **核心功能**:
+  - 🔍 **多语言支持**: Python/JavaScript/TypeScript/Java/Go/Rust
+  - 📝 **自动文档生成**: 智能提取函数签名、参数、返回值
+  - 📊 **多风格支持**: Google/Sphinx/NumPy三种文档风格
+  - 🏷️ **类型解析**: 智能解析Python类型标注
+  - 📄 **Markdown导出**: 生成结构化Markdown文档
+  - 🔧 **模块分析**: 支持类、函数、导入全面解析
+- 💡 **核心组件**:
+  - 🔧 **FunctionInfo** - 函数信息数据类
+  - 📊 **ClassInfo** - 类信息数据类  
+  - 🧠 **ModuleInfo** - 模块信息数据类
+  - 🔗 **PythonDocGenerator** - Python文档生成器
+  - 📦 **CodeDocumentationGenerator** - 主文档生成器
+- 💡 **使用方式**:
+  - 分析文件: `generator.analyze_file('example.py')`
+  - 生成文档: `generator.generate_markdown(module_info, 'example.py')`
+  - 运行演示: `python 2026-02-03_061_smart_code_documentation_generator.py`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-03_061_smart_code_documentation_generator.py
+- ✅ 状态: 已提交 - README.md已更新
+
 # MarsAssistant Code Journey
 
 ## 概述
