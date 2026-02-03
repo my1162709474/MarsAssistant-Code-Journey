@@ -1,414 +1,659 @@
 #!/usr/bin/env python3
 """
-🗂️ 智能代码文档生成器
-AI驱动的代码文档自动生成工具
+智能代码文档生成器 - Smart Code Documentation Generator
+自动为代码生成API文档、注释和README
 
-功能：
-- 自动分析代码结构生成文档
+功能:
+- 自动分析代码结构
+- 生成API文档
+- 创建使用示例
 - 支持多种编程语言
-- 生成API文档、README、函数注释
-- 智能提取代码意图和功能描述
+
+使用方法:
+    python smart_doc_generator.py analyze main.py
+    python smart_doc_generator.py generate main.py --format markdown
+    python smart_doc_generator.py demo
 """
 
 import ast
 import re
 import json
-from datetime import datetime
-from typing import Dict, List, Optional, Any
+from dataclasses import dataclass, field
+from typing import List, Dict, Optional, Any
+from enum import Enum
 from pathlib import Path
+import argparse
 
 
-class CodeDocumentGenerator:
-    """智能代码文档生成器"""
+class Language(Enum):
+    """支持的编程语言"""
+    PYTHON = "python"
+    JAVASCRIPT = "javascript"
+    TYPESCRIPT = "typescript"
+    JAVA = "java"
+    GO = "go"
+    RUST = "rust"
+    UNKNOWN = "unknown"
+
+
+@dataclass
+class FunctionDoc:
+    """函数文档信息"""
+    name: str
+    docstring: str = ""
+    params: List[Dict] = field(default_factory=list)
+    returns: str = ""
+    decorators: List[str] = field(default_factory=list)
+    line_number: int = 0
+    complexity: int = 1
+
+
+@dataclass
+class ClassDoc:
+    """类文档信息"""
+    name: str
+    docstring: str = ""
+    methods: List[FunctionDoc] = field(default_factory=list)
+    attributes: List[str] = field(default_factory=list)
+    line_number: int = 0
+    inheritance: str = ""
+
+
+@dataclass
+class FileDoc:
+    """文件文档信息"""
+    path: str
+    language: Language = Language.UNKNOWN
+    description: str = ""
+    classes: List[ClassDoc] = field(default_factory=list)
+    functions: List[FunctionDoc] = field(default_factory=list)
+    imports: List[str] = field(default_factory=list)
+    constants: List[str] = field(default_factory=list)
+    examples: str = ""
+
+
+class PythonDocGenerator:
+    """Python文档生成器"""
     
-    # 语言关键词映射
-    LANGUAGE_PATTERNS = {
-        'python': ['def ', 'class ', 'import ', 'from ', '=', '#'],
-        'javascript': ['function ', 'const ', 'let ', 'var ', '=>', 'import ', 'export'],
-        'java': ['public ', 'private ', 'protected ', 'class ', 'void ', 'import '],
-        'go': ['func ', 'type ', 'import ', 'const ', 'var '],
-        'rust': ['fn ', 'struct ', 'impl ', 'pub ', 'let '],
-    }
+    @staticmethod
+    def extract_docstring(docstring: str) -> str:
+        """提取清洁的文档字符串"""
+        if not docstring:
+            return ""
+        # 移除缩进
+        lines = docstring.strip().split('\n')
+        cleaned = []
+        for line in lines:
+            stripped = line.strip()
+            if stripped:
+                cleaned.append(stripped)
+        return ' '.join(cleaned)
     
-    # 代码意图关键词
-    INTENT_KEYWORDS = {
-        'data_processing': ['parse', 'transform', 'convert', 'filter', 'map', 'reduce'],
-        'file_io': ['read', 'write', 'open', 'save', 'load', 'export', 'import'],
-        'api': ['request', 'response', 'endpoint', 'api', 'http', 'fetch', 'client'],
-        'database': ['query', 'insert', 'update', 'delete', 'connect', 'transaction'],
-        'testing': ['test', 'assert', 'mock', 'verify', 'validate', 'check'],
-        'utils': ['util', 'helper', 'tool', 'common', 'shared', 'base'],
-        'algorithm': ['sort', 'search', 'find', 'calculate', 'compute', 'optimize'],
-        'ui': ['render', 'display', 'show', 'view', 'component', 'widget'],
-    }
+    @staticmethod
+    def parse_param(param: ast.arg) -> Dict:
+        """解析参数信息"""
+        return {
+            "name": param.arg,
+            "type": "Any",
+            "description": ""
+        }
     
-    def __init__(self):
-        self.stats = {'files_processed': 0, 'docs_generated': 0, 'entities_found': 0}
-    
-    def detect_language(self, code: str) -> str:
-        """检测编程语言"""
-        scores = {}
-        for lang, patterns in self.LANGUAGE_PATTERNS.items():
-            score = sum(1 for pattern in patterns if pattern in code)
-            if score > 0:
-                scores[lang] = score
+    @staticmethod
+    def get_type_hint(annotation: ast.AST) -> str:
+        """获取类型提示"""
+        if annotation is None:
+            return "Any"
         
-        if scores:
-            return max(scores, key=scores.get)
-        return 'python'  # 默认Python
+        if isinstance(annotation, ast.Name):
+            return annotation.id
+        elif isinstance(annotation, ast.Constant):
+            return repr(annotation.value)
+        elif isinstance(annotation, ast.Subscript):
+            if isinstance(annotation.value, ast.Name):
+                base = annotation.value.id
+            else:
+                base = "Any"
+            if isinstance(annotation.slice, ast.Tuple):
+                args = ", ".join([PythonDocGenerator.get_type_hint(a) for a in annotation.slice.elts])
+                return f"{base}[{args}]"
+            else:
+                return f"{base}[{PythonDocGenerator.get_type_hint(annotation.slice)}]"
+        elif isinstance(annotation, ast.BinOp):
+            return "Any"
+        return "Any"
     
-    def extract_python_entities(self, code: str) -> List[Dict[str, Any]]:
-        """提取Python代码实体（类、函数、导入等）"""
-        entities = []
-        tree = ast.parse(code)
+    @classmethod
+    def analyze_file(cls, content: str, file_path: str) -> FileDoc:
+        """分析Python文件"""
+        doc = FileDoc(path=file_path, language=Language.PYTHON)
         
+        try:
+            tree = ast.parse(content)
+        except SyntaxError:
+            doc.description = "Syntax error - unable to parse"
+            return doc
+        
+        # 收集导入
         for node in ast.walk(tree):
-            # 提取类
+            if isinstance(node, ast.Import):
+                for alias in node.names:
+                    doc.imports.append(f"import {alias.name}")
+            elif isinstance(node, ast.ImportFrom):
+                module = node.module or ""
+                for alias in node.names:
+                    doc.imports.append(f"from {module} import {alias.name}")
+        
+        # 分析类
+        for node in ast.walk(tree):
             if isinstance(node, ast.ClassDef):
-                docstring = ast.get_docstring(node) or ""
-                entities.append({
-                    'type': 'class',
-                    'name': node.name,
-                    'line': node.lineno,
-                    'docstring': docstring,
-                    'methods': [n.name for n in node.body if isinstance(n, ast.FunctionDef)],
-                    'bases': [base.id if isinstance(base, ast.Name) else str(base) for base in node.bases]
-                })
-            
-            # 提取函数
-            elif isinstance(node, ast.FunctionDef):
-                docstring = ast.get_docstring(node) or ""
-                args = [arg.arg for arg in node.args.args]
-                entities.append({
-                    'type': 'function',
-                    'name': node.name,
-                    'line': node.lineno,
-                    'docstring': docstring,
-                    'args': args,
-                    'returns': self._get_return_type(node)
-                })
+                class_doc = ClassDoc(
+                    name=node.name,
+                    line_number=node.lineno
+                )
+                
+                # 文档字符串
+                if node.body and isinstance(node.body[0], ast.Expr):
+                    class_doc.docstring = cls.extract_docstring(ast.get_docstring(node))
+                
+                # 基类
+                if node.bases:
+                    class_doc.inheritance = ", ".join([cls.get_type_hint(base) for base in node.bases])
+                
+                # 分析方法
+                for item in node.body:
+                    if isinstance(item, ast.FunctionDef):
+                        func_doc = cls.analyze_function(item)
+                        class_doc.methods.append(func_doc)
+                        if func_doc.name.startswith('_') and not func_doc.name.startswith('__'):
+                            class_doc.attributes.append(func_doc.name)
+                
+                # 属性
+                for item in node.body:
+                    if isinstance(item, ast.AnnAssign) and isinstance(item.target, ast.Name):
+                        class_doc.attributes.append(item.target.id)
+                    elif isinstance(item, ast.Assign):
+                        for target in item.targets:
+                            if isinstance(target, ast.Name):
+                                class_doc.attributes.append(target.id)
+                
+                doc.classes.append(class_doc)
         
-        self.stats['entities_found'] += len(entities)
-        return entities
+        # 分析顶层函数
+        for node in ast.walk(tree):
+            if isinstance(node, ast.FunctionDef) and not isinstance(node.parent, ast.ClassDef) if hasattr(node, 'parent') else True:
+                # 检查是否在类外
+                is_toplevel = True
+                for child in ast.walk(tree):
+                    if isinstance(child, ast.ClassDef):
+                        for item in child.body:
+                            if item is node:
+                                is_toplevel = False
+                                break
+                if is_toplevel:
+                    doc.functions.append(cls.analyze_function(node))
+        
+        # 分析常量
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Assign):
+                if len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
+                    name = node.targets[0].id
+                    if name.isupper() and not name.startswith('_'):
+                        doc.constants.append(name)
+        
+        # 生成描述
+        if doc.classes:
+            doc.description = f"Python module with {len(doc.classes)} class(es) and {len(doc.functions)} function(s)"
+        elif doc.functions:
+            doc.description = f"Python module with {len(doc.functions)} function(s)"
+        else:
+            doc.description = "Python module"
+        
+        return doc
     
-    def _get_return_type(self, node) -> str:
-        """获取函数返回类型"""
+    @classmethod
+    def analyze_function(cls, node: ast.FunctionDef) -> FunctionDoc:
+        """分析函数"""
+        func_doc = FunctionDoc(
+            name=node.name,
+            line_number=node.lineno
+        )
+        
+        # 装饰器
+        for decorator in node.decorator_list:
+            if isinstance(decorator, ast.Name):
+                func_doc.decorators.append(f"@{decorator.id}")
+            elif isinstance(decorator, ast.Call) and isinstance(decorator.func, ast.Name):
+                func_doc.decorators.append(f"@{decorator.func.id}(...)")
+        
+        # 文档字符串
+        if node.body and isinstance(node.body[0], ast.Expr):
+            func_doc.docstring = cls.extract_docstring(ast.get_docstring(node))
+        
+        # 参数
+        for arg in node.args.args:
+            if arg.arg != 'self' and arg.arg != 'cls':
+                param = cls.parse_param(arg)
+                if arg.annotation:
+                    param["type"] = cls.get_type_hint(arg.annotation)
+                func_doc.params.append(param)
+        
+        # 返回类型
         if node.returns:
-            if isinstance(node.returns, ast.Name):
-                return node.returns.id
-            elif isinstance(node.returns, ast.Constant):
-                return str(node.returns.value)
-        return 'Any'
-    
-    def extract_code_intent(self, code: str) -> List[str]:
-        """提取代码意图"""
-        code_lower = code.lower()
-        intents = []
+            func_doc.returns = cls.get_type_hint(node.returns)
         
-        for intent, keywords in self.INTENT_KEYWORDS.items():
-            if any(kw in code_lower for kw in keywords):
-                intents.append(intent)
+        # 简单复杂度计算
+        func_doc.complexity = cls.calculate_complexity(node)
         
-        return intents if intents else ['general']
+        return func_doc
     
-    def generate_docstring(self, entity: Dict[str, Any]) -> str:
-        """为实体生成文档字符串"""
+    @staticmethod
+    def calculate_complexity(node: ast.AST) -> int:
+        """计算函数复杂度"""
+        complexity = 1
+        for child in ast.walk(node):
+            if isinstance(child, (ast.If, ast.For, ast.While, ast.And, ast.Or, ast.Compare)):
+                complexity += 1
+        return complexity
+    
+    @classmethod
+    def generate_markdown(cls, doc: FileDoc) -> str:
+        """生成Markdown文档"""
         lines = []
         
-        if entity['type'] == 'class':
-            lines.append(f"## {entity['name']}")
-            if entity.get('docstring'):
-                lines.append(f"\n{entity['docstring']}")
-            if entity.get('bases'):
-                lines.append(f"\n**继承自**: {', '.join(entity['bases'])}")
-            if entity.get('methods'):
-                lines.append(f"\n**方法**:\n- " + "\n- ".join(entity['methods']))
-        
-        elif entity['type'] == 'function':
-            lines.append(f"### `{entity['name']}()`")
-            if entity.get('docstring'):
-                lines.append(f"\n{entity['docstring']}")
-            if entity.get('args'):
-                lines.append(f"\n**参数**:\n")
-                for arg in entity['args']:
-                    lines.append(f"- `{arg}`: ")
-            if entity.get('returns'):
-                lines.append(f"\n**返回**: `{entity['returns']}`")
-        
-        return '\n'.join(lines)
-    
-    def generate_readme_section(self, file_path: str, entities: List[Dict]) -> str:
-        """生成README文档片段"""
-        filename = Path(file_path).stem.replace('_', ' ').title()
-        intent = self.extract_code_intent(open(file_path).read())
-        intent_str = ' / '.join(intent)
-        
-        lines = [
-            f"## {filename}",
-            f"- **文件**: `{file_path}`",
-            f"- **类型**: {' / '.join(set(e['type'] for e in entities))}",
-            f"- **用途**: {intent_str}",
-            "",
-            "### 实体",
-        ]
-        
-        for entity in entities:
-            lines.append(f"- **{entity['type']}**: `{entity['name']}`")
-            if entity.get('docstring'):
-                # 取第一句话作为简介
-                first_sentence = entity['docstring'].split('.')[0]
-                lines.append(f"  - {first_sentence}.")
-        
-        return '\n'.join(lines)
-    
-    def analyze_file(self, file_path: str) -> Dict[str, Any]:
-        """分析单个文件"""
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                code = f.read()
-            
-            language = self.detect_language(code)
-            entities = []
-            
-            if language == 'python':
-                try:
-                    entities = self.extract_python_entities(code)
-                except SyntaxError:
-                    # 简单的正则提取作为后备
-                    entities = self._simple_extract_entities(code)
-            
-            intent = self.extract_code_intent(code)
-            
-            self.stats['files_processed'] += 1
-            self.stats['docs_generated'] += len(entities)
-            
-            return {
-                'file': file_path,
-                'language': language,
-                'entities': entities,
-                'intent': intent,
-                'line_count': len(code.splitlines()),
-                'code': code  # 用于base64编码
-            }
-        except Exception as e:
-            return {'file': file_path, 'error': str(e)}
-    
-    def _simple_extract_entities(self, code: str) -> List[Dict]:
-        """简单的实体提取（正则作为后备）"""
-        entities = []
-        
-        # 提取类和函数
-        class_pattern = r'class\s+(\w+)'
-        func_pattern = r'def\s+(\w+)'
-        
-        for match in re.finditer(class_pattern, code):
-            entities.append({
-                'type': 'class',
-                'name': match.group(1),
-                'docstring': '',
-                'methods': []
-            })
-        
-        for match in re.finditer(func_pattern, code):
-            entities.append({
-                'type': 'function',
-                'name': match.group(1),
-                'docstring': '',
-                'args': [],
-                'returns': 'Any'
-            })
-        
-        return entities
-    
-    def batch_analyze(self, directory: str, extensions: List[str] = ['.py']) -> List[Dict]:
-        """批量分析目录中的文件"""
-        results = []
-        path = Path(directory)
-        
-        for file_path in path.rglob('*'):
-            if file_path.is_file() and file_path.suffix in extensions:
-                result = self.analyze_file(str(file_path))
-                if 'error' not in result:
-                    results.append(result)
-        
-        return results
-    
-    def generate_markdown_docs(self, analysis_results: List[Dict], output_file: str = "DOCUMENTATION.md"):
-        """生成完整的Markdown文档"""
-        lines = [
-            "# 自动生成的代码文档",
-            f"\n生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-            f"\n统计: {self.stats['files_processed']} 个文件, {self.stats['docs_generated']} 个实体",
-            "",
-            "---",
-            "",
-            "# 目录",
-        ]
-        
-        for result in analysis_results:
-            filename = Path(result['file']).stem
-            lines.append(f"- [{filename}](#{filename.lower().replace('_', '-')})")
-        
+        # 标题
+        lines.append(f"# {Path(doc.path).stem}")
+        lines.append("")
+        lines.append(f"**Language:** {doc.language.value}")
+        lines.append("")
+        lines.append(f">{doc.description}")
         lines.append("")
         
-        for result in analysis_results:
-            lines.append(f"## {Path(result['file']).stem}")
-            lines.append(f"\n**文件**: `{result['file']}`")
-            lines.append(f"**语言**: {result['language']}")
-            lines.append(f"**行数**: {result['line_count']}")
-            lines.append(f"**类型**: {', '.join(set(e['type'] for e in result['entities']))}")
-            
-            for entity in result['entities']:
+        # 目录
+        if doc.classes or doc.functions:
+            lines.append("## Table of Contents")
+            lines.append("")
+            if doc.classes:
+                lines.append("- [Classes](#classes)")
+                for class_doc in doc.classes:
+                    lines.append(f"  - [{class_doc.name}](#{class_doc.name.lower()})")
+            if doc.functions:
+                lines.append("- [Functions](#functions)")
+            lines.append("")
+        
+        # 导入
+        if doc.imports:
+            lines.append("## Imports")
+            lines.append("```python")
+            for imp in doc.imports[:10]:  # 限制数量
+                lines.append(imp)
+            if len(doc.imports) > 10:
+                lines.append(f"# ... and {len(doc.imports) - 10} more")
+            lines.append("```")
+            lines.append("")
+        
+        # 类
+        if doc.classes:
+            lines.append("## Classes")
+            lines.append("")
+            for class_doc in doc.classes:
+                lines.append(f"### `{class_doc.name}`")
                 lines.append("")
-                docstring = self.generate_docstring(entity)
-                lines.append(docstring)
-            
-            lines.append("\n---")
+                if class_doc.inheritance:
+                    lines.append(f"*Inherits from: {class_doc.inheritance}*")
+                    lines.append("")
+                if class_doc.docstring:
+                    lines.append(f"{class_doc.docstring}")
+                    lines.append("")
+                if class_doc.attributes:
+                    lines.append("**Attributes:**")
+                    lines.append("")
+                    for attr in class_doc.attributes:
+                        lines.append(f"- `{attr}`")
+                    lines.append("")
+                
+                # 方法
+                if class_doc.methods:
+                    lines.append("**Methods:**")
+                    lines.append("")
+                    for method in class_doc.methods:
+                        lines.append(f"#### `{method.name}`")
+                        if method.decorators:
+                            for dec in method.decorators:
+                                lines.append(f"{dec}")
+                        if method.docstring:
+                            lines.append("")
+                            lines.append(f"{method.docstring}")
+                        if method.params:
+                            lines.append("")
+                            lines.append("**Parameters:**")
+                            lines.append("")
+                            for param in method.params:
+                                lines.append(f"- `{param['name']}` ({param['type']})")
+                        if method.returns:
+                            lines.append("")
+                            lines.append(f"**Returns:** `{method.returns}`")
+                        lines.append("")
+                    lines.append("")
         
-        content = '\n'.join(lines)
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(content)
+        # 函数
+        if doc.functions:
+            lines.append("## Functions")
+            lines.append("")
+            for func in doc.functions:
+                lines.append(f"### `{func.name}`")
+                lines.append("")
+                if func.decorators:
+                    for dec in func.decorators:
+                        lines.append(f"{dec}")
+                if func.docstring:
+                    lines.append("")
+                    lines.append(f"{func.docstring}")
+                if func.params:
+                    lines.append("")
+                    lines.append("**Parameters:**")
+                    lines.append("")
+                    for param in func.params:
+                        lines.append(f"- `{param['name']}` ({param['type']})")
+                if func.returns:
+                    lines.append("")
+                    lines.append(f"**Returns:** `{func.returns}`")
+                lines.append("")
         
-        print(f"📄 文档已生成: {output_file}")
-        return content
+        # 常量
+        if doc.constants:
+            lines.append("## Constants")
+            lines.append("")
+            for const in doc.constants:
+                lines.append(f"- `{const}`")
+            lines.append("")
+        
+        # 使用示例
+        lines.append("## Usage Examples")
+        lines.append("```python")
+        lines.append(f"# Import the module")
+        module_name = Path(doc.path).stem
+        if doc.classes:
+            lines.append(f"from {module_name} import {doc.classes[0].name}")
+        elif doc.functions:
+            lines.append(f"from {module_name} import {doc.functions[0].name}")
+        lines.append("```")
+        lines.append("")
+        
+        return '\n'.join(lines)
+
+
+class DocumentationGenerator:
+    """文档生成器主类"""
     
-    def export_to_json(self, analysis_results: List[Dict], output_file: str = "docs.json"):
-        """导出分析结果为JSON"""
-        export_data = {
-            'generated_at': datetime.now().isoformat(),
-            'stats': self.stats,
-            'files': analysis_results
+    def __init__(self):
+        self.generators = {
+            Language.PYTHON: PythonDocGenerator,
+        }
+    
+    def analyze(self, file_path: str) -> FileDoc:
+        """分析文件并提取文档信息"""
+        path = Path(file_path)
+        
+        if not path.exists():
+            raise FileNotFoundError(f"File not found: {file_path}")
+        
+        content = path.read_text(encoding='utf-8')
+        language = self.detect_language(file_path)
+        
+        generator = self.generators.get(language)
+        if not generator:
+            # 默认使用Python生成器
+            generator = PythonDocGenerator
+        
+        return generator.analyze_file(content, file_path)
+    
+    def generate(self, file_path: str, format: str = 'markdown') -> str:
+        """生成文档"""
+        doc = self.analyze(file_path)
+        
+        if format == 'markdown':
+            return PythonDocGenerator.generate_markdown(doc)
+        elif format == 'json':
+            return self.to_json(doc)
+        else:
+            raise ValueError(f"Unsupported format: {format}")
+    
+    def detect_language(self, file_path: str) -> Language:
+        """检测编程语言"""
+        ext = Path(file_path).suffix.lower()
+        
+        language_map = {
+            '.py': Language.PYTHON,
+            '.js': Language.JAVASCRIPT,
+            '.ts': Language.TYPESCRIPT,
+            '.java': Language.JAVA,
+            '.go': Language.GO,
+            '.rs': Language.RUST,
         }
         
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(export_data, f, ensure_ascii=False, indent=2)
-        
-        print(f"📦 数据已导出: {output_file}")
-        return export_data
+        return language_map.get(ext, Language.UNKNOWN)
+    
+    def to_json(self, doc: FileDoc) -> str:
+        """转换为JSON"""
+        return json.dumps({
+            "path": doc.path,
+            "language": doc.language.value,
+            "description": doc.description,
+            "classes": [
+                {
+                    "name": c.name,
+                    "docstring": c.docstring,
+                    "methods": [
+                        {
+                            "name": m.name,
+                            "docstring": m.docstring,
+                            "params": m.params,
+                            "returns": m.returns,
+                            "complexity": m.complexity
+                        }
+                        for m in c.methods
+                    ],
+                    "attributes": c.attributes,
+                    "inheritance": c.inheritance
+                }
+                for c in doc.classes
+            ],
+            "functions": [
+                {
+                    "name": f.name,
+                    "docstring": f.docstring,
+                    "params": f.params,
+                    "returns": f.returns,
+                    "complexity": f.complexity
+                }
+                for f in doc.functions
+            ],
+            "imports": doc.imports,
+            "constants": doc.constants
+        }, indent=2, ensure_ascii=False)
 
 
 def demo():
-    """演示函数"""
-    print("🗂️ 智能代码文档生成器演示")
+    """演示文档生成"""
+    print("🧪 智能代码文档生成器演示")
     print("=" * 50)
     
     # 创建示例代码
     sample_code = '''
-#!/usr/bin/env python3
-"""
-示例计算器模块
-提供基本的数学运算功能
-"""
+"""示例模块 - 演示文档生成功能"""
 
-class Calculator:
-    """一个简单的计算器类"""
+import json
+from typing import List, Dict, Optional
+import datetime
+
+
+class UserManager:
+    """用户管理类 - 演示类文档生成"""
     
-    def __init__(self, precision: int = 2):
-        """初始化计算器
+    def __init__(self, debug: bool = False):
+        """初始化用户管理器
         
         Args:
-            precision: 小数精度
+            debug: 是否启用调试模式
         """
-        self.precision = precision
+        self.debug = debug
+        self.users: List[Dict] = []
     
-    def add(self, a: float, b: float) -> float:
-        """加法运算
+    def add_user(self, name: str, email: str, age: Optional[int] = None) -> bool:
+        """添加新用户
         
         Args:
-            a: 第一个数
-            b: 第二个数
-            
+            name: 用户名
+            email: 邮箱地址
+            age: 年龄（可选）
+        
         Returns:
-            两数之和
+            是否添加成功
         """
-        return round(a + b, self.precision)
+        if self.debug:
+            print(f"Adding user: {name}")
+        return True
     
-    def multiply(self, a: float, b: float) -> float:
-        """乘法运算"""
-        return round(a * b, self.precision)
+    def get_user(self, user_id: int) -> Optional[Dict]:
+        """获取用户信息
+        
+        Args:
+            user_id: 用户ID
+        
+        Returns:
+            用户信息字典，未找到返回None
+        """
+        for user in self.users:
+            if user.get('id') == user_id:
+                return user
+        return None
+    
+    def list_users(self) -> List[Dict]:
+        """列出所有用户
+        
+        Returns:
+            用户列表
+        """
+        return self.users
 
 
-def calculate_average(numbers: List[float]) -> float:
-    """计算列表的平均值
+def calculate_stats(numbers: List[float]) -> Dict[str, float]:
+    """计算数值统计信息
     
     Args:
-        numbers: 数字列表
-        
+        numbers: 数值列表
+    
     Returns:
-        平均值
+        包含统计信息的字典
     """
     if not numbers:
-        return 0
-    return sum(numbers) / len(numbers)
+        return {"sum": 0, "average": 0, "max": 0, "min": 0}
+    
+    total = sum(numbers)
+    return {
+        "sum": total,
+        "average": total / len(numbers),
+        "max": max(numbers),
+        "min": min(numbers)
+    }
+
+
+# 示例常量
+DEFAULT_TIMEOUT = 30
+MAX_RETRY_COUNT = 3
 '''
     
-    # 创建临时文件
-    with open('/tmp/sample_calculator.py', 'w') as f:
-        f.write(sample_code)
-    
-    # 使用文档生成器
-    generator = CodeDocumentGenerator()
-    
-    # 分析文件
-    result = generator.analyze_file('/tmp/sample_calculator.py')
-    
-    print(f"\n📊 分析结果:")
-    print(f"- 语言: {result['language']}")
-    print(f"- 行数: {result['line_count']}")
-    print(f"- 实体数量: {len(result['entities'])}")
-    
-    print(f"\n📝 发现的实体:")
-    for entity in result['entities']:
-        print(f"  - [{entity['type']}] {entity['name']}")
-        if entity.get('docstring'):
-            print(f"    文档: {entity['docstring'][:50]}...")
+    # 保存示例文件
+    sample_file = Path("/tmp/sample_module.py")
+    sample_file.write_text(sample_code)
     
     # 生成文档
-    print(f"\n📄 生成文档字符串:")
-    for entity in result['entities']:
-        doc = generator.generate_docstring(entity)
-        print(doc[:100] + "..." if len(doc) > 100 else doc)
+    generator = DocumentationGenerator()
     
-    print(f"\n✅ 统计: {generator.stats}")
+    print("\n📊 分析结果:")
+    doc = generator.analyze(str(sample_file))
+    print(f"  - 语言: {doc.language.value}")
+    print(f"  - 描述: {doc.description}")
+    print(f"  - 类: {len(doc.classes)}")
+    print(f"  - 函数: {len(doc.functions)}")
+    print(f"  - 常量: {len(doc.constants)}")
+    
+    if doc.classes:
+        print(f"\n📝 类详情:")
+        for cls in doc.classes:
+            print(f"  - {cls.name} ({len(cls.methods)} methods)")
+    
+    print("\n📄 生成的Markdown文档:")
+    print("-" * 50)
+    md = generator.generate(str(sample_file), format='markdown')
+    print(md)
     
     # 清理
-    import os
-    os.remove('/tmp/sample_calculator.py')
+    sample_file.unlink()
+    
+    print("\n✅ 演示完成!")
 
 
 def main():
     """主函数"""
-    import sys
+    parser = argparse.ArgumentParser(
+        description="智能代码文档生成器",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+示例:
+    %(prog)s analyze main.py          # 分析文件
+    %(prog)s generate main.py         # 生成Markdown文档
+    %(prog)s generate main.py --format json  # 生成JSON文档
+    %(prog)s demo                     # 运行演示
+        """
+    )
     
-    if len(sys.argv) > 1 and sys.argv[1] == 'demo':
+    subparsers = parser.add_subparsers(dest="command", help="命令")
+    
+    # analyze命令
+    analyze_parser = subparsers.add_parser("analyze", help="分析代码文件")
+    analyze_parser.add_argument("file", help="代码文件路径")
+    
+    # generate命令
+    generate_parser = subparsers.add_parser("generate", help="生成文档")
+    generate_parser.add_argument("file", help="代码文件路径")
+    generate_parser.add_argument("--format", default="markdown", 
+                                choices=["markdown", "json"],
+                                help="输出格式")
+    generate_parser.add_argument("--output", "-o", help="输出文件路径")
+    
+    # demo命令
+    subparsers.add_parser("demo", help="运行演示")
+    
+    args = parser.parse_args()
+    
+    generator = DocumentationGenerator()
+    
+    if args.command == "analyze":
+        doc = generator.analyze(args.file)
+        print(f"📊 分析结果: {doc.path}")
+        print(f"  语言: {doc.language.value}")
+        print(f"  描述: {doc.description}")
+        print(f"  类: {len(doc.classes)}")
+        print(f"  函数: {len(doc.functions)}")
+        print(f"  常量: {len(doc.constants)}")
+        print(f"  导入: {len(doc.imports)}")
+        
+    elif args.command == "generate":
+        output = generator.generate(args.file, args.format)
+        
+        if args.output:
+            Path(args.output).write_text(output)
+            print(f"✅ 文档已保存到: {args.output}")
+        else:
+            print(output)
+    
+    elif args.command == "demo":
         demo()
-        return
     
-    generator = CodeDocumentGenerator()
-    
-    print("🗂️ 智能代码文档生成器")
-    print("=" * 40)
-    print("用法:")
-    print("  python smart_doc_generator.py <文件路径>")
-    print("  python smart_doc_generator.py <目录路径> --batch")
-    print("  python smart_doc_generator.py --demo")
-    print()
-    
-    if len(sys.argv) > 1:
-        path = sys.argv[1]
-        
-        if Path(path).is_file():
-            result = generator.analyze_file(path)
-            print(f"分析结果: {json.dumps(result, indent=2, ensure_ascii=False)}")
-        
-        elif Path(path).is_dir():
-            results = generator.batch_analyze(path)
-            print(f"分析了 {len(results)} 个文件")
-            
-            # 生成文档
-            generator.generate_markdown_docs(results, "DOCUMENTATION.md")
-            generator.export_to_json(results, "docs.json")
+    else:
+        parser.print_help()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
