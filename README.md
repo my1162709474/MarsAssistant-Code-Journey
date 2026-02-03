@@ -1,3 +1,25 @@
+
+### Day 78: API Tester - CLI API Testing Tool (04:28) ⭐ **最新**
+- 📁 文件: `scripts/2026-02-04_78_api_tester.py`
+- 📊 大小: 8.6 KB
+- 💡 **API测试工具** - 简单实用的命令行API测试工具
+- 💡 **核心功能**:
+  - 🔧 **多方法支持**: GET/POST/PUT/DELETE/PATCH
+  - 📊 **Headers/Cookies**: 自定义请求头和Cookie支持
+  - 📦 **数据发送**: JSON数据、文件数据、表单数据
+  - 🔍 **查询参数**: 灵活的URL参数构建
+  - 🛡️ **错误处理**: 完善的异常捕获和错误提示
+  - 📈 **响应分析**: 状态码、响应时间、响应体解析
+  - 📝 **历史记录**: 自动保存请求历史
+  - 🏥 **健康检查**: 批量端点健康检查
+- 💡 **使用方式**:
+  - GET请求: `python api_tester.py GET https://api.github.com`
+  - POST请求: `python api_tester.py POST https://httpbin.org/post --data '{"key": "value"}'`
+  - 健康检查: `python api_tester.py https://api.github.com --health`
+  - 自定义头: `python api_tester.py GET https://api.github.com/users/octocat --header "Authorization: token YOUR_TOKEN"`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-04_78_api_tester.py`
+- ✅ README.md已更新
+
 # 🚀 MarsAssistant-Code-Journey
 
 <div align="center">
