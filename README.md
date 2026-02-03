@@ -1,31 +1,27 @@
 
 ## Day 61 (2026-02-03) 🌟 **最新**
-- 📁 文件: `scripts/2026-02-03_061_smart_code_documentation_generator.py`
-- 📊 大小: 27.4 KB
-- 💡 **智能代码文档生成器** - 自动为多语言代码生成专业文档注释
+- 📁 文件: `scripts/2026-02-03_061_smart_complexity_analyzer.py`
+- 📊 大小: 27.8 KB
+- 💡 **智能代码复杂度分析器** - 自动分析代码复杂度、计算技术债务、评估代码可维护性
 - 💡 **核心功能**:
-  - 🔍 **多语言支持**: Python/JavaScript/TypeScript/Java/Go/Rust
-  - 📝 **自动文档生成**: 智能提取函数签名、参数、返回值
-  - 📊 **多风格支持**: Google/Sphinx/NumPy三种文档风格
-  - 🏷️ **类型解析**: 智能解析Python类型标注
-  - 📄 **Markdown导出**: 生成结构化Markdown文档
-  - 🔧 **模块分析**: 支持类、函数、导入全面解析
+  - 🔍 **圈复杂度计算**: Cyclomatic Complexity自动计算
+  - 📊 **代码行数统计**: 代码/注释/空白行智能分类
+  - 🧠 **函数复杂度分析**: AST深度分析每个函数
+  - 💰 **技术债务估算**: 基于复杂度评估重构成本
+  - 📈 **可维护性指数**: 综合评分0-100
+  - 🎨 **HTML报告生成**: 可视化复杂度报告
 - 💡 **核心组件**:
-  - 🔧 **FunctionInfo** - 函数信息数据类
-  - 📊 **ClassInfo** - 类信息数据类  
-  - 🧠 **ModuleInfo** - 模块信息数据类
-  - 🔗 **PythonDocGenerator** - Python文档生成器
-  - 📦 **CodeDocumentationGenerator** - 主文档生成器
+  - 🔧 **FunctionMetrics** - 函数指标数据类
+  - 📊 **FileMetrics** - 文件指标数据类
+  - 🧠 **ComplexityAnalyzer** - 复杂度分析器核心
+  - 📈 **AST分析** - Python AST深度解析
+  - 🎨 **HTML报告** - 可视化报告生成
 - 💡 **使用方式**:
-  - 分析文件: `generator.analyze_file('example.py')`
-  - 生成文档: `generator.generate_markdown(module_info, 'example.py')`
-  - 运行演示: `python 2026-02-03_061_smart_code_documentation_generator.py`
-- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-03_061_smart_code_documentation_generator.py
-- ✅ 状态: 已提交 - README.md已更新
-
-# MarsAssistant Code Journey
-
-## 概述
+  - 运行演示: `python 2026-02-03_061_smart_complexity_analyzer.py demo`
+  - 分析文件: `python 2026-02-03_061_smart_complexity_analyzer.py analyze <path>`
+  - 生成报告: `python 2026-02-03_061_smart_complexity_analyzer.py report <path> --html`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-03_061_smart_complexity_analyzer.py
+- ✅ 状态: 已提交## 概述
 这是一个展示AI编码能力和学习过程的代码仓库。每天AI都会创建新的代码文件,涵盖算法练习、实用工具、AI提示工程示例等多个领域。
 
 ## 目录结构
@@ -41,7 +37,7 @@ scripts/
 
 ### 2026年2月
 - **Day 62**: 智能代码性能分析器 - 自动分析Python代码性能瓶颈
-- **Day 61**: 智能文档格式化工具 - 自动化文档格式转换
+- **Day 61**: 智能代码复杂度分析器 - 自动化文档格式转换
 - **Day 60**: 智能文本处理工具 - AI驱动的文本分析处理
 - **Day 59**: 智能测试用例生成器 - 自动生成多语言测试代码
 - **Day 58**: 智能提示词优化器 - AI提示词分析优化
@@ -78,6 +74,7 @@ scripts/
 - 代码性能分析器
 - 代码质量评估
 - 安全检测工具
+- 代码复杂度分析器
 
 ## 使用方法
 每个脚本都是独立的Python文件,可以直接运行:
@@ -93,3 +90,4 @@ MIT License
 
 ---
 *持续更新中...每天都有新的代码诞生! 🚀*
+
