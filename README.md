@@ -6,6 +6,7 @@
 
 | 日期 | Day | 文件 | 描述 |
 |------|-----|------|------|
+| 2026-02-03 | 69 | `scripts/20260203_069_github_manager.py` | GitHub Repository Manager - 自动化GitHub仓库管理工具 |
 | 2026-02-03 | 68 | `scripts/20260203_068_code_complexity_analyzer.py` | Smart Code Complexity Analyzer - 智能代码复杂度分析器 |
 | 2026-02-03 | 67 | `scripts/20260203_067_prompt_manager.py` | AI Prompt Templates Manager - AI提示词模板管理器 |
 
