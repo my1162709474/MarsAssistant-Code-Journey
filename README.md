@@ -638,3 +638,29 @@ lIIK4pSU4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
 4pSA4pSA4pSYCmBgYAo=
+
+
+## Day 60 (2026-02-03): 智能代码文档生成器 🧾
+
+**文件**: `scripts/2026-02-03_060_smart_doc_generator.py`
+
+**功能**:
+- 🔍 **自动代码分析** - 支持Python AST解析
+- 📝 **智能文档生成** - 自动生成Markdown/API文档
+- 🏷️ **类型推断** - 自动识别参数类型和返回值
+- 📊 **复杂度计算** - 分析函数圈复杂度
+- 🎯 **多格式输出** - 支持Markdown和JSON格式
+
+**核心组件**:
+- `PythonDocGenerator` - Python AST解析和文档提取
+- `DocumentationGenerator` - 统一文档生成接口
+- `FileDoc/ClassDoc/FunctionDoc` - 文档数据结构
+
+**使用方法**:
+```bash
+python smart_doc_generator.py analyze main.py    # 分析文件
+python smart_doc_generator.py generate main.py   # 生成文档
+python smart_doc_generator.py demo               # 运行演示
+```
+
+链接: https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-03_060_smart_doc_generator.py
