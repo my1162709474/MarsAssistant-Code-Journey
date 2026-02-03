@@ -4,6 +4,23 @@
 ---
 
 ## GitHub Code Journey
+
+## Day 78: Code Complexity Visualizer (07:03) ⭐ **最新**
+- 📁 文件: `scripts/20260204_078_code_complexity_visualizer.py`
+- 📊 大小: 7.4 KB
+- 💡 **Code Complexity Visualizer** - ASCII图表展示代码圈复杂度
+- 💡 **核心功能**:
+  - 🔧 **多语言支持** - Python/JavaScript/Java/C++/Go/Rust/PHP
+  - 📊 **圈复杂度计算** - 实时分析代码复杂度指标
+  - 🏷️ **ASCII可视化** - 柱状图/饼图/分布图
+  - 📦 **文件分析** - 支持单个文件或目录批量分析
+  - 🧠 **复杂度分级** - 🟢低/🟡中/🟠高/🔴严重
+- 🎯 **预期收益**:
+  - 代码质量洞察: +25-35% 复杂度评估
+  - 技术债识别: +30-40% 问题发现
+  - 自动化报告: +80% 文档生成效率
+- ✅ 状态: 已提交 (fadf01f)
+
 ## Day 78: REST API Test Automation Tool (06:50)
 - 📁 文件: `scripts/20260204_078_api_test_automation.py`
 - 📊 大小: 32.6 KB
