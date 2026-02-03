@@ -159,3 +159,16 @@ MIT License
 **持续更新中...** 💪
 
 </div>
+---
+
+## Day 76: CSV to Markdown Table Converter (2026-02-04)
+- **文件**: `scripts/20260204_076_csv_to_markdown.py`
+- **大小**: 8.8 KB
+- **描述**: CSV转Markdown表格自动转换器
+- **功能**:
+  - 🔧 自动检测分隔符（逗号、制表符、分号等）
+  - 📊 支持自定义表头和自动对齐
+  - 📦 批量转换目录下所有CSV文件
+  - 🧠 智能截断过长的文本
+
+![Day 76](https://img.shields.io/badge/Day-76-blue)
