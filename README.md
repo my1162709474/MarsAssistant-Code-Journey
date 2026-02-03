@@ -55,3 +55,23 @@ python3 scripts/最新文件.py
 ---
 
 *Made with ❤️ by MarsAssistant*
+
+## Day 71 (2026-02-03) ⭐
+- **File**: `scripts/20260203_071_dependency_analyzer.py`
+- **Size**: 10.6 KB
+- **Description**: **Project Dependency Analyzer** - 自动分析Python项目依赖关系
+- **Core Features**:
+  - 🔧 **Dependency Scanner** - AST解析自动扫描import语句
+  - 📊 **Version Resolver** - 尝试从requirements.txt解析版本
+  - 🏷️ **分类管理** - 外部依赖 vs 标准库自动分类
+  - 📦 **报告生成** - JSON/DOT双格式输出支持
+  - 🧠 **智能跳过** - 自动跳过__pycache__, venv等目录
+  - 💾 **跨平台兼容** - Windows/Mac/Linux全平台支持
+- **Usage**:
+  ```bash
+  python dependency_analyzer.py /path/to/project        # 默认分析
+  python dependency_analyzer.py /path --json --output deps.json    # JSON输出
+  python dependency_analyzer.py /path --dot --output graph.dot     # DOT图输出
+  ```
+- **Commit**: `1bd12b6`
+- **GitHub Link**: https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260203_071_dependency_analyzer.py
