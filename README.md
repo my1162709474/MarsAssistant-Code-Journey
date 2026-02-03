@@ -1,48 +1,105 @@
-## Day 71 (2026-02-04) - Code Complexity Analyzer 🧠
-- **文件**: `scripts/20260204_071_code_complexity_analyzer.py`
-- **大小**: 21.8 KB (23,020 bytes)
-- **描述**: 智能代码复杂度分析器 - 分析代码的圈复杂度、代码行数、函数数量等指标
+# 🚀 MarsAssistant-Code-Journey
 
-### 核心功能:
-- 🔧 **圈复杂度计算** - 使用AST和正则表达式分析代码复杂度
-- 📊 **多语言支持** - Python、JavaScript、Java、C++、Go、Rust等
-- 🐛 **代码异味检测** - 长函数、过多参数、高复杂度等
-- 📄 **HTML报告生成** - 可视化分析结果
-- 💾 **JSON导出** - 机器可读的详细报告
+<div align="center">
 
-### 技术亮点:
-- 基于AST的精确Python代码分析
-- 正则表达式估算其他语言复杂度
-- 支持递归目录分析
-- 响应式HTML可视化报告
-- 按语言分组统计
-## Day 72 (2026-02-04) - AI Code Reviewer 🤖
-- **文件**: `scripts/20260204_072_ai_code_reviewer.py`
-- **大小**: 11.2 KB (11,197 bytes)
-- **描述**: AI代码审查助手 - 智能分析代码质量、识别潜在问题并提供改进建议
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Days](https://img.shields.io/badge/Days-72-green.svg)
+![Language](https://img.shields.io/badge/Language-Python-yellow.svg)
 
-### 核心功能:
-- 🔧 **多维度代码分析** - 行级问题检测、AST深度分析
-- 📊 **智能规则引擎** - 5+内置规则（长行、魔数、print语句、硬编码路径等）
-- 🐛 **问题分级** - ERROR/WARNING/INFO/SUGGESTION四级分类
-- 📈 **质量评分** - 基于问题严重程度计算0-100分质量分数
-- 💡 **修复建议** - 自动提供代码改进建议
+**AI Coding Journey - 一个展示AI编码能力和学习过程的持续项目**
 
-### 技术亮点:
-- 基于AST的Python代码精确分析
-- 多严重程度问题分类
-- 详细的代码指标统计（代码行/注释/空白行比例）
-- 支持递归目录审查
-- 可扩展的规则引擎架构
+</div>
 
-# MarsAssistant Code Journey
+---
 
-> AI的编码能力探索之旅 - 每天一个小项目，持续学习与成长 ✨
+## 📅 每日提交记录
 
-## 📅 每日进度
+### 📆 2026年2月4日 - Day 72
 
-| 日期 | Day | 文件 | 描述 |
-|------|-----|------|------|
-| 2026-02-04 | 73 | `scripts/20260204-073-api-tester.py` | API Tester & Performance Analyzer - HTTP请求测试与性能分析工具，支持GET/POST等方法、并发测试、结果导出 |
+**文件**: `scripts/20260204_072_learning_journal.py` ⭐ **最新**
 
-| 2026-02-04 | 72 | `scripts/20260204_072_ai_code_reviewer.py` | AI Code Reviewer - 智能代码审查助手，分析代码质量、识别问题、提供改进建议 |
+**名称**: Learning Journal - 代码学习日志工具
+
+**功能**:
+- 🔧 **代码片段管理** - 添加、搜索、过滤代码片段
+- 📊 **学习统计分析** - 按语言、分类、标签统计
+- 🏷️ **标签系统** - 支持多维度标签分类
+- 📄 **多格式导出** - 支持Markdown/JSON导出
+- 💾 **数据持久化** - JSON格式本地存储
+
+**核心类**:
+- `CodeSnippet` - 代码片段数据模型
+- `LearningJournal` - 学习日志管理器
+
+---
+
+### 历史记录
+
+<details>
+<summary>点击展开 Day 1-71</summary>
+
+### 📆 2026年2月4日 - Day 71
+
+**文件**: `scripts/20260204_071_code_complexity_analyzer.py`
+
+**名称**: Code Complexity Analyzer - 智能代码复杂度分析器
+
+**功能**: 圈复杂度计算、多语言支持、代码异味检测、HTML报告生成
+
+---
+
+### 📆 2026年2月4日 - Day 70
+
+**文件**: `scripts/20260204_070_code_statistics_analyzer.py`
+
+**名称**: Code Statistics Analyzer - 综合代码库统计分析工具
+
+**功能**: 多语言支持、行数统计、结构分析、复杂度估算
+
+---
+
+### 📆 2026年2月3日 - Day 69
+
+**文件**: `scripts/20260203_069_git_commit_pattern_analyzer.py`
+
+**名称**: Git Commit Pattern Analyzer - Git提交模式分析与可视化工具
+
+**功能**: 提交频率分析、活动热力图、可视化图表
+
+---
+
+</details>
+
+---
+
+## 🎯 项目目标
+
+- ✅ 展示AI的持续编码能力
+- ✅ 学习和掌握多种编程技术
+- ✅ 建立个人代码知识库
+- ✅ 记录AI的学习成长历程
+
+## 📊 统计数据
+
+| 指标 | 数值 |
+|------|------|
+| 提交天数 | 72天 |
+| 代码文件 | 72+ |
+| 语言覆盖 | Python, JavaScript, Shell等 |
+| 项目星级 | ⭐ 持续增长中 |
+
+## 🤝 贡献指南
+
+欢迎提交Issue和Pull Request！
+
+## 📝 许可证
+
+MIT License
+
+---
+
+<div align="center">
+
+**持续更新中...** 💪
+
+</div>
