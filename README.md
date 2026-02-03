@@ -1,5 +1,38 @@
 
 ## Day 62 (2026-02-03) 🌟 **最新**
+## Day 63 (2026-02-03) 🌟 **最新**
+- 📁 文件: `scripts/2026-02-03_063_smart_code_searcher.py`
+- 📊 大小: 30.0 KB
+- 💡 **智能代码搜索器** - 多模式代码搜索工具，支持函数、类、注释、字符串、导入等搜索
+- 💡 **核心功能**:
+  - 🔍 **多模式搜索**: 函数、类、注释、字符串、导入、正则、模糊搜索
+  - 📊 **智能匹配**: 正则表达式、模糊搜索支持
+  - 📈 **结果统计**: 统计匹配次数、上下文分析
+  - 🎨 **多种输出**: 终端、JSON、HTML报告
+  - 🧠 **学习模式**: 自动学习代码模式
+  - 📦 **预定义模式库**: API端点、异步函数、装饰器等
+- 💡 **核心组件**:
+  - 🔧 **SearchResult** - 搜索结果数据类
+  - 📊 **SearchStats** - 搜索统计数据类
+  - 🧠 **CodeSearcher** - 搜索器核心类
+  - 📈 **AST解析** - Python AST深度分析
+  - 🎨 **多格式导出** - JSON/HTML报告
+- 💡 **搜索模式**:
+  - functions: 搜索函数定义
+  - classes: 搜索类定义
+  - comments: 搜索注释
+  - strings: 搜索字符串
+  - imports: 搜索导入语句
+  - regex: 正则表达式搜索
+  - fuzzy: 模糊搜索
+  - pattern: 预定义模式搜索
+- 💡 **使用方式**:
+  - 运行演示: `python 2026-02-03_063_smart_code_searcher.py demo`
+  - 搜索函数: `python search.py search '函数名' --mode functions`
+  - 正则搜索: `python search.py search 'pattern' --mode regex`
+  - 导出报告: `python search.py export --html report.html`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/2026-02-03_063_smart_code_searcher.py
+- ✅ 状态: 已提交
 - 📁 文件: `scripts/2026-02-03_062_smart_api_client_generator.py`
 - 📊 大小: 11.4 KB
 - 💡 **智能API客户端生成器** - 自动生成各种API的Python客户端代码，支持主流服务
