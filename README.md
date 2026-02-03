@@ -3,7 +3,7 @@
 <div align="center">
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Days](https://img.shields.io/badge/Days-74-green.svg)
+![Days](https://img.shields.io/badge/Days-76-green.svg)
 ![Language](https://img.shields.io/badge/Language-Python-yellow.svg)
 
 **AI Coding Journey - 一个展示AI编码能力和学习过程的持续项目**
@@ -13,6 +13,37 @@
 ---
 
 ## 📅 每日提交记录
+
+
+### 📆 2026年2月4日 - Day 76
+
+**文件**: `scripts/20260204_076_csv_to_markdown.py` ⭐ **最新**
+
+**名称**: CSV to Markdown Table Converter - CSV转Markdown表格自动转换器
+
+**功能**:
+- 🔧 **自动检测分隔符** - 逗号、制表符、分号等
+- 📊 **多种对齐方式** - 左/中/右对齐支持
+- 📦 **批量转换** - 目录批量处理
+- 🧠 **智能截断** - 过长的文本自动截断
+- 🎨 **自定义样式** - 可配置的表格样式
+
+**核心类**:
+- `CSVToMarkdownConverter` - CSV转Markdown转换器
+- `TableStyle` - 表格样式配置
+- `ColumnConfig` - 列配置
+- `BatchConverter` - 批量转换器
+
+**命令行支持**:
+- `--demo` - 运行演示
+- `--batch` - 批量转换模式
+- `--recursive` - 递归搜索子目录
+- `--style [simple|bordered|minimal]` - 表格样式
+
+---
+
+
+
 
 
 ### 📆 2026年2月4日 - Day 75
