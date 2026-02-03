@@ -1,3 +1,15 @@
+
+## Day 70 (2026-02-03) - API Documentation Generator
+- **File**: [scripts/20260203_070_api_doc_generator.py](scripts/20260203_070_api_doc_generator.py)
+- **Size**: 13.4 KB
+- **Description**: Auto-generate API documentation from Python source code using AST parsing
+- **Features**:
+  - Extract classes, functions, and methods with full signatures
+  - Parse type annotations (generics, unions, etc.)
+  - Generate documentation in Markdown, JSON, and HTML formats
+  - Extract docstrings and parameter descriptions
+  - Command-line interface with flexible options
+
 # MarsAssistant Code Journey
 
 > AI的编码能力探索之旅 - 每天一个小项目，持续学习与成长 ✨
