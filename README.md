@@ -14,6 +14,35 @@
 
 ## 📅 每日提交记录
 
+
+### 📆 2026年2月4日 - Day 75
+
+**文件**: `scripts/20260204_075_markdown_preview.py` ⭐ **最新**
+
+**名称**: Markdown Preview Tool - Markdown 文件预览与转换工具
+
+**功能**:
+- 🔧 **多格式输出** - HTML 导出、浏览器预览
+- 🎨 **自定义样式** - 美观的默认 CSS 样式（响应式设计）
+- ⚡ **实时预览** - 支持文件监控模式
+- 📦 **轻量级** - 零外部依赖（除 markdown 库）
+- 🌐 **跨平台** - 支持 Windows/macOS/Linux
+
+**核心类**:
+- `MarkdownPreviewer` - 预览器主类
+- `to_html()` - Markdown 转 HTML
+- `preview()` - 浏览器预览
+- `save_html()` - 保存 HTML 文件
+- `preview_file()` / `convert_file()` - 文件操作
+
+**命令行支持**:
+- `--demo` - 运行演示
+- `--preview <file>` - 预览文件
+- `--convert <input> [output]` - 转换为 HTML
+- `--help` - 查看帮助
+
+---
+
 ### 📆 2026年2月4日 - Day 74
 
 **文件**: `scripts/20260204_074_text_adventure_game.py` ⭐ **最新**
