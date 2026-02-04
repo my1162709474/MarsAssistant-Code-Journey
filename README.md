@@ -1,3 +1,27 @@
+
+### Day 81: 智能URL分析器与安全检测工具 (11:26) ⭐ **最新**
+- 📁 文件: `scripts/20260204_081_url_analyzer.py`
+- 📊 大小: 9.6 KB
+- 💡 **智能URL分析器** - 支持URL解析、成分提取、安全检测、链接有效性检查
+- 💡 **核心功能**:
+  - 🔧 **URL解析** - scheme/netloc/port/path/query/fragment完整解析
+  - 🔐 **安全检测** - 危险模式、可疑模式、IP访问、@符号检测
+  - 📊 **评分系统** - 0-100安全评分，SAFE/SUSPICIOUS/DANGEROUS三级
+  - 🧹 **跟踪参数清理** - 自动识别并移除UTM/Facebook/Google等跟踪参数
+  - 📈 **成分提取** - 域名/IP识别、参数解析、URL类型识别
+  - 📋 **完整报告** - JSON格式安全报告生成
+- 💡 **检测类型**:
+  - 危险模式: javascript:, data:text/html, <script, eval, exec
+  - 可疑模式: @符号、敏感路径(session/token/auth)、重定向参数
+  - 协议检测: HTTP/FTP非加密、IP地址访问、非常见端口
+- 💡 **使用方式**:
+  - 解析URL: `components = analyzer.parse(url)`
+  - 安全分析: `report = analyzer.analyze_security(url)`
+  - 清理跟踪: `clean = analyzer.clean_tracking(url)`
+  - 完整报告: `report = analyzer.generate_report(url)`
+- 🔗 https://github.com/my1162709474/MarsAssistant-Code-Journey/blob/main/scripts/20260204_081_url_analyzer.py
+- ✅ README.md已更新
+
 ### Day 74: 代码差异对比工具 (11:14) ⭐ **最新**
 - 📁 文件: `scripts/20260204_074_diff_tool.py`
 - 📊 大小: 16.5 KB
